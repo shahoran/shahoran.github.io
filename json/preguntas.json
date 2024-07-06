@@ -1,0 +1,530 @@
+[
+    {
+        "pregunta": "¿Cuánto pesas?",
+        "tipo": "numero",
+        "indice": "atributos",
+        "valor": 0
+    },
+    {
+        "pregunta": "¿Cuánto mides?",
+        "tipo": "numero",
+        "indice": "atributos",
+        "respuesta": 4,
+        "valor": 0
+    },
+    {
+        "pregunta": "¿Usted fuma o no?",
+        "tipo": "restringe",
+        "restriccion": "fumar",
+        "indice": "fumar",
+        "opciones": [
+            {
+                "texto": "Si",
+                "valor": 20
+            },
+            {
+                "texto": "No",
+                "valor": 0
+            }
+        ]
+    },
+    {
+        "restriccion": "fumar",
+        "pregunta": "¿Cuanto fuma?(por dia)",
+        "indice": "fumar",
+        "tipo": "opciones",
+        "opciones": [
+            {
+                "texto": "1",
+                "valor": 10
+            },
+            {
+                "texto": "2-5",
+                "valor": 15
+            },
+            {
+                "texto": ">6",
+                "valor": 20
+            }
+        ]
+    },
+    {
+        "pregunta": "¿Cada cuanto fuma?",
+        "tipo": "opciones",
+        "restriccion": "fumar",
+        "indice": "fumar",
+        "opciones": [
+            {
+                "texto": "Diario",
+                "valor": 15
+            },
+            {
+                "texto": "Semanal",
+                "valor": 5
+            },
+            {
+                "texto": "Una vez al mes",
+                "valor": 0
+            }
+        ]
+    },
+    {
+        "pregunta": "¿Consume o ha consumido algun tipo de droga?",
+        "tipo": "restringe",
+        "restriccion": "drogas",
+        "indice": "drogas",
+        "opciones": [
+            {
+                "texto": "Si",
+                "valor": 30
+            },
+            {
+                "texto": "No",
+                "valor": 0
+            }
+        ]
+    },
+    {
+        "pregunta": "¿Qué tipo de droga?",
+        "tipo": "opciones",
+        "restriccion": "drogas",
+        "indice": "drogas",
+        "opciones": [
+            {
+                "texto": "Sinteticas",
+                "valor": 30
+            },
+            {
+                "texto": "Naturales",
+                "valor": 20
+            }
+        ]
+    },
+    {
+        "pregunta": "¿Cada cuanto usa drogas?",
+        "tipo": "opciones",
+        "restriccion": "drogas",
+        "indice": "drogas",
+        "opciones": [
+            {
+                "texto": "Diario",
+                "valor": 30
+            },
+            {
+                "texto": "Semanal",
+                "valor": 20
+            },
+            {
+                "texto": "Una vez a al mes",
+                "valor": 10
+            },
+            {
+                "texto": "Ya no consume droga",
+                "valor": -40
+            }
+        ]
+    },
+
+    {
+        "pregunta": "¿Consume alcohol?",
+        "tipo": "restringe",
+        "restriccion": "alcohol",
+        "indice": "alcohol",
+        "opciones": [
+            {
+                "texto": "Si",
+                "valor": 10
+            },
+            {
+                "texto": "No",
+                "valor": 0
+            }
+        ]
+    },
+    {
+        "pregunta": "¿Cada cuanto consume alcohol",
+        "tipo": "opciones",
+        "restriccion": "alcohol",
+        "indice": "alcohol",
+        "opciones": [
+            {
+                "texto": "Diario",
+                "valor": 20
+            },
+            {
+                "texto": "Semanal",
+                "valor": 10
+            },
+            {
+                "texto": "Una vez al mes",
+                "valor": 5
+            }
+        ]
+    },
+    {
+        "pregunta": "¿Cuanto es su consumo de alcohol cuando bebe? (ponga la cantida de vasos)",
+        "tipo": "opciones",
+        "restriccion": "alcohol",
+        "indice": "alcohol",
+        "opciones": [
+            {
+                "texto": "1-3",
+                "valor": 5
+            },
+            {
+                "texto": "4-6",
+                "valor": 10
+            },
+            {
+                "texto": "7-10",
+                "valor": 20
+            },
+            {
+                "texto": ">10",
+                "valor": 30
+            }
+        ]
+    },
+    {
+        "pregunta": "¿Que tipo de bebidas alcoholicas consume?",
+        "tipo": "opciones",
+        "restriccion": "alcohol",
+        "indice": "alcohol",
+        "opciones": [
+            {
+                "texto": "Cerveza o Vino",
+                "valor": 10
+            },
+            {
+                "texto": "Trago Corto",
+                "valor": 20
+            }
+        ]
+    },
+
+    {
+        "pregunta": "¿Tiene diabetes?",
+        "tipo": "opciones",
+        "indice": "enfermedades",
+        "opciones": [
+            {
+                "texto": "Si",
+                "valor": 20
+            },
+            {
+                "texto": "No",
+                "valor": 0
+            }
+        ]
+    },
+    {
+        "pregunta": "¿Tiene o ha tenido algun familiar directo con diabetes?",
+        "tipo": "opciones",
+        "indice": "familia",
+        "opciones": [
+            {
+                "texto": "Si",
+                "valor": 10
+            },
+            {
+                "texto": "No",
+                "valor": 0
+            }
+        ]
+    },
+    {
+        "pregunta": "¿Tiene cancer?",
+        "tipo": "opciones",
+        "indice": "enfermedades",
+        "opciones": [
+            {
+                "texto": "Si",
+                "valor": 30
+            },
+            {
+                "texto": "No",
+                "valor": 0
+            }
+        ]
+    },
+    {
+        "pregunta": "¿Tiene o ha tenido algun familiar directo con cancer?",
+        "tipo": "restringe",
+        "indice": "familia",
+        "restriccion": "famcancer",
+        "opciones": [
+            {
+                "texto": "Si",
+                "valor": 10
+            },
+            {
+                "texto": "No",
+                "valor": 0
+            }
+        ]
+    },
+    {
+        "pregunta": "¿El familiar que tuvo cancer, si es que fallecio, fue por el motivo de cancer?",
+        "tipo": "opciones",
+        "indice": "familia",
+        "restriccion": "famcancer",
+        "opciones": [
+            {
+                "texto": "Si",
+                "valor": 10
+            },
+            {
+                "texto": "No",
+                "valor": 0
+            }
+        ]
+    },
+    {
+        "pregunta": "¿Ha tenido pensamientos suicidas alguna vez?",
+        "tipo": "opciones",
+        "indice": "enfermedades",
+        "opciones": [
+            {
+                "texto": "Si",
+                "valor": 20
+            },
+            {
+                "texto": "No",
+                "valor": 0
+            }
+        ]
+    },
+    {
+        "pregunta": "¿Tiene o ha tenido problemas cardiacos?",
+        "tipo": "restringe",
+        "indice": "enfermedades",
+        "restriccion": "cardiaco",
+        "opciones": [
+            {
+                "texto": "Si",
+                "valor": 30
+            },
+            {
+                "texto": "No",
+                "valor": 0
+            }
+        ]
+    },
+    {
+        "pregunta": "¿Que problema cardiaco tiene o ha tenido?",
+        "tipo": "opciones",
+        "restriccion": "cardiaco",
+        "indice": "enfermedades",
+        "opciones": [
+            {
+                "texto": "Ataque coronario",
+                "valor": 30
+            },
+            {
+                "texto": "Enfermedad cardiaca o arterial",
+                "valor": 20
+            }
+        ]
+    },
+    {
+        "pregunta": "¿Tiene algun familiar con un problema cardiaco?",
+        "tipo": "restringe",
+        "indice": "familia",
+        "restriccion": "famcardiaco",
+        "opciones": [
+            {
+                "texto": "Si",
+                "valor": 10
+            },
+            {
+                "texto": "No",
+                "valor": 0
+            }
+        ]
+    },
+    {
+        "pregunta": "¿El familiar que tuvo problemas cardiacos, si es que fallecio, fue por el motivo de los problemas cardiacos?",
+        "tipo": "opciones",
+        "indice": "familia",
+        "restriccion": "famcardiaco",
+        "opciones": [
+            {
+                "texto": "Si",
+                "valor": 10
+            },
+            {
+                "texto": "No",
+                "valor": 0
+            }
+        ]
+    },
+    {
+        "pregunta": "¿Usted ha tenido alguna operación?",
+        "tipo": "opciones",
+        "indice": "historial",
+        "opciones": [
+            {
+                "texto": "Si",
+                "valor": 20
+            },
+            {
+                "texto": "No",
+                "valor": 0
+            }
+        ]
+    },
+    {
+        "pregunta": "¿Usted esta vacunado con la mayoria o todas sus vacunas obligatorias?",
+        "tipo": "opciones",
+        "indice": "historial",
+        "opciones": [
+            {
+                "texto": "Si",
+                "valor": 0
+            },
+            {
+                "texto": "No",
+                "valor": 20
+            }
+        ]
+    },
+    {
+        "pregunta": "¿Usted tiene algun problema genetico?",
+        "tipo": "restringe",
+        "indice": "enfermedades",
+        "restriccion": "genetica",
+        "opciones": [
+            {
+                "texto": "Si",
+                "valor": 20
+            },
+            {
+                "texto": "No",
+                "valor": 0
+            }
+        ]
+    },
+    {
+        "pregunta": "Que tipo de problema genetico tiene?",
+        "tipo": "opciones",
+        "indice": "enfermedades",
+        "restriccion": "genetica",
+        "opciones": [
+            {
+                "texto": "mutacion",
+                "valor": 20
+            },
+            {
+                "texto": "deformidad",
+                "valor": 30
+            }
+        ]
+    },
+    {
+        "pregunta": "¿Usted tiene alergias?",
+        "tipo": "opciones",
+        "opciones": [
+            {
+                "texto": "Si",
+                "valor": 10
+            },
+            {
+                "texto": "No",
+                "valor": 0
+            }
+        ]
+    },
+    {
+        "pregunta": "¿Usted sigue alguna dieta?",
+        "tipo": "restringe",
+        "indice": "dieta",
+        "restriccion": "dieta",
+        "obj": "mal",
+        "opciones": [
+            {
+                "texto": "Si",
+                "valor": 0
+            },
+            {
+                "texto": "No",
+                "valor": 10
+            }
+        ]
+    },
+    {
+        "pregunta": "¿Qué tipo de dieta sigue?",
+        "tipo": "opciones",
+        "indice": "dieta",
+        "restriccion": "dieta",
+        "opciones": [
+            {
+                "texto": "Vegetariana",
+                "valor": 0
+            },
+            {
+                "texto": "Balanceada",
+                "valor": 0
+            },
+            {
+                "texto": "Omnivora",
+                "valor": 10
+            }
+        ]
+    },
+    {
+        "pregunta": "¿Usted realiza actividad fisica o deporte?",
+        "tipo": "restringe",
+        "indice": "deporte",
+        "restriccion": "deporte",
+        "obj": "mal",
+        "opciones": [
+            {
+                "texto": "Si",
+                "valor": 0
+            },
+            {
+                "texto": "No",
+                "valor": 20
+            }
+        ]
+    },
+    {
+        "pregunta": "¿Cada cuanto tiempo realiza actividad fisica o deporte?",
+        "tipo": "opciones",
+        "indice": "tiemdeporte",
+        "restriccion": "deporte",
+        "opciones": [
+            {
+                "texto": "Todos los dias",
+                "valor": 0
+            },
+            {
+                "texto": "1 vez por semana",
+                "valor": 5
+            },
+            {
+                "texto": "Muy ocasionalmente",
+                "valor": 10
+            }
+        ]
+    },
+    {
+        "pregunta": "¿Cuantas horas duerme al dia?",
+        "tipo": "opciones",
+        "indice": "dormir",
+        "opciones": [
+            {
+                "texto": "2-5",
+                "valor": 20
+            },
+            {
+                "texto": "6-9",
+                "valor": 0
+            },
+            {
+                "texto": "10 a mas",
+                "valor": 10
+            }
+        ]
+    }
+]

@@ -1,0 +1,143 @@
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Cuestionario</title><link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+        <link
+            href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+            rel="stylesheet">
+
+        <!-- Custom styles for this template-->
+        <link href="css/sb-admin-2.min.css" rel="stylesheet">
+        <style>
+        body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to bottom, #74ebd5, #ACB6E5, #FFD3A5, #FD6565); /* Fondo degradado con más colores */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden; /* Evitar scroll */
+}
+
+.contenedor {
+    background: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    padding: 30px;
+    width: 90%;
+    max-width: 600px;
+    text-align: center;
+    animation: fadeIn 1s;
+    position: relative; /* Para posicionar elementos internos */
+}
+
+.pregunta {
+    font-size: 26px;
+    margin-bottom: 25px;
+    font-weight: bold;
+    color: #333; /* Color de texto más oscuro para legibilidad */
+    /*animation: slideIn 0.5s ease-out;*/
+}
+
+.respuestas {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.respuesta {
+    background: #4CAF50;
+    color: white;
+    padding: 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Agregar sombra a las opciones */
+}
+
+.respuesta:hover {
+    background: #45a049;
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Aumentar la sombra al pasar el ratón */
+}
+
+.input-respuesta {
+    width: 60%;
+    padding: 12px;
+    margin: 10px auto;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para el input */
+}
+
+.boton {
+    background: #008CBA;
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Agregar sombra al botón */
+}
+
+.boton:hover {
+    background: #007bb5;
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Aumentar la sombra al pasar el ratón */
+}
+
+.progress {
+    margin-bottom: 25px;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideIn {
+    from { transform: translateY(-20px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes slideOut {
+    from { transform: translateY(0); opacity: 1; }
+    to { transform: translateY(-20px); opacity: 0; }
+}
+
+.slide-out {
+    animation: slideOut 0.15s ease-out forwards;
+}
+
+.slide-in {
+    animation: slideIn 0.15s ease-in;
+}
+    </style>
+
+    </head>
+    <body>
+
+        <div class="contenedor" style="display:none">
+            <div class="progress" id="divprogress">
+                <div id="progress-bar" class="progress-bar" role="progressbar" style="width: 0%;" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+            <div id="pregunta" class="pregunta"></div>
+            <div id="respuestas" class="respuestas"></div>
+            <button id="siguiente" class="btn btn-primary boton">Siguiente</button>
+        </div>
+
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="sistema.js"></script>
+        <script src="vendor/jquery/jquery.min.js"></script>
+        <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+        <!-- Core plugin JavaScript-->
+        <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+        <!-- Custom scripts for all pages-->
+        <script src="js/sb-admin-2.min.js"></script>
+    </body>
+</html>
