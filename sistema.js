@@ -468,6 +468,9 @@ $(document).ready(function () {
                                 mostrarPregunta();
                             }
                         });
+                        setTimeout(() => {
+                            input.focus();
+                        }, 0);
                     }
                     const progreso = ((indicePreguntaActual) / (preguntas.length - 1)) * 100;
                     $('#progress-bar').css('width', `${progreso}%`).attr('aria-valuenow', progreso);
