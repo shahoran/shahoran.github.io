@@ -67,7 +67,7 @@ function cargarPersonajes() {
             <div class="personaje-box seleccionado" data-id="${id}">
                 <img src="pjs/${pj.nombre}.png">
                 <div class="check-marca">${pj.activo === true ? "✔" : "X"}</div>
-                <div class="text-center mt-1">${pj.nombre}</div>
+                <div class="text-center mt-1">${pj.nombre.toLowerCase().replace(/\b\w/g, char => char.toUpperCase())}</div>
             </div>
         `);
 
@@ -141,7 +141,7 @@ function generateRandomizer() {
                     border:3px solid #444;"
                 >
                 <div class="check-marca">✔</div>
-                <div style="margin-top:5px;">${p.nombre}</div>
+                <div style="margin-top:5px;">${p.nombre.toLowerCase().replace(/\b\w/g, char => char.toUpperCase())}</div>
             </div>
         `;
     });
@@ -163,4 +163,5 @@ $("#btnGenerar").on("click", function () {
 $(document).ready(function () {
     cargarEstadoPersonajes();
     cargarPersonajes();
+
 });
