@@ -163,5 +163,4 @@ $("#btnGenerar").on("click", function () {
 $(document).ready(function () {
     cargarEstadoPersonajes();
     cargarPersonajes();
-
 });
