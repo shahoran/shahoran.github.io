@@ -58,7 +58,7 @@ $(document).ready(function () {
     $("#header").load(base + "header.html", function () {
 
         // Código de idioma
-        const savedLang = localStorage.getItem("language") || "es";
+        const savedLang = localStorage.getItem("language") || "en";
         $("#languageSelector").val(savedLang);
 
         $(document).on("change", "#languageSelector", function () {
@@ -69,4 +69,5 @@ $(document).ready(function () {
     });
 
     $("#footer").load(base + "footer.html");
+
 });
