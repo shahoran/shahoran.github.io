@@ -4,6 +4,7 @@
     <title>Randomizer - Chaos Zero Nightmare</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../../css/styles.css">
     <link rel="stylesheet" type="text/css" href="styles.css">
 
     <!-- jQuery -->
@@ -11,35 +12,33 @@
 </head>
 
 <body>
-    <h1>Randomizer - Chaos Zero Nightmare</h1>
+    <div id="header"></div>
+
     <div id="content">
+    <h2 data-i18n="title_randomizer"></h2>
         <form id="randomizerForm">
-            <!---
-            <label for="dificultad">Selecciona dificultad:</label>
+            <label for="dificultad" data-i18n="selecciona_dificultad">Selecciona dificultad:</label>
             <select id="dificultad" name="dificultad">
-                <option value="facil">facil</option>
-                <option value="normal">Normal</option>
-                <option value="dificil">dificil</option>
                 <option value="nightmare">Nightmare</option>
+                <option value="facil" data-i18n="facil_healer">facil(healer siempre)</option>
             </select>
 
             <br><br>
-        -->
-            <label>Selecciona los personajes</label>
-            <button type="button" id="btnMostrarPjs">Mostrar personajes</button>
+            <label data-i18n="select_character"></label>
+            <button type="button" id="btnMostrarPjs" data-i18n="show_characters"></button>
 
             <div id="contenedor-personajes" class="d-flex flex-wrap gap-3 d-none"></div>
 
             <br><br>
 
-            <button type="button" id="btnGenerar">Generate Randomizer</button>
+            <button type="button" id="btnGenerar" data-i18n="generate_randomizer"></button>
         </form>
-
+        <div data-i18n="your_team_random" id="resultado_texto" style="display: none"></div>
+        <br>
         <div id="result"></div>
     </div>
-
+    <div id="footer"></div>
+    <script src="../../js/general.js"></script>
     <script src="script.js"></script>
 </body>
-
-
 </html>

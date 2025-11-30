@@ -1,23 +1,13 @@
-/* Modo oscuro */
-body {
-    background: #121212;
-    color: #e2e2e2;
-    font-family: Arial, sans-serif;
-}
-
-/* OCULTO AL INICIO */
+/* Contenedor de personajes */
 #contenedor-personajes {
     margin-top: 15px;
 
-    /* CUADRÍCULA flexible */
     display: grid;
     grid-template-columns: repeat(auto-fill, 130px);
     gap: 20px;
 }
-.d-none {
-    display: none !important;
-}   
-/* Tamaño fijo del círculo */
+
+/* Caja del personaje */
 .personaje-box {
     width: 130px;
     height: 160px;
@@ -26,6 +16,7 @@ body {
     text-align: center;
 }
 
+/* Imagen circular */
 .personaje-box img {
     width: 130px;
     height: 130px;
@@ -35,15 +26,16 @@ body {
     transition: .2s;
 }
 
+/* Imagen seleccionada */
 .personaje-box.seleccionado img {
     border-color: #4CAF50;
 }
 
-/* Check encima */
+/* Check de selección invisible inicialmente */
 .check-marca {
     position: absolute;
-    top: 0px;
-    right: 0px;
+    top: 0;
+    right: 0;
     background: #000000;
     border-radius: 50%;
     border: 2px solid black;
@@ -56,10 +48,12 @@ body {
     transition: .2s;
     font-size: 24px;
 }
+
+/* Check */
 .check {
     position: absolute;
-    top: 0px;
-    right: 0px;
+    top: 0;
+    right: 0;
     background: #000000;
     border-radius: 50%;
     border: 2px solid black;
@@ -71,25 +65,8 @@ body {
     transition: .2s;
     font-size: 24px;
 }
+
+/* Mostrar check al seleccionar */
 .personaje-box.seleccionado .check-marca {
     opacity: 1;
-}
-
-/* Títulos y textos */
-h1, label, p {
-    color: #f0f0f0;
-}
-
-/* Opciones */
-select, button {
-    background: #1e1e1e;
-    color: white;
-    border: 1px solid #555;
-    padding: 6px 10px;
-    border-radius: 6px;
-}
-
-/* Hover botones */
-button:hover {
-    background: #333;
 }

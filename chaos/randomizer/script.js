@@ -33,10 +33,10 @@ function guardarEstadoPersonajes() {
         }
     }
 
-    localStorage.setItem("personajes_desactivados", JSON.stringify(desactivados));
+    localStorage.setItem("automizer_chaos", JSON.stringify(desactivados));
 }
 function cargarEstadoPersonajes() {
-    const data = localStorage.getItem("personajes_desactivados");
+    const data = localStorage.getItem("automizer_chaos");
 
     if (!data) return; // si no existe, todo queda activo
 
@@ -48,6 +48,7 @@ function cargarEstadoPersonajes() {
         }
     });
 }
+
 // Mostrar / ocultar personajes
 $("#btnMostrarPjs").on("click", function () {
     $("#contenedor-personajes").addClass("d-flex").toggleClass("d-none");
@@ -85,47 +86,7 @@ function togglePersonaje(id, elemento) {
     check.text(PERSONAJES[id].activo === true ? "✔" : "X");
     guardarEstadoPersonajes();
 }
-
-function generateRandomizer() {
-    // 1. Separar supports y no supports
-    const supports = [];
-    const otros = [];
-
-    for (const id in PERSONAJES) {
-        const pj = PERSONAJES[id];
-        if (!pj.activo) continue; // si está inactivo, lo salta
-
-        if (pj.rol === "support") supports.push({ id, ...pj });
-        else otros.push({ id, ...pj });
-    }
-
-    // Validación mínima
-    if (supports.length < 1) {
-        $("#result").html("<p>No hay supports activos.</p>");
-        return;
-    }
-
-    // 2. Escoger 1 support aleatorio
-    const support = supports[Math.floor(Math.random() * supports.length)];
-
-    // 3. Escoger 2 aleatorios de cualquier rol (excepto el elegido)
-    const disponibles = otros.filter(p => p.id !== support.id);
-
-    if (disponibles.length < 2) {
-        $("#result").html("<p>No hay suficientes personajes para formar un equipo.</p>");
-        return;
-    }
-
-    // Mezclar aleatoriamente
-    const mezclados = disponibles.sort(() => Math.random() - 0.5);
-
-    // Seleccionar 2
-    const p2 = mezclados[0];
-    const p3 = mezclados[1];
-
-    // 4. Mostrar resultado
-    const equipo = [support, p2, p3];
-
+function mostrarEquipo(equipo) {
     let html = `<div class="equipo-container" style="display:flex; gap:20px;">`;
 
     equipo.forEach(p => {
@@ -138,29 +99,93 @@ function generateRandomizer() {
                     height:120px;
                     border-radius:50%;
                     object-fit:cover;
-                    border:3px solid #444;"
-                >
+                    border:3px solid #444;">
                 <div class="check-marca">✔</div>
-                <div style="margin-top:5px;">${p.nombre.toLowerCase().replace(/\b\w/g, char => char.toUpperCase())}</div>
+                <div style="margin-top:5px;">
+                    ${p.nombre.toLowerCase().replace(/\b\w/g, char => char.toUpperCase())}
+                </div>
             </div>
         `;
     });
 
     html += `</div>`;
-
+    $("#resultado_texto").show();
     $("#result").html(html);
 }
+function generateFacilRandomizer() {
+    const supports = [];
+    const otros = [];
 
+    for (const id in PERSONAJES) {
+        const pj = PERSONAJES[id];
+        if (!pj.activo) continue;
 
+        if (pj.rol === "support") supports.push({ id, ...pj });
+        else otros.push({ id, ...pj });
+    }
 
+    if (supports.length < 1) {
+        $("#result").html("<p>No hay supports activos.</p>");
+        return;
+    }
 
+    const support = supports[Math.floor(Math.random() * supports.length)];
+
+    const disponibles = otros.filter(p => p.id !== support.id);
+
+    if (disponibles.length < 2) {
+        $("#result").html("<p>No hay suficientes personajes para formar un equipo.</p>");
+        return;
+    }
+
+    const mezclados = disponibles.sort(() => Math.random() - 0.5);
+
+    mostrarEquipo([support, mezclados[0], mezclados[1]]);
+}
+function generateFullRandom() {
+    const activos = [];
+
+    for (const id in PERSONAJES) {
+        const pj = PERSONAJES[id];
+        if (!pj.activo) continue;
+
+        activos.push({ id, ...pj });
+    }
+
+    if (activos.length < 3) {
+        $("#result").html("<p>Se requieren al menos 3 personajes activos.</p>");
+        return;
+    }
+
+    const mezclados = activos.sort(() => Math.random() - 0.5);
+
+    mostrarEquipo([mezclados[0], mezclados[1], mezclados[2]]);
+}
+function generateRandomizer() {
+    const modo = localStorage.getItem("automizer_modo") || "facil";
+
+    if (modo === "nightmare") {
+        return generateFullRandom();
+    } else if (modo === "facil") {
+        return generateFacilRandomizer();
+    }
+}
 
 $("#btnGenerar").on("click", function () {
     generateRandomizer();
 });
 
+$("#dificultad").on("change", function () {
+    localStorage.setItem("automizer_modo", $(this).val());
+});
+
+
 // Cargar al inicio
 $(document).ready(function () {
     cargarEstadoPersonajes();
+
+    const modo = localStorage.getItem("automizer_modo") || "facil";
+    $("#dificultad").val(modo);
+
     cargarPersonajes();
 });
