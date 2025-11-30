@@ -7,6 +7,8 @@
     "your_team_random": "Tu equipo aleatorio:",
     "selecciona_dificultad": "Selecciona dificultad:",
     "facil_healer": "fácil (healer siempre)",
+    "no_support": "No hay supports activos.",
+    "no_personajes_suficientes": "No hay suficientes personajes para formar un equipo.",
 
     "footer_follow": "Sígueme en mis redes:"
 }
