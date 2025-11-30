@@ -26,7 +26,9 @@ function loadLanguage(lang, forceReload = false) {
             console.error(`❌ No se pudo cargar el archivo de idioma: ${url}`);
         });
 }
-
+function t(key) {
+    return translations[key] || key;
+}
 // Aplicar textos traducidos a los elementos con data-i18n
 function applyTranslations() {
     $("[data-i18n]").each(function () {
@@ -58,7 +60,7 @@ $(document).ready(function () {
     $("#header").load(base + "header.html", function () {
 
         // Código de idioma
-        const savedLang = localStorage.getItem("language") || "en";
+        const savedLang = localStorage.getItem("language") || "es";
         $("#languageSelector").val(savedLang);
 
         $(document).on("change", "#languageSelector", function () {
@@ -69,5 +71,4 @@ $(document).ready(function () {
     });
 
     $("#footer").load(base + "footer.html");
-
 });
