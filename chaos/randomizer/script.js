@@ -52,9 +52,8 @@ function cargarEstadoPersonajes() {
 // Mostrar / ocultar personajes
 $("#btnMostrarPjs").on("click", function () {
     $("#contenedor-personajes").addClass("d-flex").toggleClass("d-none");
-    $(this).text(function (i, text) {
-        return text === "Mostrar personajes" ? "Ocultar personajes" : "Mostrar personajes";
-    });
+    const isHidden = $("#contenedor-personajes").hasClass("d-none");
+    $(this).text(isHidden ? t("show_characters") : t("hide_characters"));
 });
 
 // ====== CARGA DE PERSONAJES ======
@@ -125,7 +124,7 @@ function generateFacilRandomizer() {
     }
 
     if (supports.length < 1) {
-        $("#result").html("<p>No hay supports activos.</p>");
+        $("#result").html("<p>"+t("no_support")+"</p>");
         return;
     }
 
@@ -134,7 +133,7 @@ function generateFacilRandomizer() {
     const disponibles = otros.filter(p => p.id !== support.id);
 
     if (disponibles.length < 2) {
-        $("#result").html("<p>No hay suficientes personajes para formar un equipo.</p>");
+        $("#result").html("<p>"+t("no_personajes_suficientes")+"</p>");
         return;
     }
 
@@ -153,7 +152,7 @@ function generateFullRandom() {
     }
 
     if (activos.length < 3) {
-        $("#result").html("<p>Se requieren al menos 3 personajes activos.</p>");
+        $("#result").html("<p>"+t("no_personajes_suficientes")+"</p>");
         return;
     }
 
