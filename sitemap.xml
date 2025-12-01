@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <!-- Raíz general -->
+  <url>
+    <loc>https://shahoran.github.io/</loc>
+    <changefreq>weekly</changefreq>
+  </url>
+
+  <!-- Proyecto Chaos -->
+  <url>
+    <loc>https://shahoran.github.io/chaos/</loc>
+    <changefreq>weekly</changefreq>
+  </url>
+
+  <!-- Randomizer dentro de Chaos -->
+  <url>
+    <loc>https://shahoran.github.io/chaos/randomizer/</loc>
+    <changefreq>weekly</changefreq>
+  </url>
+
+</urlset>
