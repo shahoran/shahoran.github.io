@@ -7,7 +7,58 @@
     <link rel="stylesheet" type="text/css" href="../../css/styles.css">
     <link rel="stylesheet" type="text/css" href="styles.css">
     <link rel="shortcut icon" href="../../images/favicon.png">
+    <!-- Footer Styles(para que cualquiera que lo tenga en cache pueda entrar sin bugear todo) -->
+    <style>
+    .main-footer {
+        padding: 20px;
+        background: #111;
+        color: #fff;
+        text-align: center;
+    }
 
+    .social-links {
+        display: flex;
+        justify-content: center;   /* Centra horizontalmente */
+        align-items: center;       /* Centra verticalmente */
+        flex-direction: column;
+        gap: 12px;
+        margin-top: 10px;
+        width: 100%;               /* Importante para centrar */
+    }
+
+    .social-links a {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        color: #fff;
+        font-weight: 500;
+        text-decoration: none;
+        transition: transform .2s ease, opacity .2s ease;
+    }
+
+    .social-links a img {
+        width: 32px;
+        height: 32px;
+        border-radius: 6px;
+        transition: transform .2s ease;
+    }
+
+    .social-links a:hover {
+        transform: scale(1.05);
+        opacity: 0.85;
+    }
+
+    .social-links a img:hover {
+        transform: scale(1.25);
+    }
+
+    /* En pantallas grandes, centrado horizontal */
+    @media (min-width: 600px) {
+        .social-links {
+            flex-direction: row;
+        }
+    }
+</style>
     <!-- jQuery -->
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 </head>
@@ -16,7 +67,7 @@
     <div id="header"></div>
 
     <div id="content">
-    <h2 data-i18n="title_randomizer"></h2>
+        <h2 data-i18n="title_randomizer"></h2>
         <form id="randomizerForm">
             <label for="dificultad" data-i18n="selecciona_dificultad">Selecciona dificultad:</label>
             <select id="dificultad" name="dificultad">

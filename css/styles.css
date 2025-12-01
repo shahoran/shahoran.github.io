@@ -6,7 +6,9 @@ body {
     margin: 0;
 }
 
-h1, label, p {
+h1,
+label,
+p {
     color: #f0f0f0;
 }
 
@@ -15,7 +17,8 @@ h1, label, p {
 }
 
 /* Inputs / botones */
-select, button {
+select,
+button {
     background: #1e1e1e;
     color: white;
     border: 1px solid #555;
@@ -59,20 +62,53 @@ button:hover {
 }
 
 /* ===== FOOTER ===== */
-.main-footer {
-    margin-top: 40px;
-    text-align: center;
-    padding: 20px;
-    background: #111;
-    color: #eee;
-}
 
-.social-links a {
-    margin: 0 10px;
-    color: #ddd;
-    text-decoration: none;
-}
+    .main-footer {
+        padding: 20px;
+        background: #111;
+        color: #fff;
+        text-align: center;
+    }
 
-.social-links a:hover {
-    text-decoration: underline;
-}
+    .social-links {
+        display: flex;
+        justify-content: center; 
+        align-items: center;    
+        flex-direction: column;
+        gap: 12px;
+        margin-top: 10px;
+        width: 100%;            
+    }
+
+    .social-links a {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        color: #fff;
+        font-weight: 500;
+        text-decoration: none;
+        transition: transform .2s ease, opacity .2s ease;
+    }
+
+    .social-links a img {
+        width: 32px;
+        height: 32px;
+        border-radius: 6px;
+        transition: transform .2s ease;
+    }
+
+    .social-links a:hover {
+        transform: scale(1.05);
+        opacity: 0.85;
+    }
+
+    .social-links a img:hover {
+        transform: scale(1.25);
+    }
+
+    /* En pantallas grandes, centrado horizontal */
+    @media (min-width: 600px) {
+        .social-links {
+            flex-direction: row;
+        }
+    }
