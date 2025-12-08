@@ -1,0 +1,12 @@
+{
+    "n1":{
+        "id":"n1",
+        "name":"Gear bag",
+        "img":"gear_bag.png"
+    },
+    "n2":{
+        "id":"n2",
+        "name":"First Aid Kit",
+        "img":"first_aid_kit.png"
+    }
+}

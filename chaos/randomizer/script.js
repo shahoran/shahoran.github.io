@@ -124,7 +124,7 @@ function generateFacilRandomizer() {
     }
 
     if (supports.length < 1) {
-        $("#result").html("<p>"+t("no_support")+"</p>");
+        $("#result").html('<p data-i18n="no_support">'+t("no_support")+"</p>");
         return;
     }
 
@@ -133,7 +133,7 @@ function generateFacilRandomizer() {
     const disponibles = otros.filter(p => p.id !== support.id);
 
     if (disponibles.length < 2) {
-        $("#result").html("<p>"+t("no_personajes_suficientes")+"</p>");
+        $("#result").html('<p data-i18n="no_personajes_suficientes">'+t("no_personajes_suficientes")+"</p>");
         return;
     }
 
@@ -152,7 +152,7 @@ function generateFullRandom() {
     }
 
     if (activos.length < 3) {
-        $("#result").html("<p>"+t("no_personajes_suficientes")+"</p>");
+        $("#result").html('<p data-i18n="no_personajes_suficientes">'+t("no_personajes_suficientes")+"</p>");
         return;
     }
 

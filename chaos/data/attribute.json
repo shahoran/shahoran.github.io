@@ -1,0 +1,7 @@
+{
+  "passion":   { "name": "Passion", "icon": "passion.png" },
+  "void":  { "name": "Void",  "icon": "void.png" },
+  "instinct":  { "name": "Instinc","icon": "instinct.png" },
+  "order":  { "name": "Order",  "icon": "order.png" },
+  "justice":  { "name": "Justice",  "icon": "justice.png" }
+}

@@ -1,0 +1,8 @@
+{
+  "terrascion": { "name": "Terrascion", "icon": "terrascion.png" },
+  "ironrain":  { "name": "Ironrain", "icon": "ironrain.png" },
+  "stellafamilia": { "name": "Stella Familia", "icon": "stellafamilia.png" },
+  "peltion": { "name": "Peltion", "icon": "peltion.png" },
+  "theholycrusaders": { "name": "The Holy Crusaders", "icon": "theholycrusaders.png" },
+  "wanderer": { "name": "Wanderer", "icon": "wanderer.png" }
+}

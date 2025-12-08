@@ -1,36 +1,45 @@
 let translations = {};
 let currentLang = "es";
-let isReloading = false;
-
+let hasReloaded = false;
+function getDailyCacheKey() {
+    const today = new Date();
+    return today.toISOString().slice(0, 10); // "2025-12-07"
+}
+function getDailyURL(path) {
+    return `${path}?v=${getDailyCacheKey()}`;
+}
+let random=getDailyCacheKey();
 // Cargar archivo JSON del idioma
 function loadLanguage(lang, forceReload = false) {
-
-    // Evita recarga infinita si no existe el archivo
-    if (isReloading && forceReload) return;
-
-    isReloading = forceReload;
-
+    if(forceReload){
+        random=Math.floor(Math.random() * 10000);
+    }
     const url =
-        `/lang/${lang}.json` +
-        (forceReload ? `?reload=${Math.floor(Math.random() * 10000)}` : "");
-
+        `/lang/${lang}.json?v=${random}`;
     return $.getJSON(url)
         .done(function (data) {
             translations = data;
             currentLang = lang;
             localStorage.setItem("language", lang);
-            isReloading = false;
             applyTranslations();
         })
         .fail(function () {
             console.error(`❌ No se pudo cargar el archivo de idioma: ${url}`);
         });
 }
+
 function t(key) {
-    return translations[key] || key;
+    if(translations[key]){
+        return translations[key]
+    }else{
+        loadLanguage(currentLang, true);
+        return translations[key]
+    }
 }
 // Aplicar textos traducidos a los elementos con data-i18n
 function applyTranslations() {
+    let missing = false;
+
     $("[data-i18n]").each(function () {
         const key = $(this).data("i18n");
 
@@ -38,13 +47,16 @@ function applyTranslations() {
             $(this).text(translations[key]);
         } else {
             console.warn(`⚠ No existe la key '${key}' en ${currentLang}.json`);
-            
-            // Fuerza recarga UNA sola vez
-            if (!isReloading) loadLanguage(currentLang, true);
+            missing = true;
         }
     });
-}
 
+    // Si falta una key y NO hemos recargado antes, recargar solo 1 vez
+    if (missing && !hasReloaded) {
+        hasReloaded = true;
+        loadLanguage(currentLang, true);
+    }
+}
 function getBasePath() {
     const path = window.location.pathname;
     const depth = path.split("/").length - 2; // detecta cuántas carpetas hay

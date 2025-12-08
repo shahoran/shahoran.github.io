@@ -1,0 +1,617 @@
+<html>
+
+<head>
+  <title>Chaos Zero Nightmare</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="/css/styles.css">
+  <link rel="icon" type="image/png" href="/img/favicon.png">
+  <style>
+    #character-detail-container .card-img-top {
+      object-fit: cover;
+      max-height: 300px;
+    }
+
+
+    .pj-tab-content>*+* {
+      margin-top: 0.8rem;
+    }
+
+    /* Mini tarjetas para cartas */
+    .card-cartita {
+      border: 1px solid rgba(0, 0, 0, 0.06);
+      border-radius: 6px;
+      padding: 8px;
+      text-align: center;
+    }
+
+    /* Vista compacta */
+    .view-compact .card-cartita {
+      padding: 6px;
+      font-size: 0.9rem;
+    }
+
+    /* Responsive tweaks */
+    @media (max-width: 767px) {
+      #pj-tabs {
+        overflow-x: auto;
+        white-space: nowrap;
+      }
+
+      #pj-tabs .btn {
+        flex: 0 0 auto;
+      }
+    }
+
+
+    /* Epifanias */
+    /* --- CONTENEDOR PRINCIPAL --- */
+    .epifania-card {
+      background: #0d0d0d;
+      border-radius: 15px;
+      border: 2px solid #222;
+      padding: 20px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    }
+
+    /* --- SECCIÓN IZQUIERDA: CARTA BASE --- */
+    .epifania-base {
+      width: 110px;
+    }
+
+    /* MINI-CARD (carta base) */
+    .epifania-card-base {
+      width: 100%;
+      border-radius: 8px;
+      border: 2px solid #555;
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.15);
+    }
+
+    /* NOMBRE DE LA CARTA BASE */
+    .epifania-base-name {
+      color: #fff;
+      font-size: 0.95rem;
+      font-weight: 600;
+      text-shadow: 0 0 4px rgba(255, 255, 255, 0.3);
+    }
+
+    /* --- FILA DE EPIFANÍAS A LA DERECHA --- */
+    .epifania-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+
+    /* --- TARJETA DE EPIFANÍA INDIVIDUAL --- */
+    .epifania-option {
+      background: #161616;
+      border-radius: 12px;
+      border: 2px solid #333;
+      width: 180px;
+      padding: 10px;
+      text-align: center;
+      box-shadow: 0 0 12px rgba(0, 0, 0, 0.6);
+      transition: 0.2s;
+    }
+
+    .epifania-option:hover {
+      background: #1e1e1e;
+      transform: translateY(-3px);
+      border-color: #666;
+    }
+
+    /* --- EPIFANÍA RECOMENDADA (EFECTO ROJO) --- */
+    .epifania-best {
+      border-color: #ff4a4a !important;
+      background: linear-gradient(150deg, #250000, #140000);
+      box-shadow: 0 0 20px rgba(255, 0, 0, 0.3);
+    }
+
+    /* --- IMAGEN DE EPIFANÍA --- */
+    .epifania-epicard-img {
+      width: 100%;
+      border-radius: 10px;
+      border: 2px solid #666;
+      box-shadow: 0 0 15px rgba(255, 255, 255, 0.15);
+      transition: 0.2s;
+    }
+
+    .epifania-epicard-img:hover {
+      box-shadow: 0 0 25px rgba(255, 255, 255, 0.3);
+    }
+
+    /* NOMBRE EPIFANÍA */
+    .epifania-name {
+      color: #ddd;
+      font-size: 0.9rem;
+      font-weight: 500;
+      margin-top: 6px;
+      text-shadow: 0 0 4px rgba(255, 255, 255, 0.25);
+    }
+
+
+
+
+    /* ----------------COPY---------------- */
+    .copy-block {
+      border: 1px solid #444;
+      background: #1a1a1a;
+      padding: 16px;
+      border-radius: 6px;
+      margin-bottom: 28px;
+    }
+
+    /* Título */
+    .copy-title {
+      font-size: 18px;
+      font-weight: bold;
+      color: #fff;
+      margin-bottom: 14px;
+    }
+
+    /* Estructura general */
+    .copy-row {
+      display: flex;
+      gap: 30px;
+      align-items: flex-start;
+    }
+
+    /* Carta base */
+    .copy-base {
+      text-align: center;
+    }
+
+    .copy-base img {
+      width: 130px;
+      border-radius: 6px;
+    }
+
+    .copy-base-name {
+      margin-top: 8px;
+      color: #ddd;
+      font-size: 14px;
+    }
+
+    /* Contenedor de las pilas */
+    .copy-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 26px;
+    }
+
+    /* PILA */
+    .copy-stack {
+      position: relative;
+      width: 180px;
+      height: 240px;
+    }
+
+    .copy-stack img {
+      width: 150px;
+      height: 200px;
+      border-radius: 6px;
+      border: 1px solid #333;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+
+    .copy-stack img.copy-duplicate {
+      opacity: 0.95;
+    }
+
+    /* Mejor epifanía */
+    .copy-best {
+      border-color: #ff4848 !important;
+      box-shadow: 0 0 8px #ff4848;
+    }
+
+    /* Texto bajo cada pila */
+    .copy-label {
+      margin-top: 6px;
+      font-size: 14px;
+      color: #ccc;
+      text-align: center;
+    }
+
+
+
+
+    /* ----------------NEUTRALES---------------- */
+    .neutral-option {
+      width: 120px;
+    }
+
+    .neutral-option img {
+      width: 100%;
+      border-radius: 8px;
+    }
+
+    .neutral-name {
+      font-size: 0.9rem;
+      font-weight: 600;
+    }
+
+
+    /*----------------FRAGMENTOS---------------- */
+    .fragment-option {
+      width: 80px;
+    }
+
+    .fragment-img {
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+
+    .fragment-name {
+      font-size: 0.75rem;
+      font-weight: 600;
+    }
+
+    .fragment-sub {
+      font-size: 0.7rem;
+    }
+
+
+
+
+    /*----------------POTENCIALES---------------- */
+    #skill-map {
+      position: relative;
+      width: 800px;
+      height: 600px;
+      margin: auto;
+    }
+
+    .node {
+      position: absolute;
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      background: #4f3781;
+      border: 3px solid #000000;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: 0.2s;
+    }
+
+    .priority-0 {
+      background: #a70d0d;
+      border-color: #430707 !important;
+    }
+
+    .priority-1 {
+      background: #fffdf9;
+      border-color: #fffdf9 !important;
+    }
+
+    .priority-2 {
+      background: #139745;
+      border-color: #005325 !important;
+    }
+
+    .node_icon {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      overflow: hidden;
+      margin-bottom: 6px;
+    }
+
+    .node-icon img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .node:hover {
+      transform: scale(1.08);
+      /*border-color: #ffd56b;*/
+    }
+
+    .node-icon img {
+      width: 70px;
+    }
+
+    .node-level {
+      margin-top: 4px;
+      color: white;
+      font-size: 14px;
+      font-weight: bold;
+    }
+
+    .connector {
+      position: absolute;
+      height: 4px;
+      background: rgba(255, 255, 255, 0.4);
+      transform-origin: left center;
+      border-radius: 4px;
+    }
+
+    /* Fondo oscuro del tooltip */
+    .tooltip-inner {
+      background-color: #111 !important;
+      color: #fff !important;
+      border-radius: 6px;
+      padding: 6px 10px;
+      font-size: 13px;
+    }
+
+    /* Flecha del tooltip cuando está abajo */
+    .bs-tooltip-bottom .tooltip-arrow::before {
+      border-bottom-color: #111 !important;
+    }
+
+    /* Flecha cuando está arriba (por si lo usas en otra parte) */
+    .bs-tooltip-top .tooltip-arrow::before {
+      border-top-color: #111 !important;
+    }
+  </style>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+
+<body data-bs-theme="dark">
+  <div id="header"></div>
+  <div id="content">
+    <div class="container py-3" id="character-detail-container">
+      <div class="row g-3">
+        <!-- LEFT: imagen + info básica -->
+        <aside class="col-12 col-md-2">
+          <div class="card shadow-sm">
+            <img id="pj-img" class="card-img-top" src="" alt="Imagen personaje">
+            <div class="card-body">
+              <h3 id="pj-nombre" class="card-title mb-1">Nombre</h3>
+              <div class="d-flex gap-2 align-items-center mb-2">
+                <img id="pj-clase-icon" src="" alt="" style="width:28px;height:28px;">
+                <!--<span id="pj-clase" class="badge bg-primary"></span>-->
+                <img id="pj-elemento-icon" src="" alt="" style="width:28px;height:28px;">
+                <!--<span id="pj-elemento" class="badge bg-info"></span>-->
+              </div>
+              <p class="mb-1"><span id="pj-faccion"></span></p>
+              <p class="mb-0"><strong data-i18n="rareza">Rareza:</strong><strong>:</strong> <span id="pj-rango"></span>
+              </p>
+
+              <hr>
+
+              <div class="d-grid gap-2 mt-2">
+                <!-- Botones de acción rápidos -->
+                <button id="btn-copy-link" class="btn btn-outline-secondary btn-sm">Copiar link</button>
+              </div>
+            </div>
+          </div>
+        </aside>
+
+        <!-- RIGHT: pestañas y contenido -->
+        <main class="col-12 col-md-10">
+          <div class="card shadow-sm">
+            <div class="card-header d-flex justify-content-between align-items-center flex-wrap gap-2">
+              <div id="pj-tabs" class="btn-group" role="group" aria-label="Secciones personaje">
+                <button class="btn btn-outline-info active" data-target="tab-cartas" data-i18n="cartas">Cartas</button>
+                <button class="btn btn-outline-info" data-target="tab-epifanias" data-i18n="bestepifanias">Mejores
+                  epifanías</button>
+                <button class="btn btn-outline-info" data-target="tab-copiar" data-i18n="bestcopias">Mejores
+                  Copias</button>
+                <button class="btn btn-outline-info" data-target="tab-neutral" data-i18n="bestneutrales">Mejores
+                  Neutrales</button>
+                <button class="btn btn-outline-info" data-target="tab-potenciales"
+                  data-i18n="potenciales">Potenciales</button>
+                <button class="btn btn-outline-info" data-target="tab-fragmentos"
+                  data-i18n="fragmentos">Fragmentos</button>
+                <!--<button class="btn btn-outline-info" data-target="tab-builds" data-i18n="builds">Builds</button>-->
+              </div>
+
+              <!-- control para cambiar diseño / vista (ej: compacto / detallado) -->
+              <!--<div class="float-end">
+                <div class="btn-group" role="group" aria-label="Ver">
+                  <button class="btn btn-sm btn-outline-secondary" id="view-compact">Compacto</button>
+                  <button class="btn btn-sm btn-outline-secondary active" id="view-detailed">Detallado</button>
+                </div>
+              </div>-->
+            </div>
+
+            <div class="card-body">
+              <!-- Contenedores de contenido (uno por pestaña) -->
+              <div id="tab-cartas" class="pj-tab-content">
+                <!-- Aquí irán las cartas: listado en grid -->
+                <div class="row" id="cartas-list"></div>
+              </div>
+
+              <div id="tab-epifanias" class="pj-tab-content d-none">
+                <div id="epifanias-list">
+                  <!-- Aqui iran las epifanias-->
+
+
+
+                </div>
+              </div>
+
+              <div id="tab-copiar" class="pj-tab-content d-none">
+
+                <div id="copy-list"></div>
+              </div>
+
+              <div id="tab-neutral" class="pj-tab-content d-none">
+                <div id="neutral-list"></div>
+              </div>
+
+              <div id="tab-potenciales" class="pj-tab-content d-none">
+                <div id="potenciales-list">
+
+                  <div id="skill-map">
+                    <!-- n1 → n2 -->
+                    <div class="connector" style="
+  top: 515px;
+  left: 145px;
+  width: 140.36px;
+  transform: rotate(4.08deg);
+"></div>
+
+                    <!-- n2 → n4 -->
+                    <div class="connector" style="
+  top: 525px;
+  left: 285px;
+  width: 140.36px;
+  transform: rotate(-94.08deg);
+"></div>
+
+                    <!-- n3 → n4 -->
+                    <div class="connector" style="
+  top: 385px;
+  left: 425px;
+  width: 150px;
+  transform: rotate(180deg);
+"></div>
+
+                    <!-- n4 → n5 -->
+                    <div class="connector" style="
+  top: 385px;
+  left: 275px;
+  width: 140.36px;
+  transform: rotate(-94.08deg);
+"></div>
+
+                    <!-- n5 → n6 -->
+                    <div class="connector" style="
+  top: 245px;
+  left: 265px;
+  width: 140.36px;
+  transform: rotate(-4.08deg);
+"></div>
+
+                    <!-- n6 → n7 -->
+                    <div class="connector" style="
+  top: 235px;
+  left: 405px;
+  width: 140.36px;
+  transform: rotate(-4.08deg);
+"></div>
+
+                    <!-- n6 → n8 -->
+                    <div class="connector" style="
+  top: 235px;
+  left: 405px;
+  width: 151.33px;
+  transform: rotate(-97.59deg);
+"></div>
+
+                    <!-- n7 → n9 -->
+                    <div class="connector" style="
+  top: 225px;
+  left: 545px;
+  width: 140.36px;
+  transform: rotate(-85.91deg);
+"></div>
+                    <!-- mejora general n1-->
+                    <div class="node" style="top: 480px; left: 110px;" data-pid="1" data-tooltip="...">
+                      <div class="node-icon">
+                        <img src="/chaos/img/icons/potencial10.png">
+                      </div>
+                      <!--<span class="node-level">1/5</span>-->
+                    </div>
+
+                    <!-- mejora basicos 1 n2 -->
+                    <div class="node" style="top: 490px; left: 250px;" data-pid="2" data-tooltip="...">
+                      <div class="node-icon">
+                        <img src="/chaos/img/icons/potencial10.png">
+                      </div>
+                      <!--<span class="node-level">1/5</span>-->
+                    </div>
+
+                    <!-- mejora general 2 n3-->
+                    <div class="node" style="top: 350px; left: 390px;" data-pid="4" data-tooltip="...">
+                      <div class="node-icon">
+                        <img src="/chaos/img/icons/potencial10.png">
+                      </div>
+                      <!--<span class="node-level">1/5</span>-->
+                    </div>
+
+                    <!-- mejora neutral n4-->
+                    <div class="node" style="top: 350px; left: 240px;" data-pid="3" data-tooltip="...">
+                      <div class="node-icon">
+                        <img src="/chaos/img/icons/potencial10.png">
+                      </div>
+                      <!--<span class="node-level">1/5</span>-->
+                    </div>
+
+                    <!-- mejora unique 1 n5-->
+                    <div class="node" style="top: 210px; left: 230px;" data-pid="5" data-tooltip="...">
+                      <div class="node-icon">
+                        <img src="/chaos/img/icons/potencial10.png">
+                      </div>
+                      <!--<span class="node-level">1/5</span>-->
+                    </div>
+
+                    <!-- mejora prob critico n6-->
+                    <div class="node" style="top: 200px; left: 370px;" data-pid="6" data-tooltip="...">
+                      <div class="node-icon">
+                        <img src="/chaos/img/icons/potencial10.png">
+                      </div>
+                      <!--<span class="node-level">1/5</span>-->
+                    </div>
+
+
+                    <!-- mejora daño critico n7-->
+                    <div class="node" style="top: 190px; left: 510px;" data-pid="7" data-tooltip="...">
+                      <div class="node-icon">
+                        <img src="/chaos/img/icons/potencial10.png">
+                      </div>
+                      <!--<span class="node-level">1/5</span>-->
+                    </div>
+
+
+                    <!-- mejora basicos 2 n8-->
+                    <div class="node" style="top: 50px; left: 350px;" data-pid="8" data-tooltip="...">
+                      <div class="node-icon">
+                        <img src="/chaos/img/icons/potencial10.png">
+                      </div>
+                      <!--<span class="node-level">4/5</span>-->
+                    </div>
+
+                    <!-- mejora unique 2 n9-->
+                    <div class="node" style="top: 50px; left: 520px;" data-pid="9" data-tooltip="...">
+                      <div class="node-icon">
+                        <img src="/chaos/img/icons/potencial10.png">
+                      </div>
+                      <!--<span class="node-level">4/5</span>-->
+                    </div>
+
+                  </div>
+
+
+
+                </div>
+              </div>
+
+              <div id="tab-fragmentos" class="pj-tab-content d-none">
+                <div id="fragmentos-list"></div>
+              </div>
+
+              <div id="tab-builds" class="pj-tab-content d-none">
+                <div id="builds-list"></div>
+              </div>
+            </div>
+          </div>
+        </main>
+      </div>
+    </div>
+  </div>
+
+
+  <div id="footer"></div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+    crossorigin="anonymous"></script>
+  <script src="/js/general.js"></script>
+  <script src="character.js"></script>
+
+</body>
+
+</html>

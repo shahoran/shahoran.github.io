@@ -1,0 +1,16 @@
+{
+    "f1": {
+        "id": "f1",
+        "name": "Judgment's Flames Set",
+        "effect": "+50% Damage Amount to Instinct Cards used against Ravaged targets.",
+        "img": "judgments_flames.png",
+        "pieces": 4
+    },
+    "f2": {
+        "id": "f2",
+        "name": "Orb of Inhibition Set",
+        "effect": "When Hitting 2 times with 1 Attack Card, +10% Damage Amount to Void Cards for 1 turn(2 times per turn).",
+        "img": "orb_of_inhibition.png",
+        "pieces": 4
+    }
+}

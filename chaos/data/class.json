@@ -1,0 +1,32 @@
+{
+  "striker": {
+    "id": 1,
+    "name": "Striker",
+    "icon":"striker.png "
+  },
+  "vanguard": {
+    "id": 2,
+    "name": "Vanguard",
+    "icon":"vanguard.png"
+  },
+  "ranger": {
+    "id": 3,
+    "name": "Ranger",
+    "icon":"ranger.png"
+  },
+  "hunter": {
+    "id": 4,
+    "name": "Hunter",
+    "icon":"hunter.png"
+  },
+  "psionic": {
+    "id": 5,
+    "name": "Psionic",
+    "icon":"psionic.png"
+  },
+  "controller": {
+    "id": 6,
+    "name": "Controller",
+    "icon":"controller.png"
+  }
+}
