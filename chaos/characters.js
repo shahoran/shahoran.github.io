@@ -3,6 +3,14 @@ const IMAGES_PATH = '/chaos/img/pjsbanner/';   // ajusta según tu estructura
 const DETAIL_PAGE = '/chaos/character.html';    // pagina de detalle que recibirá ?id=ID
 const JSON_URL = '/chaos/data/characters.json'; // o '/characters.json' según donde lo pongas
 
+function getDailyCacheKey() {
+    const today = new Date();
+    return today.toISOString().slice(0, 10); // "2025-12-07"
+}
+function getDailyURL(path) {
+    return `${path}?v=${getDailyCacheKey()}`;
+}
+
 $(async function () {
 
   const PATH_CHARACTERS = getDailyURL("/chaos/data/characters.json");

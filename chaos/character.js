@@ -1,4 +1,16 @@
 $(document).ready(async function () {
+
+function getDailyCacheKey() {
+    const today = new Date();
+    return today.toISOString().slice(0, 10); // "2025-12-07"
+}
+function getDailyURL(path) {
+    return `${path}?v=${getDailyCacheKey()}`;
+}
+
+
+
+
     // --- Obtener ID desde la URL (igual que ya tenías) ---
     const params = new URLSearchParams(window.location.search);
     const pjId = params.get("id");
