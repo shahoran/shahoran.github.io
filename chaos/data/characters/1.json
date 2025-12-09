@@ -156,21 +156,27 @@
         "9":{
             "name": "Unique Stat Upgrade",
             "description": "+10% to Haru's Anchor Shot Damage. If Haru's Attack is greater than 1000, an additional +10% to that value.",
-            "priority": 0
+            "priority": 2
         }
     },
     "fragments": [
         {
-            "name": "set justice",
+            "name": "haru_set_1",
             "sets": [
-                "f1",
-                "f2"
+                "f5",
+                "f14"
+            ],
+            "sub":[
+                "f10",
+                "f4"
             ]
         },
         {
-            "name": "otro set",
+            "name": "haru_set_2",
             "sets": [
-                "f1"
+                "f14",
+                "f10",
+                "f12"
             ]
         }
     ],

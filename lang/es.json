@@ -33,6 +33,14 @@
     "lowpriority": "Baja Prioridad",
     "opcional": "Opcional",
     "highpriority":"Alta Prioridad",
+    "setprincipal":"Set Principal",
+    "alternative":"Alternativas",
+
+
+
+
+    "haru_set_1":"Aumenta 20% prob. critico a muchas cartas de haru.",
+    "haru_set_2":"Triple set, Opcion general.",
 
 
     "footer_follow": "Sígueme en mis redes:"

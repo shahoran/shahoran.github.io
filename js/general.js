@@ -8,11 +8,11 @@ function getDailyCacheKey() {
 function getDailyURL(path) {
     return `${path}?v=${getDailyCacheKey()}`;
 }
-let random=getDailyCacheKey();
+let random = getDailyCacheKey();
 // Cargar archivo JSON del idioma
 function loadLanguage(lang, forceReload = false) {
-    if(forceReload){
-        random=Math.floor(Math.random() * 10000);
+    if (forceReload) {
+        random = Math.floor(Math.random() * 10000);
     }
     const url =
         `/lang/${lang}.json?v=${random}`;
@@ -29,10 +29,14 @@ function loadLanguage(lang, forceReload = false) {
 }
 
 function t(key) {
-    if(translations[key]){
+    console.log(key);
+    console.log(translations[key]);
+    if (translations[key]) {
         return translations[key]
-    }else{
+    } else {
         loadLanguage(currentLang, true);
+        console.log("recargando: "+key);
+        console.log("y el recargado muestra:"+ translations[key]);
         return translations[key]
     }
 }
@@ -76,7 +80,9 @@ $(document).ready(function () {
         $("#languageSelector").val(savedLang);
 
         $(document).on("change", "#languageSelector", function () {
-            loadLanguage($(this).val());
+            const lang = $(this).val();
+            localStorage.setItem("language", lang);
+            location.reload(); // Recargar para aplicar
         });
 
         loadLanguage(savedLang);

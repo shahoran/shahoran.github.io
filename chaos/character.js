@@ -1,12 +1,12 @@
 $(document).ready(async function () {
 
-function getDailyCacheKey() {
-    const today = new Date();
-    return today.toISOString().slice(0, 10); // "2025-12-07"
-}
-function getDailyURL(path) {
-    return `${path}?v=${getDailyCacheKey()}`;
-}
+    function getDailyCacheKey() {
+        const today = new Date();
+        return today.toISOString().slice(0, 10); // "2025-12-07"
+    }
+    function getDailyURL(path) {
+        return `${path}?v=${getDailyCacheKey()}`;
+    }
 
 
 
@@ -283,7 +283,7 @@ function getDailyURL(path) {
 
     // Ejemplo renderizador fragmentos
     // ----------------------------------------------------------------
-    function renderFragments(data, fragmentsJson) {
+    async function renderFragments(data, fragmentsJson) {
         const $container = $("#fragmentos-list").empty();
 
         const fragmentGroups = data.fragments || [];
@@ -294,49 +294,80 @@ function getDailyURL(path) {
         }
 
         fragmentGroups.forEach(group => {
-
-            // Título de la combinación
-            const $title = $(`
-            <div class="fw-bold text-capitalize">
-                ${group.name}
+            // Título del set
+            $container.append(`
+            <div class="fw-bold text-capitalize mt-3 mb-1" data-i18n="${group.name}">
+                ${t(group.name)}
             </div>
         `);
 
-            $container.append($title);
+            // Contenedor de la fila principal + alternativas
+            const $wrapper = $(`<div class="d-flex fragment-row gap-3"></div>`);
 
-            // Contenedor de la fila de fragmentos
-            const $row = $(`
-            <div class="fragments-card mb-1 p-3 d-flex flex-wrap gap-2"></div>
-        `);
+            // --- PRIMARIO ---
+            const $main = $(`<div class="flex-grow-1"></div>`);
+            const $mainRow = $(`<div class="fragments-card mb-1 p-3 d-flex flex-wrap gap-2"></div>`);
 
             group.sets.forEach(fId => {
                 const fragment = fragmentsJson[fId];
                 if (!fragment) return;
 
-                const $frag = $(`
+                $mainRow.append(`
                 <div class="fragment-option text-center"
-                     data-bs-toggle="tooltip"
-                     data-bs-placement="bottom"
-                     title="${fragment.effect}">
-
+                    data-bs-toggle="tooltip"
+                    data-bs-placement="bottom"
+                    title="${fragment.effect}">
+                    
                     <img src="/chaos/img/fragments/${fragment.img}" class="fragment-img">
-
                     <div class="fragment-name mt-1">${fragment.name}</div>
                     <div class="fragment-sub small text-muted">${fragment.pieces} <span data-i18n='piezas'>${t("piezas")}</span></div>
                 </div>
             `);
-
-                $row.append($frag);
             });
 
-            $container.append($row);
+            $main.append(`<div class="small fw-bold text-primary mb-1" data-i18n="setprincipal">${t("setprincipal")}</div>`);
+            $main.append($mainRow);
+            $wrapper.append($main);
+
+            // --- SECUNDARIOS / SUB ---
+            if (group.sub && group.sub.length) {
+                const $sub = $(`<div class="sub-column"></div>`);
+                const $subRow = $(`<div class="fragments-card mb-1 p-3 d-flex flex-wrap gap-2"></div>`);
+
+                group.sub.forEach(fId => {
+                    const fragment = fragmentsJson[fId];
+                    if (!fragment) return;
+
+                    $subRow.append(`
+                    <div class="fragment-option text-center optional-fragment"
+                         data-bs-toggle="tooltip"
+                         data-bs-placement="bottom"
+                         title="${fragment.effect}">
+
+                        <img src="/chaos/img/fragments/${fragment.img}" class="fragment-img">
+                        <div class="fragment-name mt-1">${fragment.name}</div>
+                        <div class="fragment-sub small text-muted">${fragment.pieces} <span data-i18n='piezas'>${t("piezas")}</span></div>
+                    </div>
+                `);
+                });
+
+                $sub.append(`
+                <div class="small fw-bold text-warning mb-1" data-i18n="alternative">
+                    ${t("alternative")}
+                </div>
+            `);
+                $sub.append($subRow);
+
+                $wrapper.append($sub);
+            }
+
+            $container.append($wrapper);
         });
 
-        // Inicializar tooltips Bootstrap
-        const tooltipTriggerList = [].slice.call(
-            document.querySelectorAll('[data-bs-toggle="tooltip"]')
-        );
-        tooltipTriggerList.map(el => new bootstrap.Tooltip(el));
+        // inicializar tooltips
+        document
+            .querySelectorAll('[data-bs-toggle="tooltip"]')
+            .forEach(el => new bootstrap.Tooltip(el));
     }
 
 
@@ -352,14 +383,14 @@ function getDailyURL(path) {
             const pid = $(this).data("pid");
             const pot = potentials[pid];
             if (!pot) return;
-            let recomendado="";
-            if(pot.priority===0){
+            let recomendado = "";
+            if (pot.priority === 0) {
                 console.log(t("lowpriority"));
-                recomendado='<b data-i18n="lowpriority">'+t("lowpriority")+"</b>"
-            }else if(pot.priority===1){
-                recomendado='<b data-i18n="opcional">'+t("opcional")+"</b>"
-            }else if(pot.priority===2){
-                recomendado='<b data-i18n="highpriority">'+t("highpriority")+"</b>";
+                recomendado = '<b data-i18n="lowpriority">' + t("lowpriority") + "</b>"
+            } else if (pot.priority === 1) {
+                recomendado = '<b data-i18n="opcional">' + t("opcional") + "</b>"
+            } else if (pot.priority === 2) {
+                recomendado = '<b data-i18n="highpriority">' + t("highpriority") + "</b>";
             }
             const tooltipHtml = `
             ${recomendado}<br>

@@ -237,6 +237,10 @@
 
 
     /*----------------FRAGMENTOS---------------- */
+    /* ============================
+   ESTILO ORIGINAL
+   ============================ */
+
     .fragment-option {
       width: 80px;
     }
@@ -256,6 +260,59 @@
     .fragment-sub {
       font-size: 0.7rem;
     }
+
+
+
+    /* ============================
+   LAYOUT CORREGIDO
+   ============================ */
+
+    /* Fila contenedora */
+    .fragment-row {
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+      /* separación moderada */
+      width: auto;
+      /* evita expandirse */
+      max-width: fit-content;
+      /* se ajusta al contenido */
+      flex-wrap: nowrap;
+      /* evita que salte de línea */
+    }
+
+
+    /* Columna principal y secundaria: NO crecen */
+    .fragment-row>div {
+      flex: 0 0 auto !important;
+      /* <-- evita crecimiento */
+    }
+
+
+    /* Sub-columna (secundarios) */
+    .sub-column {
+      margin-left: 16px;
+      padding-left: 12px;
+      border-left: 2px dashed #ccc;
+      flex: 0 0 auto;
+      /* tamaño natural */
+      max-width: fit-content;
+      /* no se expande */
+    }
+
+
+    /* Opcionales: leve variación visual */
+    .optional-fragment {
+      opacity: 0.9;
+      transform: scale(0.97);
+      transition: 0.15s ease;
+    }
+
+    .optional-fragment:hover {
+      opacity: 1;
+      transform: scale(1);
+    }
+
 
 
 

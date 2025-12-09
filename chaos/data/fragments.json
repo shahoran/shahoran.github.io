@@ -12,5 +12,89 @@
         "effect": "When Hitting 2 times with 1 Attack Card, +10% Damage Amount to Void Cards for 1 turn(2 times per turn).",
         "img": "orb_of_inhibition.png",
         "pieces": 4
+    },
+    "f3":{
+        "id": "f3",
+        "name": "Conqueror's Aspect Set",
+        "effect": "+35% Critical Damage of 1-cost cards",
+        "img": "conquerors_aspect.png",
+        "pieces": 4
+    },
+    "f4":{
+        "id": "f4",
+        "name": "Healer's Journey Set",
+        "effect": "+12% Max HP",
+        "img": "healersjourney.png",
+        "pieces": 2
+    },
+    "f5":{
+        "id": "f5",
+        "name": "Line of Justice Set",
+        "effect": "+20% Critical Chance of cards that cost 2 or more",
+        "img": "lineofjustice.png",
+        "pieces": 4
+    },
+    "f6":{
+        "id": "f6",
+        "name": "Tetra's Authority Set",
+        "effect": "+12% Defense",
+        "img": "tetrasauthority.png",
+        "pieces": 2
+    },
+    "f7":{
+        "id": "f7",
+        "name": "Bullet of Order Set",
+        "effect": "When an Attack Card is used, increase Damage Amount of Order Cards by 10% for 1 turn (2 times per turn)",
+        "img": "bulletoforder.png",
+        "pieces": 4
+    },
+    "f8":{
+        "id": "f8",
+        "name": "Cursed Corpse Set",
+        "effect": "Increase damage dealt to targets inflicted with Agony by 10%",
+        "img": "cursedcorpse.png",
+        "pieces": 2
+    },
+    "f9":{
+        "id": "f9",
+        "name": "Offering of the Void Set",
+        "effect": "When a card is Exhausted, increase Damage Amount of Void Cards by 20% for 1 turn(1 times per turn)",
+        "img": "offeringofthevoid.png",
+        "pieces": 4
+    },
+    "f10":{
+        "id": "f10",
+        "name": "Black Wing Set",
+        "effect": "+12% Attack",
+        "img": "blackwing.png",
+        "pieces": 2
+    },
+    "f11":{
+        "id": "f11",
+        "name": "Instinctual Growth Set",
+        "effect": "When there are 4 or more Cards in hand, increase Damage Amount of Instinct Cards by 20%",
+        "img": "instinctualgrowth.png",
+        "pieces": 4
+    },
+    "f12":{
+        "id": "f12",
+        "name": "Seth's Scarab Set",
+        "effect": "Increase the damage, Shield, and Healing of Basic Cards by 20%",
+        "img": "sethsscarab.png",
+        "pieces": 2
+    },
+    "f13":{
+        "id": "f13",
+        "name": "Spark of Passion Set",
+        "effect": "When an Upgrade Card is Used, increase Damage Amount of the next 5 Passion Cards used by 20%",
+        "img": "sparkofpassion.png",
+        "pieces": 4
+    },
+    "f14":{
+        "id": "f14",
+        "name": "Executioner's Tool Set",
+        "effect": "+25% Critical Damage",
+        "img": "executionerstool.png",
+        "pieces": 2
     }
 }
