@@ -26,7 +26,7 @@
     "bestneutrales": "Mejores Neutrales",
     "potenciales": "Potenciales",
     "fragmentos": "Fragmentos",
-    "builds": "Builds",
+    "equipos": "Equipos",
     "recomendada": "Recomendada",
     "copias": "copias",
     "piezas": "piezas",
@@ -35,12 +35,27 @@
     "highpriority":"Alta Prioridad",
     "setprincipal":"Set Principal",
     "alternative":"Alternativas",
+    "team_recom_best_epi":"Estas son las mejores epifanías recomendadas para este equipo",
+
+
+    
+    "haru_epi_1":"Aumenta daño de Anchor Shot",
+    "haru_epi_2":"Aumenta número de impactos de Anchor Shot y no necesita cargar",
+    "haru_epi_3":"Aumenta el numero de usos de Anchor Pointer",
 
 
 
 
     "haru_set_1":"Aumenta 20% prob. critico a muchas cartas de haru.",
     "haru_set_2":"Triple set, Opcion general.",
+
+    
+    "haru_team_1": "Haru Hipercarry",
+
+
+
+
+
 
 
     "footer_follow": "Sígueme en mis redes:"

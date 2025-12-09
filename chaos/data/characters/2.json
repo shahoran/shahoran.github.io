@@ -1,11 +1,11 @@
 {
-    "id": 1,
-    "name": "Haru",
-    "img": "haru.png",
-    "class": "striker",
-    "element": "justice",
-    "faction": "terrascion",
-    "subfaction": "SS Edenity",
+    "id": 2,
+    "name": "Khalipe",
+    "img": "khalipe.png",
+    "class": "vanguard",
+    "element": "instinct",
+    "faction": "stellafamilia",
+    "subfaction": "White Altair",
     "rarity": 5,
     "cards": [
         {
@@ -73,13 +73,13 @@
                     "id": "epi1",
                     "best": true,
                     "img": "haru_epi_anchorshotdano.png",
-                    "notes": "haru_epi_1"
+                    "notes": "Aumenta daño de Anchor Shot"
                 },
                 {
                     "id": "epi2",
                     "best": true,
                     "img": "haru_epi_anchorshothit.png",
-                    "notes": "haru_epi_2"
+                    "notes": "Aumenta número de impactos de Anchor Shot"
                 }
             ]
         },
@@ -90,7 +90,7 @@
                     "id": "epi3",
                     "best": true,
                     "img": "haru_epi_anchorpointerretrieve.png",
-                    "notes": "haru_epi_3"
+                    "notes": "Aumenta el numero de usos de Anchor Pointer"
                 }
             ]
         }
@@ -102,7 +102,8 @@
                 {
                     "epiphanyId": "epi3",
                     "copies": 2,
-                    "best": true
+                    "best": true,
+                    "reason": "Más usos de Anchor Pointer."
                 }
             ]
         }
@@ -179,15 +180,16 @@
             ]
         }
     ],
-    "teams":[
+    "builds": [
         {
-            "name":"haru_team_1",
-            "pjs":[2,2],
-            "bestepiphanies":[
-                {"pj":0,"card":"c4","epi":"epi2"},
-                {"pj":0,"card":"c5","epi":"epi3"},
-                {"pj":2,"card":"c4","epi":"epi2"}
-            ]
+            "name": "DPS Puro",
+            "role": "DPS",
+            "playstyle": "Burst",
+            "recommended_team": [
+                "SoporteA",
+                "BufferB"
+            ],
+            "description": "Maxear daño, usar epifanía X"
         }
     ]
 }

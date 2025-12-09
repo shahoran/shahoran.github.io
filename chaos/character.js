@@ -65,6 +65,7 @@ $(document).ready(async function () {
         if (target === "tab-neutral") renderNeutrals(pjData, neutralsJson);
         if (target === "tab-fragmentos") renderFragments(pjData, FragmentsJson);
         if (target === "tab-potenciales") renderPotencial(pjData);
+        if (target === "tab-equipos") renderTeams(pjData);
         // etc: otros renderizadores
     });
 
@@ -126,7 +127,7 @@ $(document).ready(async function () {
             const cardInfo = cards.find(c => c.id === epi.cardId);
 
             const $card = $(`
-            <div class="epifania-card mb-4 p-3 d-flex align-items-start gap-4">
+            <div class="copy-block mb-4 p-3 d-flex align-items-start gap-4">
 
                 <!-- IZQUIERDA: CARTA BASE + NOMBRE -->
                 <div class="epifania-base text-center">
@@ -146,19 +147,43 @@ $(document).ready(async function () {
 
             epi.options.forEach(op => {
                 const $op = $(`
-                <div class="epifania-option ${op.best ? "epifania-best" : ""}">
-                    <img src="/chaos/img/epiphanies/${op.img}" class="epifania-epicard-img">
-                    <div class="epifania-name">
-                        ${op.best ? '<span class="badge bg-danger ms-1" data-i18n="recomendada">' + t("recomendada") + '</span>' : ''}
-                    </div>
-                </div>
-            `);
+        <div class="epifania-option ${op.best ? "epifania-best" : ""}"
+            data-bs-toggle="tooltip"
+            data-bs-html="true"
+            data-bs-placement="bottom"
+            title="
+                <b data-i18n='${op.notes}'>${t(op.notes)}</b><br>
+            ">
+            <img src="/chaos/img/epiphanies/${op.img}" class="epifania-epicard-img">
+
+            <div class="epifania-name">
+                ${op.best
+                        ? `<span class="badge bg-danger ms-1" data-i18n="recomendada">${t("recomendada")}</span>`
+                        : ''
+                    }
+            </div>
+        </div>
+    `);
 
                 $optRow.append($op);
             });
 
             $container.append($card);
         });
+        setTimeout(() => {
+            document.querySelectorAll('[data-bs-toggle="tooltip"]').forEach(el => {
+
+                // elimina si ya existía para evitar duplicados
+                const existing = bootstrap.Tooltip.getInstance(el);
+                if (existing) existing.dispose();
+
+                new bootstrap.Tooltip(el, {
+                    placement: 'bottom',
+                    fallbackPlacements: [],  // fija el tooltip abajo
+                    boundary: 'viewport'     // evita que se desubique
+                });
+            });
+        }, 100);
     }
 
 
@@ -235,14 +260,35 @@ $(document).ready(async function () {
                     <span class="badge bg-primary ms-1">${op.copies + ' <span data-i18n="copias">' + t("copias") + "</span></span>"} ${op.best ? '<span class="badge bg-danger ms-1" data-i18n="recomendada">' + t("recomendada") + '</span>' : ""}
                 </div>
             `);
-
-                const $stackContainer = $("<div>").append($label).append($stack);
+                const $stackContainer = $(`
+                    <div class="copy-card-container"
+                    data-bs-toggle="tooltip"
+                    data-bs-html="true"
+                    data-bs-placement="bottom"
+                    title="<b>${t(epiInfo.notes)}</b>">
+                    </div>
+                    `);
+                $stackContainer.append($label).append($stack);
 
                 $grid.append($stackContainer);
             });
 
             $container.append($block);
         });
+        setTimeout(() => {
+            document.querySelectorAll('[data-bs-toggle="tooltip"]').forEach(el => {
+
+                // elimina cualquier tooltip previo
+                const existing = bootstrap.Tooltip.getInstance(el);
+                if (existing) existing.dispose();
+
+                new bootstrap.Tooltip(el, {
+                    placement: 'bottom',
+                    fallbackPlacements: [],   // evita que Bootstrap lo mueva
+                    boundary: 'viewport'      // evita que un contenedor lo recorte
+                });
+            });
+        }, 50);
     }
 
 
@@ -294,14 +340,18 @@ $(document).ready(async function () {
         }
 
         fragmentGroups.forEach(group => {
+            
+            // Contenedor de la fila principal + alternativas
+            const $contenedorset =$(`<div class="copy-block" style="width:100%"></div>`)
+
             // Título del set
-            $container.append(`
-            <div class="fw-bold text-capitalize mt-3 mb-1" data-i18n="${group.name}">
+            $contenedorset.append(`
+            <div class="fw-bold text-capitalize mb-1" data-i18n="${group.name}">
                 ${t(group.name)}
             </div>
         `);
 
-            // Contenedor de la fila principal + alternativas
+
             const $wrapper = $(`<div class="d-flex fragment-row gap-3"></div>`);
 
             // --- PRIMARIO ---
@@ -361,13 +411,26 @@ $(document).ready(async function () {
                 $wrapper.append($sub);
             }
 
-            $container.append($wrapper);
+            $contenedorset.append($wrapper);
+            $container.append($contenedorset);
         });
 
         // inicializar tooltips
-        document
-            .querySelectorAll('[data-bs-toggle="tooltip"]')
-            .forEach(el => new bootstrap.Tooltip(el));
+        setTimeout(() => {
+            document.querySelectorAll('[data-bs-toggle="tooltip"]').forEach(el => {
+
+                // Elimina un tooltip anterior si existía
+                const existing = bootstrap.Tooltip.getInstance(el);
+                if (existing) existing.dispose();
+
+                // Crea uno nuevo, fijo hacia abajo
+                new bootstrap.Tooltip(el, {
+                    placement: 'bottom',
+                    fallbackPlacements: [],
+                    boundary: 'viewport'
+                });
+            });
+        }, 100);
     }
 
 
@@ -447,42 +510,146 @@ $(document).ready(async function () {
 
 
 
-    function renderBuilds(data) {
-        const $b = $("#builds-list").empty();
-        if (!data.builds || data.builds.length === 0) {
-            $b.append(`<p class="text-muted">No hay builds configuradas.</p>`);
-            return;
+    //-- TEAMS ---
+    // ----------------------------------------------------------------
+    // Ejemplo renderizador TEAMS
+    async function renderTeams(data) {
+        console.log(data);
+        const $container = $("#teams-list").empty();
+        const basePjData = data; // personaje actual
+
+        const pjCache = {}; // cache para evitar requests repetidas
+
+        async function getPjData(id) {
+            if (id === 0) return basePjData;
+            if (pjCache[id]) return pjCache[id];
+
+            const json = await $.getJSON(`/chaos/data/characters/${id}.json`);
+            pjCache[id] = json;
+            return json;
         }
-        data.builds.forEach((build, i) => {
-            const card = $(`
-        <div class="card mb-2">
-          <div class="card-body">
-            <div class="d-flex justify-content-between align-items-start">
-              <div>
-                <h5 class="mb-1">${build.name || 'Build ' + (i + 1)}</h5>
-                <div class="small text-muted">${build.role || ''} • ${build.playstyle || ''}</div>
-              </div>
-              <div>
-                <button class="btn btn-sm btn-outline-primary btn-copy-build" data-index="${i}">Copiar recomendación</button>
-              </div>
+
+        for (const team of data.teams) {
+
+
+            const $teamBox = $(`
+<div class="copy-block mb-4 p-3 border rounded">
+    <h4 class="fw-bold mb-3" data-i18n="${team.name}">${t(team.name)}</h4>
+
+    <div class="d-flex gap-4">
+
+        <!-- IZQUIERDA -->
+        <div class="team-pjs d-flex flex-column gap-2"></div>
+
+        <!-- DERECHA -->
+        <div class="flex-grow-1">
+
+            <!-- TÍTULO + AYUDA -->
+            <div class="d-flex align-items-center gap-2 mb-2">
+                <h6 class="m-0 text-warning" data-i18n="bestepifanias">${t("bestepifanias")}</h6>
+                <i class="bi bi-question-circle-fill text-white epi-help-icon"
+                    style="font-size: 1.1rem; cursor: pointer; text-shadow: 0 0 4px rgba(0,0,0,0.6);"
+                    data-bs-toggle="tooltip"
+                    data-bs-placement="bottom"
+                    data-bs-html="true"
+                    title="
+                        <b data-i18n='team_recom_best_epi'>
+                            ${t("team_recom_best_epi")}
+                        </b>
+                    ">
+                </i>
             </div>
-            <p class="mt-2 mb-1">${build.description || ''}</p>
-            <div class="small text-muted">Equipo recomendado: ${(build.recommended_team || []).join(", ")}</div>
-          </div>
+
+            <!-- CONTENEDOR DE EPIFANÍAS -->
+            <div class="team-epiphanies d-flex flex-wrap gap-3 align-content-start"></div>
+
         </div>
-      `);
-            $b.append(card);
-        });
+    </div>
+</div>
+`);
 
-        // Ejemplo acción copiar build (genera texto para copiar)
-        $(".btn-copy-build").on("click", function () {
-            const idx = $(this).data("index");
-            const b = data.builds[idx];
-            const txt = `Build: ${b.name}\nRole: ${b.role}\nRecomendado: ${(b.recommended_team || []).join(", ")}\nNotas: ${b.notes || ''}`;
-            navigator.clipboard?.writeText(txt);
-            $(this).text("Copiado").prop("disabled", true);
-            setTimeout(() => $(this).text("Copiar recomendación").prop("disabled", false), 1200);
-        });
+
+
+            const $pjCol = $teamBox.find(".team-pjs");
+            const $epiContainer = $teamBox.find(".team-epiphanies");
+
+            // ---------------------------------------------------
+            // 1. Mostrar personajes → vertical
+            // ---------------------------------------------------
+
+            // PJ 0 (personaje actual)
+            $pjCol.append(`
+    <img class="team-pj-icon"
+         src="/chaos/img/pjs/${basePjData.img}"
+         title="<b>${basePjData.name}</b>"
+         data-bs-toggle="tooltip"
+         data-bs-html="true">
+`);
+
+
+            // Otros personajes
+            for (const pjId of team.pjs) {
+                const pjData = await getPjData(pjId);
+
+                $pjCol.append(`
+        <img class="team-pj-icon"
+             src="/chaos/img/pjs/${pjData.img}"
+             title="<b>${pjData.name}</b>"
+             data-bs-toggle="tooltip"
+             data-bs-html="true">
+    `);
+            }
+
+            // ---------------------------------------------------
+            // 2. Epifanías optimizadas (sin recargar JSON)
+            // ---------------------------------------------------
+
+            for (const item of team.bestepiphanies) {
+
+                const pjData = await getPjData(item.pj);
+
+                // Buscar carta
+                const card = pjData.cards.find(c => c.id === item.card);
+                if (!card) continue;
+
+                // Buscar epifanía
+                const epiGroup = pjData.epiphanies.find(e => e.cardId === item.card);
+                if (!epiGroup) continue;
+
+                const epi = epiGroup.options.find(e => e.id === item.epi);
+                if (!epi) continue;
+
+                // Render solo la epifanía
+                $epiContainer.append(`
+    <div class="team-epi-option text-center">
+        <img 
+            src="/chaos/img/epiphanies/${epi.img}" 
+            class="team-epi-img"
+            title='<b>${pjData.name}</b><br><p data-i18n="${epi.notes}">${t(epi.notes)}</p>'
+            data-bs-toggle="tooltip"
+            data-bs-html="true"
+            data-bs-theme="dark">
+    </div>
+`);
+            }
+
+            $container.append($teamBox);
+
+            setTimeout(() => {
+                document.querySelectorAll('[data-bs-toggle="tooltip"]').forEach(el => {
+
+                    // Elimina un tooltip anterior si existía
+                    const existing = bootstrap.Tooltip.getInstance(el);
+                    if (existing) existing.dispose();
+
+                    // Crea uno nuevo, fijo hacia abajo
+                    new bootstrap.Tooltip(el, {
+                        placement: 'bottom',
+                        fallbackPlacements: [],
+                        boundary: 'viewport'
+                    });
+                });
+            }, 100);
+        }
     }
-
 });

@@ -26,7 +26,7 @@
     "bestneutrales": "Best Neutrals",
     "potenciales": "Potentials",
     "fragmentos": "Fragments",
-    "builds": "Builds",
+    "equipos": "Equipos",
     "recomendada": "Recommended",
     "copias": "copies",
     "piezas": "pieces",
@@ -35,12 +35,24 @@
     "highpriority":"High priority",
     "setprincipal":"Principal Set",
     "alternative":"Alternatives",
+    "team_recom_best_epi":"These are the best epiphanies recommended for this team",
+
+
+
+    "haru_epi_1": "Increases Anchor Shot damage",
+    "haru_epi_2": "Increases the number of Anchor Shot hits and removes the charge requirement",
+    "haru_epi_3": "Increases the number of uses of Anchor Pointer",
 
 
 
     
-    "haru_set_1": "Boosts Haru’s critical chance by 20% on many of her cards",
+    "haru_set_1": "Boosts Haru's critical chance by 20% on many of her cards",
     "haru_set_2": "Triple set, general-purpose option",
+
+
+    "haru_team_1": "Haru Hipercarry",
+
+
 
 
 
