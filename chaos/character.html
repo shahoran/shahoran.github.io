@@ -66,7 +66,7 @@
     .epifania-card-base {
       width: 100%;
       border-radius: 8px;
-      border: 2px solid #555;
+      border: 2px solid #1a1a1a;
       box-shadow: 0 0 10px rgba(255, 255, 255, 0.15);
     }
 
@@ -89,7 +89,7 @@
     .epifania-option {
       background: #161616;
       border-radius: 12px;
-      width: 150px;
+      width: 130px;
       text-align: center;
       box-shadow: 0 0 12px rgba(0, 0, 0, 0.6);
       transform: scale(1);
@@ -108,8 +108,8 @@
     /* --- IMAGEN DE EPIFANÍA --- */
     .epifania-epicard-img {
       width: 100%;
-      border-radius: 10px;
-      border: 2px solid #666;
+      border-radius: 6px;
+      border: 2px solid #1a1a1a;
       transition: 0.15s ease;
     }
 
@@ -179,7 +179,7 @@
     /* PILA */
     .copy-stack {
       position: relative;
-      width: 180px;
+      width: 160px;
       height: 240px;
     }
 
@@ -190,12 +190,10 @@
 
     .copy-card-container:hover {
       transform: scale(1.06);
-
     }
 
     .copy-stack img {
-      width: 150px;
-      height: 200px;
+      width: 140px;
       border-radius: 6px;
       border: 1px solid #333;
       position: absolute;
@@ -205,6 +203,10 @@
 
     .copy-stack img.copy-duplicate {
       opacity: 0.95;
+    }
+
+    .copy-stack img.copy-duplicate:hover {
+      box-shadow: 0 0 25px rgba(255, 255, 255, 0.3);
     }
 
     /* Mejor epifanía */
@@ -226,7 +228,13 @@
 
     /* ----------------NEUTRALES---------------- */
     .neutral-option {
-      width: 120px;
+      width: 130px;
+      transform: scale(1);
+      transition: 0.15s ease;
+    }
+
+    .neutral-option:hover {
+      transform: scale(1.04);
     }
 
     .neutral-option img {
@@ -436,7 +444,7 @@
 
     .team-epi-img {
       width: 130px;
-      border-radius: 12px;
+      border-radius: 6px;
       transform: scale(1);
       transition: 0.15s ease;
     }
@@ -453,6 +461,18 @@
 
     .epi-help-icon:hover {
       opacity: 1;
+    }
+
+
+
+
+    /*partners-------------------------------------*/
+    .tooltip-partner .tooltip-inner {
+      max-width: 400px !important;
+      text-align: left;
+      /* mejora la lectura */
+      font-size: 0.85rem;
+      line-height: 1.2rem;
     }
   </style>
   <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
@@ -495,12 +515,12 @@
             <div class="card-header d-flex justify-content-between align-items-center flex-wrap gap-2">
               <div id="pj-tabs" class="btn-group" role="group" aria-label="Secciones personaje">
                 <button class="btn btn-outline-info active" data-target="tab-cartas" data-i18n="cartas">Cartas</button>
-                <button class="btn btn-outline-info" data-target="tab-epifanias" data-i18n="bestepifanias">Mejores
-                  epifanías</button>
-                <button class="btn btn-outline-info" data-target="tab-copiar" data-i18n="bestcopias">Mejores
-                  Copias</button>
-                <button class="btn btn-outline-info" data-target="tab-neutral" data-i18n="bestneutrales">Mejores
-                  Neutrales</button>
+                <button class="btn btn-outline-info" data-target="tab-epifanias"
+                  data-i18n="bestepifanias">epifanías</button>
+                <button class="btn btn-outline-info" data-target="tab-copiar" data-i18n="bestcopias">Copias</button>
+                <button class="btn btn-outline-info" data-target="tab-neutral" data-i18n="bestneutrales">Neutrales</button>
+                <button class="btn btn-outline-info" data-target="tab-removal" data-i18n="removal">remover</button>
+                <button class="btn btn-outline-info" data-target="tab-partners">Partners</button>
                 <button class="btn btn-outline-info" data-target="tab-potenciales"
                   data-i18n="potenciales">Potenciales</button>
                 <button class="btn btn-outline-info" data-target="tab-fragmentos"
@@ -521,7 +541,7 @@
               <!-- Contenedores de contenido (uno por pestaña) -->
               <div id="tab-cartas" class="pj-tab-content">
                 <!-- Aquí irán las cartas: listado en grid -->
-                <div class="row" id="cartas-list"></div>
+                <div class="row copy-block" id="cartas-list"></div>
               </div>
 
               <div id="tab-epifanias" class="pj-tab-content d-none">
@@ -542,13 +562,22 @@
                 <div id="neutral-list"></div>
               </div>
 
+              <div id="tab-removal" class="pj-tab-content d-none">
+                <div id="removal-list"></div>
+              </div>
+
+              <div id="tab-partners" class="pj-tab-content d-none">
+                <div id="partners-list"></div>
+              </div>
+
+
               <div id="tab-potenciales" class="pj-tab-content d-none">
                 <div id="potenciales-list">
 
-                  <div id="skill-map">
+                  <div id="skill-map" class=" copy-block">
                     <!-- n1 → n2 -->
                     <div class="connector" style="
-  top: 515px;
+  top: 485px;
   left: 145px;
   width: 140.36px;
   transform: rotate(4.08deg);
@@ -556,7 +585,7 @@
 
                     <!-- n2 → n4 -->
                     <div class="connector" style="
-  top: 525px;
+  top: 495px;
   left: 285px;
   width: 140.36px;
   transform: rotate(-94.08deg);
@@ -564,7 +593,7 @@
 
                     <!-- n3 → n4 -->
                     <div class="connector" style="
-  top: 385px;
+  top: 355px;
   left: 425px;
   width: 150px;
   transform: rotate(180deg);
@@ -572,7 +601,7 @@
 
                     <!-- n4 → n5 -->
                     <div class="connector" style="
-  top: 385px;
+  top: 355px;
   left: 275px;
   width: 140.36px;
   transform: rotate(-94.08deg);
@@ -580,7 +609,7 @@
 
                     <!-- n5 → n6 -->
                     <div class="connector" style="
-  top: 245px;
+  top: 215px;
   left: 265px;
   width: 140.36px;
   transform: rotate(-4.08deg);
@@ -588,7 +617,7 @@
 
                     <!-- n6 → n7 -->
                     <div class="connector" style="
-  top: 235px;
+  top: 205px;
   left: 405px;
   width: 140.36px;
   transform: rotate(-4.08deg);
@@ -596,7 +625,7 @@
 
                     <!-- n6 → n8 -->
                     <div class="connector" style="
-  top: 235px;
+  top: 205px;
   left: 405px;
   width: 151.33px;
   transform: rotate(-97.59deg);
@@ -604,88 +633,76 @@
 
                     <!-- n7 → n9 -->
                     <div class="connector" style="
-  top: 225px;
+  top: 195px;
   left: 545px;
   width: 140.36px;
   transform: rotate(-85.91deg);
 "></div>
-                    <!-- mejora general n1-->
-                    <div class="node" style="top: 480px; left: 110px;" data-pid="1" data-tooltip="...">
+
+                    <!-- mejora general n1 -->
+                    <div class="node" style="top: 450px; left: 110px;" data-pid="1" data-tooltip="...">
                       <div class="node-icon">
                         <img src="/chaos/img/icons/potencial10.png">
                       </div>
-                      <!--<span class="node-level">1/5</span>-->
                     </div>
 
                     <!-- mejora basicos 1 n2 -->
-                    <div class="node" style="top: 490px; left: 250px;" data-pid="2" data-tooltip="...">
+                    <div class="node" style="top: 460px; left: 250px;" data-pid="2" data-tooltip="...">
                       <div class="node-icon">
                         <img src="/chaos/img/icons/potencial10.png">
                       </div>
-                      <!--<span class="node-level">1/5</span>-->
                     </div>
 
-                    <!-- mejora general 2 n3-->
-                    <div class="node" style="top: 350px; left: 390px;" data-pid="4" data-tooltip="...">
+                    <!-- mejora general 2 n3 -->
+                    <div class="node" style="top: 320px; left: 390px;" data-pid="4" data-tooltip="...">
                       <div class="node-icon">
                         <img src="/chaos/img/icons/potencial10.png">
                       </div>
-                      <!--<span class="node-level">1/5</span>-->
                     </div>
 
-                    <!-- mejora neutral n4-->
-                    <div class="node" style="top: 350px; left: 240px;" data-pid="3" data-tooltip="...">
+                    <!-- mejora neutral n4 -->
+                    <div class="node" style="top: 320px; left: 240px;" data-pid="3" data-tooltip="...">
                       <div class="node-icon">
                         <img src="/chaos/img/icons/potencial10.png">
                       </div>
-                      <!--<span class="node-level">1/5</span>-->
                     </div>
 
-                    <!-- mejora unique 1 n5-->
-                    <div class="node" style="top: 210px; left: 230px;" data-pid="5" data-tooltip="...">
+                    <!-- mejora unique 1 n5 -->
+                    <div class="node" style="top: 180px; left: 230px;" data-pid="5" data-tooltip="...">
                       <div class="node-icon">
                         <img src="/chaos/img/icons/potencial10.png">
                       </div>
-                      <!--<span class="node-level">1/5</span>-->
                     </div>
 
-                    <!-- mejora prob critico n6-->
-                    <div class="node" style="top: 200px; left: 370px;" data-pid="6" data-tooltip="...">
+                    <!-- mejora prob critico n6 -->
+                    <div class="node" style="top: 170px; left: 370px;" data-pid="6" data-tooltip="...">
                       <div class="node-icon">
                         <img src="/chaos/img/icons/potencial10.png">
                       </div>
-                      <!--<span class="node-level">1/5</span>-->
                     </div>
 
-
-                    <!-- mejora daño critico n7-->
-                    <div class="node" style="top: 190px; left: 510px;" data-pid="7" data-tooltip="...">
+                    <!-- mejora daño critico n7 -->
+                    <div class="node" style="top: 160px; left: 510px;" data-pid="7" data-tooltip="...">
                       <div class="node-icon">
                         <img src="/chaos/img/icons/potencial10.png">
                       </div>
-                      <!--<span class="node-level">1/5</span>-->
                     </div>
 
-
-                    <!-- mejora basicos 2 n8-->
-                    <div class="node" style="top: 50px; left: 350px;" data-pid="8" data-tooltip="...">
+                    <!-- mejora basicos 2 n8 -->
+                    <div class="node" style="top: 20px; left: 350px;" data-pid="8" data-tooltip="...">
                       <div class="node-icon">
                         <img src="/chaos/img/icons/potencial10.png">
                       </div>
-                      <!--<span class="node-level">4/5</span>-->
                     </div>
 
-                    <!-- mejora unique 2 n9-->
-                    <div class="node" style="top: 50px; left: 520px;" data-pid="9" data-tooltip="...">
+                    <!-- mejora unique 2 n9 -->
+                    <div class="node" style="top: 20px; left: 520px;" data-pid="9" data-tooltip="...">
                       <div class="node-icon">
                         <img src="/chaos/img/icons/potencial10.png">
                       </div>
-                      <!--<span class="node-level">4/5</span>-->
                     </div>
 
                   </div>
-
-
 
                 </div>
               </div>

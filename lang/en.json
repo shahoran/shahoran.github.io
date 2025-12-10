@@ -21,12 +21,12 @@
     "filtrar": "Filters",
 
     "cartas": "Cards",
-    "bestepifanias": "Best Epiphanies",
-    "bestcopias": "Best Copies",
-    "bestneutrales": "Best Neutrals",
+    "bestepifanias": "Epiphanies",
+    "bestcopias": "Copies",
+    "bestneutrales": "Neutrals",
     "potenciales": "Potentials",
     "fragmentos": "Fragments",
-    "equipos": "Equipos",
+    "equipos": "Teams",
     "recomendada": "Recommended",
     "copias": "copies",
     "piezas": "pieces",
@@ -36,23 +36,50 @@
     "setprincipal":"Principal Set",
     "alternative":"Alternatives",
     "team_recom_best_epi":"These are the best epiphanies recommended for this team",
+    "team_epifanias":"Situational Team Epiphanies",
+    "removal":"Removal",
 
 
 
     "haru_epi_1": "Increases Anchor Shot damage",
     "haru_epi_2": "Increases the number of Anchor Shot hits and removes the charge requirement",
     "haru_epi_3": "Increases the number of uses of Anchor Pointer",
-
-
-
+    "haru_epi_4": "Helps balance Haru's critical chance",
+    "haru_epi_5": "If you didn’t get the critical chance upgrade, this is a decent option",
+    "haru_epi_6": "Adds permanent Retain to Anchor Shot",
+    "haru_epi_7": "Situational but decent if you have good crit.",
+    "haru_epi_8": "Reduces cost by 1",
+    "haru_epi_9": "Activates once more if it kills",
+    "haru_epi_10":"Only increases the original's damage",
+    "haru_epi_11":"Only increases the original's damage",
+    "haru_epi_12":"Change to Upgrade, it's a permanent buff",
+    "haru_epi_13":"Turns the buff additive so it improves Anchor Shot by +1 hit",
+    "haru_epi_14":"Helps cycle and draw attack cards",
     
     "haru_set_1": "Boosts Haru's critical chance by 20% on many of her cards",
-    "haru_set_2": "Triple set, general-purpose option",
+
+    "haru_team_1": "Haru Hyper Carry",
 
 
-    "haru_team_1": "Haru Hipercarry",
 
 
+    "khalipe_epi_1":"Plays itself with the Celestial.",
+    "khalipe_epi_2":"Allows you to choose what to draw.",
+    "khalipe_epi_rally_3":"Guarantees drawing a Vulture.",
+    "khalipe_epi_3":"Increases the original's damage and shield.",
+    "khalipe_epi_4":"Becomes a pure damage card.",
+    "khalipe_epi_vulture_5":"Gives more shield the more cards you have.",
+    "khalipe_epi_overpower_1":"Provides extra tenacity that helps recover AP.",
+    "khalipe_epi_overpower_2":"Good general option, weaken and vulnerable are good debuffs.",
+    "khalipe_epi_overpower_3":"If played at the start of the turn or when drawing cards, it can provide a lot of shield.",
+    "khalipe_epi_greatsword_1":"Provides Sirvel Veil.",
+    "khalipe_epi_greatsword_2":"Only increases the original's damage.",
+    "khalipe_epi_greatsword_3":"Adds retrieve, which increases the number of times it can be used.",
+
+    "khalipe_set_1":"Increases critical chance for almost her entire kit.",
+    "khalipe_set_2":"Triple set, general for many characters.",
+    "khalipe_set_3":"Khalipe has a lot of tenacity so she can activate the set (situational).",
+    "khalipe_set_4":"If you have any card draw it can be useful (situational).",
 
 
 

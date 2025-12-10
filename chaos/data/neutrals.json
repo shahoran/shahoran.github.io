@@ -1,12 +1,30 @@
 {
-    "n1":{
-        "id":"n1",
+    "gear_bag":{
         "name":"Gear bag",
         "img":"gear_bag.png"
     },
-    "n2":{
-        "id":"n2",
+    "first_aid_kit":{
         "name":"First Aid Kit",
         "img":"first_aid_kit.png"
+    },
+    "aggressive_mutant":{
+        "name":"Aggressive Mutant",
+        "img":"aggressive_mutant.png"
+    },
+    "energy_barrier":{
+        "name":"Energy Barrier",
+        "img":"energy_barrier.png"
+    },
+    "protective_shout":{
+        "name":"Protective Shout",
+        "img":"protective_shout.png"
+    },
+    "fortitude":{
+        "name":"Fortitude",
+        "img":"fortitude.png"
+    },
+    "iron_wall":{
+        "name":"Iron Wall",
+        "img":"iron_wall.png"
     }
 }

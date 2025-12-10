@@ -80,6 +80,12 @@
                     "best": true,
                     "img": "haru_epi_anchorshothit.png",
                     "notes": "haru_epi_2"
+                },
+                {
+                    "id": "epi7",
+                    "best": false,
+                    "img": "haru_epi_anchorcrit.png",
+                    "notes": "haru_epi_7"
                 }
             ]
         },
@@ -87,10 +93,80 @@
             "cardId": "c5",
             "options": [
                 {
-                    "id": "epi3",
-                    "best": true,
+                    "id":"epi3",
+                    "best":true,
+                    "img":"haru_epi_pointercrit.png",
+                    "notes":"haru_epi_4"
+                },
+                {
+                    "id": "epi6",
+                    "best": false,
+                    "img":"haru_epi_pointerretain.png",
+                    "notes": "haru_epi_6"
+                },
+                {
+                    "id": "epi5",
+                    "best": false,
                     "img": "haru_epi_anchorpointerretrieve.png",
                     "notes": "haru_epi_3"
+                },
+                {
+                    "id":"epi4",
+                    "best":false,
+                    "img":"haru_epi_pointerdano.png",
+                    "notes":"haru_epi_5"
+                }
+            ]
+        },
+        {
+            "cardId":"c6",
+            "options":[
+                {
+                    "id":"menoscosto",
+                    "best":true,
+                    "img":"haru_epi_powercharge_cost.png",
+                    "notes":"haru_epi_8"
+                },
+                {
+                    "id":"onemore",
+                    "best":true,
+                    "img":"haru_epi_powercharge_onemore.png",
+                    "notes":"haru_epi_9"
+                },
+                {
+                    "id":"dano",
+                    "best":false,
+                    "notes":"haru_epi_10",
+                    "img":"haru_epi_powercharge_dano.png"
+                }
+            ]
+        },
+        {
+            "cardId":"c7",
+            "options":[
+                {
+                    "id":"dano",
+                    "best":true,
+                    "notes":"haru_epi_11",
+                    "img":"haru_epi_charge_dano.png"
+                },
+                {
+                    "id":"upgrade",
+                    "best":true,
+                    "notes":"haru_epi_12",
+                    "img":"haru_epi_charge_upgrade.png"
+                },
+                {
+                    "id":"aditivo",
+                    "best":true,
+                    "notes":"haru_epi_13",
+                    "img":"haru_epi_charge_aditivo.png"
+                },
+                {
+                    "id":"draw",
+                    "best":false,
+                    "notes":"haru_epi_14",
+                    "img":"haru_epi_charge_draw.png"
                 }
             ]
         }
@@ -103,14 +179,38 @@
                     "epiphanyId": "epi3",
                     "copies": 2,
                     "best": true
+                },
+                {
+                    "epiphanyId": "epi6",
+                    "copies": 2,
+                    "best": false
+                },
+                {
+                    "epiphanyId": "epi5",
+                    "copies": 2,
+                    "best": false
+                },
+                {
+                    "epiphanyId": "epi4",
+                    "copies": 2,
+                    "best": false
                 }
             ]
         }
     ],
     "neutrals": [
-        "n1",
-        "n2"
+        {"id":"aggressive_mutant","best":true}
     ],
+    "removal":[
+        {
+            "cardId":"c3",
+            "best":true
+        },{
+            "cardId":"c1",
+            "best":false
+        }
+    ],
+    "partners": ["asteria","ritochka","scarlet", "douglas"],
     "potentials": {
         "1":{
             "name": "Ephifany Bonus",
@@ -150,7 +250,7 @@
         "8":{
             "name": "Basic Card Proficiency 2",
             "description": "+5% Damage of Haru's Anchor and Power Anchor. If Haru's Attack is above 500, 5% additionally.",
-            "priority": 2
+            "priority": 0
         },
         "9":{
             "name": "Unique Stat Upgrade",

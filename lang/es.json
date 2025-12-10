@@ -21,9 +21,9 @@
     "filtrar": "Filtros",
 
     "cartas": "Cartas",
-    "bestepifanias": "Mejores epifanías",
-    "bestcopias": "Mejores Copias",
-    "bestneutrales": "Mejores Neutrales",
+    "bestepifanias": "Epifanías",
+    "bestcopias": "Copias",
+    "bestneutrales": "Neutrales",
     "potenciales": "Potenciales",
     "fragmentos": "Fragmentos",
     "equipos": "Equipos",
@@ -36,26 +36,48 @@
     "setprincipal":"Set Principal",
     "alternative":"Alternativas",
     "team_recom_best_epi":"Estas son las mejores epifanías recomendadas para este equipo",
-
+    "team_epifanias":"Epifanias Situacionales del Equipo",
+    "removal":"Borrar Cartas",
 
     
-    "haru_epi_1":"Aumenta daño de Anchor Shot",
-    "haru_epi_2":"Aumenta número de impactos de Anchor Shot y no necesita cargar",
-    "haru_epi_3":"Aumenta el numero de usos de Anchor Pointer",
-
-
-
+    "haru_epi_1":"Aumenta daño de Anchor Shot.",
+    "haru_epi_2":"Aumenta número de impactos de Anchor Shot y no necesita cargar.",
+    "haru_epi_3":"Aumenta el numero de usos de Anchor Pointer.",
+    "haru_epi_4":"Ayuda a balancear la prob. critico de haru.",
+    "haru_epi_5":"Si no te ha salido la mejora de prob. critico, es una opcion decente.",
+    "haru_epi_6":"Añade retain permanente al Anchor Shot.",
+    "haru_epi_7":"Situacional pero decente si tienes buen crit.",
+    "haru_epi_8":"Baja el costo en 1.",
+    "haru_epi_9":"Se activa una vez mas si mata.",
+    "haru_epi_10":"Solo aumenta el daño del original",
+    "haru_epi_11":"Solo aumenta el daño del original",
+    "haru_epi_12":"Lo vuelve upgrade, es buff permanente",
+    "haru_epi_13":"Convierte al buff en aditivo asi que mejora al Anchor Shot de +1 hit",
+    "haru_epi_14":"Ayuda a ciclar y robar las cartas de ataque",
 
     "haru_set_1":"Aumenta 20% prob. critico a muchas cartas de haru.",
-    "haru_set_2":"Triple set, Opcion general.",
-
     
-    "haru_team_1": "Haru Hipercarry",
+    "haru_team_1": "Haru Hyper Carry",
 
 
 
-
-
+    "khalipe_epi_1":"Se juega sola con el Celestial.",
+    "khalipe_epi_2":"Te permite elegir que robar.",
+    "khalipe_epi_rally_3":"Asegura robar un Vulture.",
+    "khalipe_epi_3":"Aumenta el daño y escudo del original.",
+    "khalipe_epi_4":"Se vuelve carta de daño puro.",
+    "khalipe_epi_vulture_5":"Te aporta mas escudo mientras mas cartas tengas.",
+    "khalipe_epi_overpower_1":"Aporta tenacidad extra que te ayuda a recuperar AP.",
+    "khalipe_epi_overpower_2":"buena opcion general, weaken y vulnerable son buenos debuffs.",
+    "khalipe_epi_overpower_3":"si se juega al inicio del turno o robando cartas puede aportar mucho escudo.",
+    "khalipe_epi_greatsword_1":"Aporta Sirvel Veil.",
+    "khalipe_epi_greatsword_2":"Solo aumenta el daño del original.",
+    "khalipe_epi_greatsword_3":"Añade retrieve, lo que aumenta mas las veces que se puede usar.",
+    
+    "khalipe_set_1":"Aumenta prob. critico para casi todo su kit.",
+    "khalipe_set_2":"Triple set, general para muchos personajes.",
+    "khalipe_set_3":"khalipe tiene mucho tenacity asi que puede activar el set(situacional).",
+    "khalipe_set_4":"Si tienes algun robo de cartas puede ser util(situacional).",
 
 
     "footer_follow": "Sígueme en mis redes:"

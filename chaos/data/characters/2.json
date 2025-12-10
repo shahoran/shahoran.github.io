@@ -10,108 +10,205 @@
     "cards": [
         {
             "id": "c1",
-            "name": "Archor",
-            "img": "haru_anchor.png",
+            "name": "Lashing",
+            "img": "khalipe_lashing.png",
             "type": "Attack",
             "basic": true
         },
         {
             "id": "c2",
-            "name": "Power Anchor",
-            "img": "haru_poweranchor.png",
+            "name": "Upward Slash",
+            "img": "khalipe_upwardslash.png",
             "type": "Attack",
             "basic": true
         },
         {
             "id": "c3",
-            "name": "Anchor Drop",
-            "img": "haru_anchordrop.png",
+            "name": "Tyr's Vow",
+            "img": "khalipe_tyrvow.png",
             "type": "Skill",
             "basic": true
         },
         {
             "id": "c4",
-            "name": "Anchor Shot",
-            "img": "haru_anchorshot.png",
+            "name": "Vulture Ejection",
+            "img": "khalipe_vulture.png",
             "type": "Attack",
             "basic": false
         },
         {
             "id": "c5",
-            "name": "Anchor Pointer",
-            "img": "haru_anchorpointer.png",
-            "type": "Skill",
-            "basic": false
-        },
-        {
-            "id": "c6",
-            "name": "Power Charge",
-            "img": "haru_powercharge.png",
+            "name": "Greatsword Aquila",
+            "img": "khalipe_greatsword.png",
             "type": "Attack",
             "basic": false
         },
         {
+            "id": "c6",
+            "name": "Overpower",
+            "img": "khalipe_overpower.png",
+            "type": "Skill",
+            "basic": false
+        },
+        {
             "id": "c7",
-            "name": "Charge Energy",
-            "img": "haru_chargeenergy.png",
+            "name": "Rally",
+            "img": "khalipe_rally.png",
             "type": "Skill",
             "basic": false
         },
         {
             "id": "c8",
-            "name": "Lift Anchor",
-            "img": "haru_liftanchor.png",
+            "name": "Absolute Protection",
+            "img": "khalipe_absolute.png",
             "type": "Skill",
             "basic": false
         }
     ],
     "epiphanies": [
         {
-            "cardId": "c4",
+            "cardId": "c7",
             "options": [
                 {
                     "id": "epi1",
                     "best": true,
-                    "img": "haru_epi_anchorshotdano.png",
-                    "notes": "Aumenta daño de Anchor Shot"
+                    "img": "khalipe_epi_rally_celestial.png",
+                    "notes": "khalipe_epi_1"
                 },
                 {
                     "id": "epi2",
-                    "best": true,
-                    "img": "haru_epi_anchorshothit.png",
-                    "notes": "Aumenta número de impactos de Anchor Shot"
+                    "best": false,
+                    "img": "khalipe_epi_rally_choose.png",
+                    "notes": "khalipe_epi_2"
+                },
+                {
+                    "id": "epi_rally_3",
+                    "best": false,
+                    "img": "khalipe_epi_rally_drawcelestial.png",
+                    "notes": "khalipe_epi_rally_3"
                 }
             ]
         },
         {
-            "cardId": "c5",
+            "cardId": "c4",
             "options": [
                 {
                     "id": "epi3",
                     "best": true,
-                    "img": "haru_epi_anchorpointerretrieve.png",
-                    "notes": "Aumenta el numero de usos de Anchor Pointer"
+                    "img": "khalipe_epi_vulture_danoescudo.png",
+                    "notes": "khalipe_epi_3"
+                },
+                {
+                    "id": "epi4",
+                    "best": false,
+                    "img": "khalipe_epi_vulture_dano.png",
+                    "notes": "khalipe_epi_4"
+                },
+                {
+                    "id":"epi_vulture_5",
+                    "best":false,
+                    "img": "khalipe_epi_vulture_cardescudo.png",
+                    "notes":"khalipe_epi_vulture_5"
+                }
+            ]
+        },
+        {
+            "cardId":"c6",
+            "options":[
+                {
+                    "id":"epi_overpower_1",
+                    "best":true,
+                    "img":"khalipe_epi_overpower_tenacity.png",
+                    "notes":"khalipe_epi_overpower_1"
+                },
+                {
+                    "id":"epi_overpower_2",
+                    "best":false,
+                    "img":"khalipe_epi_overpower_vulweak.png",
+                    "notes":"khalipe_epi_overpower_2"
+                },
+                {
+                    "id":"epi_overpower_3",
+                    "best":false,
+                    "img":"khalipe_epi_overpower_moreshield.png",
+                    "notes":"khalipe_epi_overpower_3"
+                }
+            ]
+        },{
+            "cardId":"c5",
+            "options":[
+                {
+                    "id":"epi_greatsword_1",
+                    "best":true,
+                    "img":"khalipe_epi_greatsword_silverveil.png",
+                    "notes":"khalipe_epi_greatsword_1"
+                },
+                {
+                    "id":"epi_greatsword_2",
+                    "best":false,
+                    "img":"khalipe_epi_greatsword_dano.png",
+                    "notes":"khalipe_epi_greatsword_2"
+                },
+                {
+                    "id":"epi_greatsword_3",
+                    "best":false,
+                    "img":"khalipe_epi_greatsword_retrieve.png",
+                    "notes":"khalipe_epi_greatsword_3"
                 }
             ]
         }
     ],
     "copy": [
         {
-            "cardId": "c5",
+            "cardId": "c4",
             "options": [
                 {
                     "epiphanyId": "epi3",
                     "copies": 2,
-                    "best": true,
-                    "reason": "Más usos de Anchor Pointer."
+                    "best": true
+                },
+                {
+                    "epiphanyId": "epi4",
+                    "copies": 2,
+                    "best": false
+                },
+                {
+                    "epiphanyId":"epi_vulture_5",
+                    "copies": 2,
+                    "best":false
+                }
+
+            ]
+        },
+        {
+            "cardId":"c7",
+            "options":[
+                {
+                    "epiphanyId":"epi1",
+                    "copies":1,
+                    "best":false
                 }
             ]
         }
     ],
     "neutrals": [
-        "n1",
-        "n2"
+        {"id":"iron_wall","best":true},
+        {"id":"fortitude","best":false},
+        {"id":"energy_barrier","best":false}
     ],
+    "removal":[
+        {
+            "cardId":"c1",
+            "best":true
+        },{
+            "cardId":"c3",
+            "best":true
+        },{
+            "cardId":"c2",
+            "best":false
+        }
+    ],
+    "partners": ["zeta","wilhelmina","rachel"],
     "potentials": {
         "1":{
             "name": "Ephifany Bonus",
@@ -130,7 +227,7 @@
         },
         "4":{
             "name": "Basic Card Proficiency",
-            "description": "+20% Damage Amount to Anchor and Power Anchor. The following effect is added to Anchor Shot: Increase Damage by 10%",
+            "description": "Change Upward Slash card to target all enemies",
             "priority": 2
         },
         "5":{
@@ -144,52 +241,73 @@
             "priority": 2
         },
         "7":{
-            "name": "Critical Damage Proficiency",
-            "description": "+12% Critical Damage.",
-            "priority": 2
+            "name": "Health Proficiency",
+            "description": "Increase Health by 8%.",
+            "priority": 0
         },
         "8":{
             "name": "Basic Card Proficiency 2",
-            "description": "+5% Damage of Haru's Anchor and Power Anchor. If Haru's Attack is above 500, 5% additionally.",
-            "priority": 2
+            "description": "+5% Damage for Khalipe's Lashing and Upward Slash<br>If Khalipe's Defense is greater than 250, an additional +5% to that value",
+            "priority": 0
         },
         "9":{
             "name": "Unique Stat Upgrade",
-            "description": "+10% to Haru's Anchor Shot Damage. If Haru's Attack is greater than 1000, an additional +10% to that value.",
+            "description": "+10% Vulture Ejection Damage and Shield Gain<br>If Khalipe’s Attack is greater than 700, an additional +20% Vulture Ejection Damage<br>If Khalipe’s Defense is greater than 300, an additional +20% Vulture Ejection Shield",
             "priority": 2
         }
     },
     "fragments": [
         {
-            "name": "haru_set_1",
+            "name": "khalipe_set_1",
             "sets": [
                 "f5",
                 "f14"
             ],
             "sub":[
-                "f10",
-                "f4"
+                "f6"
             ]
         },
         {
-            "name": "haru_set_2",
+            "name": "khalipe_set_2",
             "sets": [
                 "f14",
-                "f10",
+                "f6",
+                "f10"
+            ],
+            "sub":[
                 "f12"
+            ]
+        },
+        {
+            "name": "khalipe_set_3",
+            "sets": [
+                "f1",
+                "f14"
+            ],
+            "sub":[
+                "f6"
+            ]
+        },
+        {
+            "name": "khalipe_set_4",
+            "sets": [
+                "f11",
+                "f14"
+            ],
+            "sub":[
+                "f6"
             ]
         }
     ],
-    "builds": [
+    "teams":[
         {
-            "name": "DPS Puro",
-            "role": "DPS",
-            "playstyle": "Burst",
-            "recommended_team": [
-                "SoporteA",
-                "BufferB"
-            ],
-            "description": "Maxear daño, usar epifanía X"
+            "name":"haru_team_1",
+            "pjs":[1,2],
+            "bestepiphanies":[
+                {"pj":0,"card":"c4","epi":"epi2"},
+                {"pj":0,"card":"c5","epi":"epi3"},
+                {"pj":1,"card":"c4","epi":"epi2"}
+            ]
         }
     ]
 }

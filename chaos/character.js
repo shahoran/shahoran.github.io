@@ -10,6 +10,28 @@ $(document).ready(async function () {
 
 
 
+    function initTooltips() {
+
+        // 1. Eliminar tooltips antiguos
+        document.querySelectorAll('[data-bs-toggle="tooltip"]').forEach(el => {
+            const instance = bootstrap.Tooltip.getInstance(el);
+            if (instance) {
+                instance.dispose();
+            }
+        });
+
+        // 2. Crear los nuevos
+        document.querySelectorAll('[data-bs-toggle="tooltip"]').forEach(el => {
+            new bootstrap.Tooltip(el, {
+                placement: 'bottom',
+                fallbackPlacements: ['right', 'left', 'bottom'], // sin top
+                boundary: 'window',
+                container: 'body'
+            });
+        });
+    }
+
+
 
     // --- Obtener ID desde la URL (igual que ya tenías) ---
     const params = new URLSearchParams(window.location.search);
@@ -27,6 +49,7 @@ $(document).ready(async function () {
         pjData = await $.getJSON(getDailyURL(`/chaos/data/characters/${pjId}.json`));
         neutralsJson = await $.getJSON(getDailyURL(`/chaos/data/neutrals.json`));
         FragmentsJson = await $.getJSON(getDailyURL(`/chaos/data/fragments.json`));
+        parnersJson = await $.getJSON(getDailyURL(`/chaos/data/partners.json`));
     } catch (e) {
         // fallback: characters.json
         const all = await $.getJSON(getDailyURL("/chaos/data/characters.json"));
@@ -66,6 +89,8 @@ $(document).ready(async function () {
         if (target === "tab-fragmentos") renderFragments(pjData, FragmentsJson);
         if (target === "tab-potenciales") renderPotencial(pjData);
         if (target === "tab-equipos") renderTeams(pjData);
+        if (target === "tab-partners") renderPartners(pjData, parnersJson);
+        if (target === "tab-removal") renderRemovalPriorities(pjData);
         // etc: otros renderizadores
     });
 
@@ -159,7 +184,7 @@ $(document).ready(async function () {
             <div class="epifania-name">
                 ${op.best
                         ? `<span class="badge bg-danger ms-1" data-i18n="recomendada">${t("recomendada")}</span>`
-                        : ''
+                        : `<span class="badge bg-secondary ms-1" data-i18n="opcional">${t("opcional")}</span>`
                     }
             </div>
         </div>
@@ -170,20 +195,7 @@ $(document).ready(async function () {
 
             $container.append($card);
         });
-        setTimeout(() => {
-            document.querySelectorAll('[data-bs-toggle="tooltip"]').forEach(el => {
-
-                // elimina si ya existía para evitar duplicados
-                const existing = bootstrap.Tooltip.getInstance(el);
-                if (existing) existing.dispose();
-
-                new bootstrap.Tooltip(el, {
-                    placement: 'bottom',
-                    fallbackPlacements: [],  // fija el tooltip abajo
-                    boundary: 'viewport'     // evita que se desubique
-                });
-            });
-        }, 100);
+        initTooltips()
     }
 
 
@@ -257,7 +269,8 @@ $(document).ready(async function () {
 
                 const $label = $(`
                 <div class="copy-label mb-1 text-center">
-                    <span class="badge bg-primary ms-1">${op.copies + ' <span data-i18n="copias">' + t("copias") + "</span></span>"} ${op.best ? '<span class="badge bg-danger ms-1" data-i18n="recomendada">' + t("recomendada") + '</span>' : ""}
+                    <span class="badge bg-primary ms-1">${op.copies + ' <span data-i18n="copias">' + t("copias") + "</span></span>"}
+                    ${op.best ? '<span class="badge bg-danger ms-1" data-i18n="recomendada">' + t("recomendada") + '</span>' : '<span class="badge bg-secondary ms-1" data-i18n="opcional">' + t("opcional") + '</span>'}
                 </div>
             `);
                 const $stackContainer = $(`
@@ -275,20 +288,7 @@ $(document).ready(async function () {
 
             $container.append($block);
         });
-        setTimeout(() => {
-            document.querySelectorAll('[data-bs-toggle="tooltip"]').forEach(el => {
-
-                // elimina cualquier tooltip previo
-                const existing = bootstrap.Tooltip.getInstance(el);
-                if (existing) existing.dispose();
-
-                new bootstrap.Tooltip(el, {
-                    placement: 'bottom',
-                    fallbackPlacements: [],   // evita que Bootstrap lo mueva
-                    boundary: 'viewport'      // evita que un contenedor lo recorte
-                });
-            });
-        }, 50);
+        initTooltips()
     }
 
 
@@ -301,23 +301,29 @@ $(document).ready(async function () {
         const neutrals = data.neutrals || [];
 
         if (!neutrals.length) {
-            $container.append(`<p class="text-muted">Este personaje no tiene cartas neutrales recomendadas.</p>`);
+            $container.append(`<p class="text-muted">${t("Este personaje no tiene cartas neutrales recomendadas")}</p>`);
             return;
         }
 
         // Contenedor general con estilo similar a epifanías
         const $row = $(`
-        <div class="neutrals-card mb-4 p-3 d-flex flex-wrap gap-3"></div>
+        <div class="neutrals-card copy-block mb-4 p-3 d-flex flex-wrap gap-3"></div>
     `);
 
-        neutrals.forEach(id => {
-            const card = neutralsjson[id];
+        neutrals.forEach(n => {
+            const card = neutralsjson[n.id];
             if (!card) return;
+
+            const badge = n.best
+                ? `<span class="badge bg-danger ms-1" data-i18n="recomendada">${t("recomendada")}</span>`
+                : `<span class="badge bg-secondary ms-1" data-i18n="opcional">${t("opcional")}</span>`;
 
             const $card = $(`
             <div class="neutral-option text-center">
                 <img src="/chaos/img/neutrals/${card.img}" class="epifania-epicard-img">
-                <div class="neutral-name mt-1">${card.name}</div>
+                <div class="neutral-name mt-1">
+                    ${card.name} ${badge}
+                </div>
             </div>
         `);
 
@@ -340,9 +346,9 @@ $(document).ready(async function () {
         }
 
         fragmentGroups.forEach(group => {
-            
+
             // Contenedor de la fila principal + alternativas
-            const $contenedorset =$(`<div class="copy-block" style="width:100%"></div>`)
+            const $contenedorset = $(`<div class="copy-block" style="width:100%"></div>`)
 
             // Título del set
             $contenedorset.append(`
@@ -416,21 +422,7 @@ $(document).ready(async function () {
         });
 
         // inicializar tooltips
-        setTimeout(() => {
-            document.querySelectorAll('[data-bs-toggle="tooltip"]').forEach(el => {
-
-                // Elimina un tooltip anterior si existía
-                const existing = bootstrap.Tooltip.getInstance(el);
-                if (existing) existing.dispose();
-
-                // Crea uno nuevo, fijo hacia abajo
-                new bootstrap.Tooltip(el, {
-                    placement: 'bottom',
-                    fallbackPlacements: [],
-                    boundary: 'viewport'
-                });
-            });
-        }, 100);
+        initTooltips()
     }
 
 
@@ -488,20 +480,7 @@ $(document).ready(async function () {
             }
         });
 
-        // Reset para evitar duplicados
-        $("[data-bs-toggle='tooltip']").each(function () {
-            const instance = bootstrap.Tooltip.getInstance(this);
-            if (instance) instance.dispose();
-        });
-
-        // Crear tooltips exactamente abajo
-        $("[data-bs-toggle='tooltip']").each(function () {
-            new bootstrap.Tooltip(this, {
-                html: true,
-                placement: "bottom",
-                fallbackPlacements: [] // evita movimiento automático
-            });
-        });
+        initTooltips();
     }
 
 
@@ -546,7 +525,7 @@ $(document).ready(async function () {
 
             <!-- TÍTULO + AYUDA -->
             <div class="d-flex align-items-center gap-2 mb-2">
-                <h6 class="m-0 text-warning" data-i18n="bestepifanias">${t("bestepifanias")}</h6>
+                <h6 class="m-0 text-warning" data-i18n="team_epifanias">${t("team_epifanias")}</h6>
                 <i class="bi bi-question-circle-fill text-white epi-help-icon"
                     style="font-size: 1.1rem; cursor: pointer; text-shadow: 0 0 4px rgba(0,0,0,0.6);"
                     data-bs-toggle="tooltip"
@@ -625,7 +604,7 @@ $(document).ready(async function () {
         <img 
             src="/chaos/img/epiphanies/${epi.img}" 
             class="team-epi-img"
-            title='<b>${pjData.name}</b><br><p data-i18n="${epi.notes}">${t(epi.notes)}</p>'
+            title="<b>${pjData.name}</b><br><p data-i18n='${epi.notes}'>${t(epi.notes)}</p>"
             data-bs-toggle="tooltip"
             data-bs-html="true"
             data-bs-theme="dark">
@@ -635,21 +614,121 @@ $(document).ready(async function () {
 
             $container.append($teamBox);
 
-            setTimeout(() => {
-                document.querySelectorAll('[data-bs-toggle="tooltip"]').forEach(el => {
-
-                    // Elimina un tooltip anterior si existía
-                    const existing = bootstrap.Tooltip.getInstance(el);
-                    if (existing) existing.dispose();
-
-                    // Crea uno nuevo, fijo hacia abajo
-                    new bootstrap.Tooltip(el, {
-                        placement: 'bottom',
-                        fallbackPlacements: [],
-                        boundary: 'viewport'
-                    });
-                });
-            }, 100);
+            initTooltips()
         }
+    }
+
+
+
+
+
+
+    //--------------------------------------------------------------------------------
+    //-- PARTNERS --
+    function renderPartners(data, partnersJson) {
+        console.log(partnersJson);
+        const $container = $("#partners-list").empty();
+
+        const partners = data.partners || [];
+
+        if (!partners.length) {
+            $container.append(`<p class="text-muted">Este personaje no tiene partners recomendados.</p>`);
+            return;
+        }
+
+        const $row = $(`
+        <div class="partners-card copy-block mb-4 p-3 d-flex flex-wrap gap-3"></div>
+    `);
+
+        partners.forEach(id => {
+            const partner = partnersJson[id];
+            if (!partner) return;
+
+            // Tooltip HTML
+            const tooltipHtml = `
+            <b>${partner.name}</b><br>
+            ${partner.pasive}<br><br>
+            <b>EGO SKILL</b><br>
+            ${partner.Ego}
+        `;
+
+            const $card = $(`
+            <div class="partner-option text-center neutral-option">
+                <img src="/chaos/img/partners/${partner.img}" 
+                     class="epifania-epicard-img partner-img">
+                <div class="partner-name mt-1">${partner.name}</div>
+            </div>
+        `);
+
+            // Activar tooltip estilo Bootstrap
+            $card.attr("data-bs-toggle", "tooltip")
+                .attr("data-bs-html", "true")
+                .attr("data-bs-theme", "dark")
+                .attr("data-bs-custom-class", "tooltip-partner")
+                .attr("title", tooltipHtml);
+
+            $row.append($card);
+        });
+
+        $container.append($row);
+
+        // Inicializar tooltips nuevos
+        initTooltips()
+    }
+
+
+
+
+    //-------------------------BORRAR CARTAS------------------------------------------
+    function renderRemovalPriorities(data) {
+        const $container = $("#removal-list").empty();
+
+        const cards = data.cards || [];
+        const removal = data.removal || [];
+
+        if (!removal.length) {
+            $container.append(`<p class="text-muted">Este personaje no tiene cartas para remover.</p>`);
+            return;
+        }
+
+        // Contenedor principal con un solo bloque
+        const $block = $(`
+        <div class="copy-block mb-4 p-3 d-flex flex-wrap gap-3 align-items-start"></div>
+    `);
+
+        removal.forEach(rem => {
+            const cardInfo = cards.find(c => c.id === rem.cardId);
+            if (!cardInfo) return;
+
+            const $card = $(`
+            <div class="epifania-option ${rem.best ? "epifania-best" : ""}"
+                style="width: 110px; text-align: center;"
+                data-bs-toggle="tooltip"
+                data-bs-html="true"
+                data-bs-placement="bottom"
+                title="<b>${cardInfo.name || ""}</b>">
+
+                <img src="/chaos/img/cards/${cardInfo.img}" 
+                     class="epifania-card-base" 
+                     style="width:100%; border-radius:12px;">
+
+                <div class="epifania-name mt-1" style="font-size:0.85rem;">
+                    ${cardInfo.name}
+                </div>
+
+                <div class="mt-1">
+                    ${rem.best
+                    ? `<span class="badge bg-danger" data-i18n="recomendada">${t("recomendada")}</span>`
+                    : `<span class="badge bg-secondary" data-i18n="opcional">${t("opcional")}</span>`
+                }
+                </div>
+            </div>
+        `);
+
+            $block.append($card);
+        });
+
+        $container.append($block);
+        initTooltips();
     }
 });
