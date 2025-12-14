@@ -1,0 +1,303 @@
+{
+    "id":20,
+    "name":"Mika",
+    "class":"controller",
+    "element":"justice",
+    "faction":"terrascion",
+    "subfaction":"SS Edenity",
+    "img":"mika.png",
+    "rarity":4,
+    "cards": [
+        {
+            "id": "c1",
+            "name": "Water Arrow",
+            "img": "mika_waterarrow.png",
+            "type": "Attack",
+            "basic": true
+        },
+        {
+            "id": "c2",
+            "name": "Water Barrier",
+            "img": "mika_waterbarrier.png",
+            "type": "Skill",
+            "basic": true
+        },
+        {
+            "id": "c3",
+            "name": "Water Barrier",
+            "img": "mika_waterbarrier.png",
+            "type": "Skill",
+            "basic": true
+        },
+        {
+            "id": "c4",
+            "name": "Source of Water",
+            "img": "mika_sourceofwater.png",
+            "type": "Skill",
+            "basic": false
+        },
+        {
+            "id": "c5",
+            "name": "Blessing of Waves",
+            "img": "mika_blessingofwaves.png",
+            "type": "Skill",
+            "basic": false
+        },
+        {
+            "id": "c6",
+            "name": "Tactical Analysis",
+            "img": "mika_tacticalanalysis.png",
+            "type": "Skill",
+            "basic": false
+        },
+        {
+            "id": "c7",
+            "name": "Whirlpool",
+            "img": "mika_whirlpool.png",
+            "type": "Attack",
+            "basic": false
+        },
+        {
+            "id": "c8",
+            "name": "Deluge",
+            "img": "mika_deluge.png",
+            "type": "Upgrade",
+            "basic": false
+        }
+    ],
+    "epiphanies": [
+        {
+            "cardId": "c4",
+            "options": [
+                {
+                    "id": "epi_sourceofwater_1",
+                    "best": true,
+                    "img": "mika_epi_sourceoftawer_retain.png",
+                    "notes": "mika_epi_sourceofwater_1"
+                },
+                {
+                    "id": "epi_sourceofwater_2",
+                    "best": true,
+                    "img": "mika_epi_sourceoftawer_wave.png",
+                    "notes": "mika_epi_sourceofwater_2"
+                },
+                {
+                    "id": "epi_sourceofwater_3",
+                    "best": true,
+                    "img": "mika_epi_sourceoftawer_recover.png",
+                    "notes": "mika_epi_sourceofwater_3"
+                },
+                {
+                    "id": "epi_sourceofwater_4",
+                    "best": false,
+                    "img": "mika_epi_sourceoftawer_stress.png",
+                    "notes": "mika_epi_sourceofwater_4"
+                }
+            ]
+        },
+        {
+            "cardId": "c6",
+            "options": [
+                {
+                    "id": "epi_tacticalanalysis_2",
+                    "best": true,
+                    "img": "mika_epi_tacticalanalysis_heal.png",
+                    "notes": "mika_epi_tacticalanalysis_2"
+                },
+                {
+                    "id": "epi_tacticalanalysis_4",
+                    "best": true,
+                    "img": "mika_epi_tacticalanalysis_morehealing.png",
+                    "notes": "mika_epi_tacticalanalysis_4"
+                },
+                {
+                    "id": "epi_tacticalanalysis_1",
+                    "best": true,
+                    "img": "mika_epi_tacticalanalysis_doblewave.png",
+                    "notes": "mika_epi_tacticalanalysis_1"
+                },
+                {
+                    "id": "epi_tacticalanalysis_3",
+                    "best": false,
+                    "img": "mika_epi_tacticalanalysis_upgrade.png",
+                    "notes": "mika_epi_tacticalanalysis_3"
+                }
+            ]
+        },
+        {
+            "cardId": "c5",
+            "options": [
+                {
+                    "id": "epi_blessingofwaves_1",
+                    "best": true,
+                    "img": "mika_epi_blessingofwaves_escudo.png",
+                    "notes": "mika_epi_blessingofwaves_1"
+                },
+                {
+                    "id": "epi_blessingofwaves_2",
+                    "best": true,
+                    "img": "mika_epi_blessingofwaves_finale.png",
+                    "notes": "mika_epi_blessingofwaves_2"
+                },
+                {
+                    "id": "epi_blessingofwaves_3",
+                    "best": false,
+                    "img": "mika_epi_blessingofwaves_wave.png",
+                    "notes": "mika_epi_blessingofwaves_3"
+                }
+            ]
+        },{
+            "cardId": "c7",
+            "options": [
+                {
+                    "id": "epi_whirlpool_1",
+                    "best": true,
+                    "img": "mika_epi_whirlpool_wave.png",
+                    "notes": "mika_epi_whirlpool_1"
+                }
+            ]
+        }
+
+    ],
+    "copy": [
+        {
+            "cardId": "c4",
+            "options": [
+                {
+                    "epiphanyId": "epi_sourceofwater_1",
+                    "copies": 3,
+                    "best": true
+                },
+                {
+                    "epiphanyId": "epi_sourceofwater_2",
+                    "copies": 3,
+                    "best": true
+                },
+                {
+                    "epiphanyId": "epi_sourceofwater_3",
+                    "copies": 3,
+                    "best": true
+                },
+                {
+                    "epiphanyId": "epi_sourceofwater_4",
+                    "copies": 3,
+                    "best": false
+                }
+            ]
+        },
+        {
+            "cardId":"c6",
+            "options":[
+                {
+                    "epiphanyId": "epi_tacticalanalysis_2",
+                    "copies": 1,
+                    "best": false
+                }
+            ]
+        }
+    ],
+    "neutrals": [
+        {"id":"gear_bag","best":true},
+        {"id":"rally","best":true},
+        {"id":"attack","best":true}
+    ],
+    "removal": [
+        {
+            "cardId": "c1",
+            "best": true
+        },
+        {
+            "cardId": "c7", 
+            "best": true
+        },
+        {
+            "cardId": "c2", 
+            "best": true
+        }
+    ],
+    "partners": [
+        "nyx","arwen","yvonne"
+    ],
+    "potentials": {
+        "1": {
+            "name": "Ephifany Bonus",
+            "description": "When entering Chaos, obtain 1 Rare Card with an activated Epiphany.",
+            "priority": 2
+        },
+        "2": {
+            "name": "Basic Card Upgrade",
+            "description": "Increase Damage, Shield Gain and Healing amount of Basic Cards by 20%.",
+            "priority": 2
+        },
+        "3": {
+            "name": "Common Card Upgrade",
+            "description": "Increase Damage, Shield Gain and Healing amount of Common Cards by 20%.",
+            "priority": 0
+        },
+        "4": {
+            "name": "Basic Card Proficiency",
+            "description": "+30% Healing of Water Barrier Cards.",
+            "priority": 2
+        },
+        "5": {
+            "name": "Unique Card Upgrade",
+            "description": "Increase Damage, Shield Gain and Healing amount of Unique Cards by 20%.",
+            "priority": 2
+        },
+        "6": {
+            "name": "Health Proficiency",
+            "description": "Increase Health by 8%.",
+            "priority": 1
+        },
+        "7": {
+            "name": "Attack Proficiency",
+            "description": "Increase Attack by 8%.",
+            "priority": 0
+        },
+        "8": {
+            "name": "Basic Card Proficiency 2",
+            "description": "+5% Heal for Mika's Water Barrier<br>If Mika's Ego Recovery is greater than 30, an additional +5% to that value",
+            "priority": 1
+        },
+        "9": {
+            "name": "Unique Stat Upgrade",
+            "description": "If Mika’s Ego Recovery is greater than 40,<br>+10% Source of Water Recovery<br>For every 5 Ego Recovery exceeding that value, an additional +2%<br>(up to an additional +20%)",
+            "priority": 2
+        }
+    },
+    "fragments": [
+        {
+            "name": "mika_set_1",
+            "sets": [
+                "f6",
+                "f4"
+            ]
+        }
+    ],
+    "teams": [
+        {
+            "name": "haru_team_1",
+            "pjs": [
+                1,
+                2
+            ],
+            "bestepiphanies": [
+                {
+                    "pj": 0,
+                    "card": "c4",
+                    "epi": "epi2"
+                },
+                {
+                    "pj": 0,
+                    "card": "c5",
+                    "epi": "epi3"
+                },
+                {
+                    "pj": 1,
+                    "card": "c4",
+                    "epi": "epi2"
+                }
+            ]
+        }
+    ]
+}

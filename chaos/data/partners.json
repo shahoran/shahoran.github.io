@@ -102,5 +102,53 @@
         "max_pasive":"The assigned combatant's skill card shield gain is increased by 20%.<br>When the assigned combatant gains Shield, 40% chance to gain 1 Counterattack.",
         "rarity": 4,
         "class":"vanguard"
+    },
+    "itsuku":{
+        "name":"Itsuku",
+        "img":"itsuku.png",
+        "pasive":"The assigned combatant’s Attack is increased by 8%.<br>Every time the assigned Combatant’s cards stack, increases Damage Amount of Attack Cards by 5%. Can stack up to 3 times.<br>Every time 1 Attack Card used by the assigned Combatant deals 3 Hits, inflicts 30% Fixed Damage to the target.",
+        "Ego":"200% Damage to all enemies<br>1 Fierce Winds",
+        "rarity": 4,
+        "class":"psionic"
+    },
+    "nyx":{
+        "name":"Nyx",
+        "img":"nyx.png",
+        "pasive":"The assigned combatant's HP and healing are increased by 8%.<br>When the assigned combatant Draws for the first time each turn using an ability, +8% Damage dealt by allies for 1 turn.",
+        "Ego":"Discard up to 3 cards,<br>then Draw +1 cards equal to the number discarded",
+        "rarity":5,
+        "class":"controller"
+    },
+    "arwen":{
+        "name":"Arwen",
+        "img":"arwen.png",
+        "pasive":"The assigned combatant's HP and healing are increased by 8%.<br>At the start of the turn, gain [Ponopoko’s Cheer] equal to the number of enemies with attack intentions.<br>[Ponopoko’s Cheer]: Incoming Damage is reduced by 10%<br>Upon activation, remove Ponopoko’s Cheer#1 (stacks up to 3 times)",
+        "Ego":"Heal 200%<br>1 Damage Reduction",
+        "rarity":4,
+        "class":"controller"
+    },
+    "yvonne":{
+        "name":"Yvonne",
+        "img":"yvonne.png",
+        "pasive":"The assigned combatant’s Defense is increased by 8%.<br>When the assigned Combatant does not use an Attack Card by the end of the turn, recover Health by Healing 30% at the start of the next turn.",
+        "Ego":"Heal 100%<br>1 Fortitude for 1 turn",
+        "rarity":3,
+        "class":"controller"
+    },
+    "zatera":{
+        "name":"Zatera",
+        "img":"zatera.png",
+        "pasive":"The assigned combatant’s Attack is increased by 8%.<br>When Injured, at the end of battle, recover 4% Health..",
+        "Ego":"200% Shield",
+        "rarity":3,
+        "class":"psionic"
+    },
+    "eloise":{
+        "name":"Eloise",
+        "img":"eloise.png",
+        "pasive":"The combatant's attack card damage increases by 10%.<br>The first time the assigned Combatant either Exhausts a card or gains a Status Ailment card (includes cards that have been changed from Status Ailment cards), increases Damage Amount of Attack Cards by 12% for 1 turn.",
+        "Ego":"For 1 turn, when a card is Exhausted, 1 Weaken to a random enemy",
+        "rarity":4,
+        "class":"psionic"
     }
 }

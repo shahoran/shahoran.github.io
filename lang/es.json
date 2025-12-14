@@ -57,7 +57,7 @@
 
     "haru_set_1":"Aumenta 20% prob. critico a muchas cartas de haru.",
     
-    "haru_team_1": "Haru Hyper Carry",
+    "haru_team_1": "Haru activa facilmente los celestial de khalipe",
 
 
 
@@ -78,6 +78,71 @@
     "khalipe_set_2":"Triple set, general para muchos personajes.",
     "khalipe_set_3":"khalipe tiene mucho tenacity asi que puede activar el set(situacional).",
     "khalipe_set_4":"Si tienes algun robo de cartas puede ser util(situacional).",
+
+
+
+
+
+
+    "tressa_epi_1":"Permite crear dagas infinitas al curar.",
+    "tressa_epi_2":"Hace que se active doble, 4 hits.",
+    "tressa_epi_3":"Aumenta el daño general del Agony",
+    "tressa_epi_4":"Aumenta el daño por cada Agony",
+    "tressa_epi_unsheathedagger_1":"Aumenta 1 daga extra",
+    "tressa_epi_unsheathedagger_2":"Gana exhaust y genera 2 dagas mas, funciona bien en la build del upgrade del shadow reload",
+    "tressa_epi_unsheathedagger_3":"Baja en 1 el costo",
+    "tressa_epi_unsheathedagger_4":"La convierte en upgrade, genera 1 daga por turno y permanente",
+    "tressa_epi_curse_1":"Mantiene su buff por 2 turnos",
+    "tressa_epi_curse_2":"Hace que todas las cartas apliquen agony",
+
+    "tressa_set_1":"Set de Void",
+    "tressa_set_2":"Triple Set",
+
+    "tressa_team_1":"Dagas infinitas con curas",
+
+
+
+
+
+
+
+
+    "chizuru_epi_onihunt_1":"Oni hunt con 4 hits para cargar mas bind.",
+    "chizuru_epi_onihunt_2":"Crea 2 basicos costo 0, ayuda a hacer combo con el upgrade de Tsukuyomi.",
+    "chizuru_epi_onihunt_3":"Aumenta mas el daño de Shadow of the moon, ayuda a hacer combo con el Tsukuyomi de +2 hits a Shadow of the moon.",
+    "chizuru_epi_tsukuyomi_1":"Aumenta +2 hits a Shadow of the moon(se stackea al tirar varias).",
+    "chizuru_epi_tsukuyomi_2":"Ayuda a crear mucho mas bind(se stackea al tirar varias)",
+    "chizuru_epi_tsukuyomi_3":"añade 1 hit a la siguiente carta, y genera mas bind(se stackea al tirar varias)",
+    "chizuru_epi_tsukuyomi_4":"Upgrade que permanentemente te da bind sin necesitar la maldicion, hace combo con Tsukuyomi de crear moonslash",
+    "chizuru_epi_bounddusk_1":"Baja el costo de 2 cartas en 1, mitigando el no poder generar AP",
+    "chizuru_epi_bounddusk_2":"Activa 2 cartas de otros personajes, muy aleatoria pero mitiga el no poder generar AP",
+    "chizuru_epi_karmicflames_1":"Aumenta un hit si ya tiene la maldicion.",
+    "chizuru_epi_karmicflames_2":"Baja en 1 el costo de la proxima carta si ya tiene la maldicion.",
+    "chizuru_epi_karmicflames_3":"Aumenta el daño si ya tiene la maldicion.",
+
+    "chizuru_set_1":"Triple set, buena opcion en general",
+
+
+
+
+    "mika_epi_sourceofwater_1":"Añadirle retain te da la opcion de usarlo en una mejor situacion.",
+    "mika_epi_sourceofwater_2":"Wave es muy general por la generacion de AP.",
+    "mika_epi_sourceofwater_3":"Especialmente util en equipos con muchas curaciones.",
+    "mika_epi_sourceofwater_4":"Especialmente util en el caos.",
+    "mika_epi_tacticalanalysis_1":"Doble wave es casi 1 AP.",
+    "mika_epi_tacticalanalysis_2":"Cura, Especialmente util para el upgrade de shadow reload de tressa.",
+    "mika_epi_tacticalanalysis_3":"Upgrade, asi que no ocupa espacio, y aumenta curaciones.",
+    "mika_epi_tacticalanalysis_4":"Doble wave es casi 1 AP y duplica las curaciones.",
+    "mika_epi_blessingofwaves_1":"Aporta escudo cuando estas full vida.",
+    "mika_epi_blessingofwaves_2":"Puedes tirarla luego de gastar todo el AP como carta final.",
+    "mika_epi_blessingofwaves_3":"Aporta 1 wave.",
+    "mika_epi_whirlpool_1":"A costo 1, puede aportar AP si es que hay muchos enemigos",
+
+    "mika_set_1":"Aumenta curacion con la defensa y supervivencia",
+
+
+
+
 
 
     "footer_follow": "Sígueme en mis redes:"

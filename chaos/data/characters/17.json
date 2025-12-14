@@ -1,0 +1,270 @@
+{
+    "id":17,
+    "name":"Tressa",
+    "class":"psionic",
+    "element":"void",
+    "faction":"terrascion",
+    "subfaction":"Planet-Born",
+    "img":"tressa.png",
+    "rarity":4,
+    "cards": [
+        {
+            "id": "c1",
+            "name": "Dagger Throw",
+            "img": "tressa_daggerthrow.png",
+            "type": "Attack",
+            "basic": true
+        },
+        {
+            "id": "c2",
+            "name": "Dagger Throw",
+            "img": "tressa_daggerthrow.png",
+            "type": "Attack",
+            "basic": true
+        },
+        {
+            "id": "c3",
+            "name": "Touch of Darkness",
+            "img": "tressa_touch_of_darkness.png",
+            "type": "Skill",
+            "basic": true
+        },
+        {
+            "id": "c4",
+            "name": "Unsheathe Dagger",
+            "img": "tressa_unsheathe_dagger.png",
+            "type": "Skill",
+            "basic": false
+        },
+        {
+            "id": "c5",
+            "name": "Curse",
+            "img": "tressa_curse.png",
+            "type": "Skill",
+            "basic": false
+        },
+        {
+            "id": "c6",
+            "name": "Shadow Reload",
+            "img": "tressa_shadow_reload.png",
+            "type": "Skill",
+            "basic": false
+        },
+        {
+            "id": "c7",
+            "name": "Vital Attack",
+            "img": "tressa_vital_attack.png",
+            "type": "Attack",
+            "basic": false
+        },
+        {
+            "id": "c8",
+            "name": "Cursed Gouge",
+            "img": "tressa_cursed_gouge.png",
+            "type": "Skill",
+            "basic": false
+        }
+    ],
+    "epiphanies": [
+        {
+            "cardId": "c6",
+            "options": [
+                {
+                    "id": "epi_shadowreload_1",
+                    "best": true,
+                    "img": "tressa_epi_shadow_upgrade.png",
+                    "notes": "tressa_epi_1"
+                }
+            ]
+        },
+        {
+            "cardId": "c7",
+            "options": [
+                {
+                    "id": "epi_vitalattack_1",
+                    "best": true,
+                    "img": "tressa_epi_vitalattack_moreuse.png",
+                    "notes": "tressa_epi_2"
+                },
+                {
+                    "id": "epi_vitalattack_2",
+                    "best": false,
+                    "img": "tressa_epi_vitalattack_danoagony.png",
+                    "notes": "tressa_epi_3"
+                },
+                {
+                    "id": "epi_vitalattack_3",
+                    "best": false,
+                    "img": "tressa_epi_vitalattack_dano.png",
+                    "notes": "tressa_epi_4"
+                }
+            ]
+        },
+        {
+            "cardId": "c4",
+            "options": [
+                {
+                    "id": "epi_unsheathedagger_1",
+                    "best": true,
+                    "img": "tressa_epi_unsheathedagger_tresdagas.png",
+                    "notes": "tressa_epi_unsheathedagger_1"
+                },
+                {
+                    "id": "epi_unsheathedagger_2",
+                    "best": true,
+                    "img": "tressa_epi_unsheathedagger_cuatrodagas.png",
+                    "notes": "tressa_epi_unsheathedagger_2"
+                },
+                {
+                    "id": "epi_unsheathedagger_3",
+                    "best": false,
+                    "img": "tressa_epi_unsheathedagger_costocero.png",
+                    "notes": "tressa_epi_unsheathedagger_3"
+                },
+                {
+                    "id": "epi_unsheathedagger_4",
+                    "best": false,
+                    "img": "tressa_epi_unsheathedagger_upgrade.png",
+                    "notes": "tressa_epi_unsheathedagger_4"
+                }
+            ]
+        },
+        {
+            "cardId": "c5",
+            "options": [
+                {
+                    "id": "epi_curse_1",
+                    "best": true,
+                    "img": "tressa_epi_curse_dosturnos.png",
+                    "notes": "tressa_epi_curse_1"
+                },
+                {
+                    "id": "epi_curse_2",
+                    "best": false,
+                    "img": "tressa_epi_curse_random.png",
+                    "notes": "tressa_epi_curse_2"
+                }
+            ]
+        }
+    ],
+    "copy": [
+        {
+            "cardId": "c6",
+            "options": [
+                {
+                    "epiphanyId": "epi_shadowreload_1",
+                    "copies": 3,
+                    "best": true
+                }
+
+            ]
+        },
+        {
+            "cardId":"c4",
+            "options":[
+                {
+                    "epiphanyId":"epi_unsheathedagger_2",
+                    "copies":1,
+                    "best":false
+                },
+                {
+                    "epiphanyId":"epi_unsheathedagger_1",
+                    "copies":1,
+                    "best":false
+                }
+            ]
+        }
+    ],
+    "neutrals": [
+        {"id":"gear_bag","best":false}
+    ],
+    "removal":[
+        {
+            "cardId":"c1",
+            "best":true
+        },{
+            "cardId":"c3",
+            "best":false
+        }
+    ],
+    "partners": ["zatera","eloise"],
+    "potentials": {
+        "1":{
+            "name": "Ephifany Bonus",
+            "description": "When entering Chaos, obtain 1 Rare Card with an activated Epiphany.",
+            "priority": 2
+        },
+        "2":{
+            "name": "Basic Card Upgrade",
+            "description": "Increase Damage, Shield Gain and Healing amount of Basic Cards by 20%.",
+            "priority": 1
+        },
+        "3":{
+            "name": "Common Card Upgrade",
+            "description": "Increase Damage, Shield Gain and Healing amount of Common Cards by 20%.",
+            "priority": 0
+        },
+        "4":{
+            "name": "Basic Card Proficiency",
+            "description": "The Dagger Throw card gains the effect 2 Agony.",
+            "priority": 2
+        },
+        "5":{
+            "name": "Unique Card Upgrade",
+            "description": "Increase Damage, Shield Gain and Healing amount of Unique Cards by 20%.",
+            "priority": 2
+        },
+        "6":{
+            "name": "Critical Chance Proficiency",
+            "description": "+10% Critical Chance.",
+            "priority": 2
+        },
+        "7":{
+            "name": "Critical Damage Proficiency",
+            "description": "+12% Critical Damage.",
+            "priority": 2
+        },
+        "8":{
+            "name": "Basic Card Proficiency 2",
+            "description": "+5% Damage for Tressa's Dagger Throw<br>If Tressa's Damage over Time is greater than 15%, an additional +5% to that value",
+            "priority": 0
+        },
+        "9":{
+            "name": "Unique Stat Upgrade",
+            "description": "+4% Void Attribute Damage<br>If Tressa's Damage over Time is greater than 30%,<br>+4% to that value",
+            "priority": 2
+        }
+    },
+    "fragments": [
+        {
+            "name": "tressa_set_1",
+            "sets": [
+                "f9",
+                "f8"
+            ],
+            "sub":[
+                "f10",
+                "f14"
+            ]
+        },
+        {
+            "name": "tressa_set_2",
+            "sets": [
+                "f8",
+                "f10",
+                "f14"
+            ]
+        }
+    ],
+    "teams":[
+        {
+            "name":"tressa_team_1",
+            "pjs":[20],
+            "bestepiphanies":[
+                {"pj":0,"card":"c6","epi":"epi_shadowreload_1"},
+                {"pj":20,"card":"c4","epi":"epi_sourceofwater_3"},
+                {"pj":20,"card":"c6","epi":"epi_tacticalanalysis_2"}
+            ]
+        }
+    ]
+}

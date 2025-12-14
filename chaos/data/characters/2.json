@@ -302,11 +302,10 @@
     "teams":[
         {
             "name":"haru_team_1",
-            "pjs":[1,2],
+            "pjs":[1,20],
             "bestepiphanies":[
-                {"pj":0,"card":"c4","epi":"epi2"},
-                {"pj":0,"card":"c5","epi":"epi3"},
-                {"pj":1,"card":"c4","epi":"epi2"}
+                {"pj":0,"card":"c7","epi":"epi1"},
+                {"pj":20,"card":"c4","epi":"epi_sourceofwater_1"}
             ]
         }
     ]

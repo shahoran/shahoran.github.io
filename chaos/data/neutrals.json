@@ -3,6 +3,14 @@
         "name":"Gear bag",
         "img":"gear_bag.png"
     },
+    "rally":{
+        "name":"Rally",
+        "img":"rally.png"
+    },
+    "attack":{
+        "name":"Attack!",
+        "img":"attack.png"
+    },
     "first_aid_kit":{
         "name":"First Aid Kit",
         "img":"first_aid_kit.png"

@@ -1,0 +1,291 @@
+{
+    "id": 13,
+    "name": "Chizuru",
+    "class": "psionic",
+    "element": "void",
+    "faction": "peltion",
+    "subfaction": "Kaguya Pharmaceutical",
+    "img": "chizuru.png",
+    "rarity": 5,
+    "cards": [
+        {
+            "id": "c1",
+            "name": "Moonslash",
+            "img": "chizuru_moonslash.png",
+            "type": "Attack",
+            "basic": true
+        },
+        {
+            "id": "c2",
+            "name": "Moonslash",
+            "img": "chizuru_moonslash.png",
+            "type": "Attack",
+            "basic": true
+        },
+        {
+            "id": "c3",
+            "name": "Spiritflame's Ward",
+            "img": "chizuru_spiritflames_ward.png",
+            "type": "Skill",
+            "basic": true
+        },
+        {
+            "id": "c4",
+            "name": "Karmic Flames",
+            "img": "chizuru_karmic_flames.png",
+            "type": "Attack",
+            "basic": false
+        },
+        {
+            "id": "c5",
+            "name": "Tsukuyomi",
+            "img": "chizuru_tsukuyomi.png",
+            "type": "Skill",
+            "basic": false
+        },
+        {
+            "id": "c6",
+            "name": "Bound at Dusk",
+            "img": "chizuru_bound_at_dusk.png",
+            "type": "Upgrade",
+            "basic": false
+        },
+        {
+            "id": "c7",
+            "name": "Oni Hunt",
+            "img": "chizuru_oni_hunt.png",
+            "type": "Attack",
+            "basic": false
+        },
+        {
+            "id": "c8",
+            "name": "Shadow of the moon",
+            "img": "chizuru_shadow_of_the_moon.png",
+            "type": "Attack",
+            "basic": false
+        }
+    ],
+    "epiphanies": [
+        {
+            "cardId": "c7",
+            "options": [
+                {
+                    "id": "epi_onihunt_1",
+                    "best": true,
+                    "img": "chizuru_epi_onihunt_4hits.png",
+                    "notes": "chizuru_epi_onihunt_1"
+                },
+                {
+                    "id": "epi_onihunt_2",
+                    "best": true,
+                    "img": "chizuru_epi_onihunt_createbasic.png",
+                    "notes": "chizuru_epi_onihunt_2"
+                },
+                {
+                    "id": "epi_onihunt_3",
+                    "best": false,
+                    "img": "chizuru_epi_onihunt_dano.png",
+                    "notes": "chizuru_epi_onihunt_3"
+                }
+            ]
+        },
+        {
+            "cardId": "c5",
+            "options": [
+                {
+                    "id": "epi_tsukuyomi_1",
+                    "best": true,
+                    "img": "chizuru_epi_tsukuyomi_2hits.png",
+                    "notes": "chizuru_epi_tsukuyomi_1"
+                },
+                {
+                    "id": "epi_tsukuyomi_2",
+                    "best": true,
+                    "img": "chizuru_epi_tsukuyomi_3fuegos.png",
+                    "notes": "chizuru_epi_tsukuyomi_2"
+                },
+                {
+                    "id": "epi_tsukuyomi_3",
+                    "best": false,
+                    "img": "chizuru_epi_tsukuyomi_1hit1fuego.png",
+                    "notes": "chizuru_epi_tsukuyomi_3"
+                },
+                {
+                    "id": "epi_tsukuyomi_4",
+                    "best": false,
+                    "img": "chizuru_epi_tsukuyomi_upgrade.png",
+                    "notes": "chizuru_epi_tsukuyomi_4"
+                }
+            ]
+        },
+        {
+            "cardId": "c6",
+            "options": [
+                {
+                    "id": "epi_bounddusk_1",
+                    "best": true,
+                    "img": "chizuru_epi_bounddusk_11cost.png",
+                    "notes": "chizuru_epi_bounddusk_1"
+                },
+                {
+                    "id": "epi_bounddusk_2",
+                    "best": false,
+                    "img": "chizuru_epi_bounddusk_activate.png",
+                    "notes": "chizuru_epi_bounddusk_2"
+                }
+            ]
+        },
+        {
+            "cardId": "c4",
+            "options": [
+                {
+                    "id": "epi_karmicflames_1",
+                    "best": true,
+                    "img": "chizuru_epi_karmicflames_dano.png",
+                    "notes": "chizuru_epi_karmicflames_1"
+                },
+                {
+                    "id": "epi_karmicflames_2",
+                    "best": true,
+                    "img": "chizuru_epi_karmicflames_menoscosto.png",
+                    "notes": "chizuru_epi_karmicflames_2"
+                },
+                {
+                    "id": "epi_karmicflames_3",
+                    "best": true,
+                    "img": "chizuru_epi_karmicflames_danosinhit.png",
+                    "notes": "chizuru_epi_karmicflames_3"
+                }
+            ]
+        }
+    ],
+    "copy": [
+        {
+            "cardId": "c7",
+            "options": [
+                {
+                    "epiphanyId": "epi_onihunt_2",
+                    "copies": 3,
+                    "best": true
+                },
+                {
+                    "epiphanyId": "epi_onihunt_1",
+                    "copies": 3,
+                    "best": true
+                },
+                {
+                    "epiphanyId": "epi_onihunt_3",
+                    "copies": 1,
+                    "best": false
+                }
+            ]
+        },
+        {
+            "cardId": "c5",
+            "options": [
+                {
+                    "epiphanyId": "epi_tsukuyomi_1",
+                    "copies": 2,
+                    "best": true
+                },
+                {
+                    "epiphanyId": "epi_tsukuyomi_2",
+                    "copies": 2,
+                    "best": true
+                },
+                {
+                    "epiphanyId": "epi_tsukuyomi_3",
+                    "copies": 2,
+                    "best": false
+                }
+            ]
+        }
+    ],
+    "neutrals": [],
+    "removal": [
+        {
+            "cardId": "c3",
+            "best": true
+        },
+        {
+            "cardId": "c1",
+            "best": false
+        }
+    ],
+    "partners": [
+        "itsuku","zatera","eloise"
+    ],
+    "potentials": {
+        "1": {
+            "name": "Ephifany Bonus",
+            "description": "When entering Chaos, obtain 1 Rare Card with an activated Epiphany.",
+            "priority": 2
+        },
+        "2": {
+            "name": "Basic Card Upgrade",
+            "description": "Increase Damage, Shield Gain and Healing amount of Basic Cards by 20%.",
+            "priority": 2
+        },
+        "3": {
+            "name": "Common Card Upgrade",
+            "description": "Increase Damage, Shield Gain and Healing amount of Common Cards by 20%.",
+            "priority": 0
+        },
+        "4": {
+            "name": "Basic Card Proficiency",
+            "description": "Change Moonslash‘s card effect to 60% Damage × 2.",
+            "priority": 2
+        },
+        "5": {
+            "name": "Unique Card Upgrade",
+            "description": "Increase Damage, Shield Gain and Healing amount of Unique Cards by 20%.",
+            "priority": 2
+        },
+        "6": {
+            "name": "Critical Chance Proficiency",
+            "description": "+10% Critical Chance.",
+            "priority": 2
+        },
+        "7": {
+            "name": "Critical Damage Proficiency",
+            "description": "+12% Critical Damage",
+            "priority": 2
+        },
+        "8": {
+            "name": "Basic Card Proficiency 2",
+            "description": "+5% Damage Amount to Chizuru’s Moonslash.<br>If Chizuru’s Attack is greater than 500, add an additional +5% to the modifier",
+            "priority": 1
+        },
+        "9": {
+            "name": "Unique Stat Upgrade",
+            "description": "If Chizuru’s Attack is greater than 600, +5% Damage Amount to Bind cards<br>For every 40 Attack above 600, add an additional +1% to the modifer (additional +10% max)",
+            "priority": 2
+        }
+    },
+    "fragments": [
+        {
+            "name": "chizuru_set_1",
+            "sets": [
+                "f10",
+                "f14",
+                "f12"
+            ],
+            "sub": [
+                "f8"
+            ]
+        }
+    ],
+    "teams": [
+        {
+            "name": "chizuru_team_1",
+            "pjs": [17],
+            "bestepiphanies": [
+                {
+                    "pj": 17,
+                    "card": "c4",
+                    "epi": "epi_unsheathedagger_1"
+                }
+            ]
+        }
+    ]
+}

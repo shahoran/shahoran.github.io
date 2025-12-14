@@ -273,11 +273,11 @@
     "teams":[
         {
             "name":"haru_team_1",
-            "pjs":[2,2],
+            "pjs":[2,20],
             "bestepiphanies":[
                 {"pj":0,"card":"c4","epi":"epi2"},
                 {"pj":0,"card":"c5","epi":"epi3"},
-                {"pj":2,"card":"c4","epi":"epi2"}
+                {"pj":20,"card":"c4","epi":"epi_sourceofwater_1"}
             ]
         }
     ]
