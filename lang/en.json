@@ -84,5 +84,71 @@
 
 
 
+
+
+
+
+
+    "tressa_epi_1":"Allows creating infinite daggers when healing.",
+    "tressa_epi_2":"Makes it trigger twice, 4 hits.",
+    "tressa_epi_3":"Increases overall Agony damage.",
+    "tressa_epi_4":"Increases damage for each Agony.",
+    "tressa_epi_unsheathedagger_1":"Adds 1 extra dagger.",
+    "tressa_epi_unsheathedagger_2":"Gains exhaust and generates 2 more daggers, works well with the Shadow Reload upgrade build.",
+    "tressa_epi_unsheathedagger_3":"Reduces cost by 1.",
+    "tressa_epi_unsheathedagger_4":"Turns it into an upgrade, generates 1 dagger per turn permanently.",
+    "tressa_epi_curse_1":"Keeps its buff for 2 turns.",
+    "tressa_epi_curse_2":"Makes all cards apply Agony.",
+
+    "tressa_set_1":"Void Set",
+    "tressa_set_2":"Triple Set",
+
+    "tressa_team_1":"Infinite daggers with healing.",
+
+
+
+
+
+
+    "chizuru_epi_onihunt_1":"Oni Hunt with 4 hits to charge more Bind.",
+    "chizuru_epi_onihunt_2":"Creates 2 basic cards with cost 0, helps combo with Tsukuyomi upgrade.",
+    "chizuru_epi_onihunt_3":"Further increases Shadow of the Moon damage, helps combo with Tsukuyomi +2 hits to Shadow of the Moon.",
+    "chizuru_epi_tsukuyomi_1":"Adds +2 hits to Shadow of the Moon (stacks when played multiple times).",
+    "chizuru_epi_tsukuyomi_2":"Helps generate much more Bind (stacks when played multiple times).",
+    "chizuru_epi_tsukuyomi_3":"Adds 1 hit to the next card and generates more Bind (stacks when played multiple times).",
+    "chizuru_epi_tsukuyomi_4":"Upgrade that permanently gives Bind without needing the curse, combos with Tsukuyomi that creates Moonslash.",
+    "chizuru_epi_bounddusk_1":"Reduces the cost of 2 cards by 1, mitigating not being able to generate AP.",
+    "chizuru_epi_bounddusk_2":"Activates 2 cards from other characters, very random but mitigates not being able to generate AP.",
+    "chizuru_epi_karmicflames_1":"Adds 1 hit if the target already has the curse.",
+    "chizuru_epi_karmicflames_2":"Reduces the cost of the next card by 1 if the target already has the curse.",
+    "chizuru_epi_karmicflames_3":"Increases damage if the target already has the curse.",
+
+    "chizuru_set_1":"Triple set, a good general option.",
+
+
+
+
+    "mika_epi_sourceofwater_1":"Adding retain gives you the option to use it in a better situation.",
+    "mika_epi_sourceofwater_2":"Wave is very general due to AP generation.",
+    "mika_epi_sourceofwater_3":"Especially useful in teams with lots of healing.",
+    "mika_epi_sourceofwater_4":"Especially useful in Chaos.",
+    "mika_epi_tacticalanalysis_1":"Double wave is almost 1 AP.",
+    "mika_epi_tacticalanalysis_2":"Healing, especially useful for Tressa’s Shadow Reload upgrade.",
+    "mika_epi_tacticalanalysis_3":"Upgrade, so it doesn’t take up space, and increases healing.",
+    "mika_epi_tacticalanalysis_4":"Double wave is almost 1 AP and doubles healing.",
+    "mika_epi_blessingofwaves_1":"Provides shield when you are at full HP.",
+    "mika_epi_blessingofwaves_2":"You can play it after spending all AP as a finisher card.",
+    "mika_epi_blessingofwaves_3":"Provides 1 wave.",
+    "mika_epi_whirlpool_1":"At cost 1, it can provide AP if there are many enemies.",
+
+    "mika_set_1":"Increases healing along with defense and survivability.",
+
+
+
+
+
+
+
+
     "footer_follow": "Follow me on my social networks:"
 }
