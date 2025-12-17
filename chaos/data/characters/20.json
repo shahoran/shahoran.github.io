@@ -1,12 +1,12 @@
 {
-    "id":20,
-    "name":"Mika",
-    "class":"controller",
-    "element":"justice",
-    "faction":"terrascion",
-    "subfaction":"SS Edenity",
-    "img":"mika.png",
-    "rarity":4,
+    "id": 20,
+    "name": "Mika1",
+    "class": "controller",
+    "element": "justice",
+    "faction": "terrascion",
+    "subfaction": "SS Edenity",
+    "img": "mika.png",
+    "rarity": 4,
     "cards": [
         {
             "id": "c1",
@@ -146,7 +146,8 @@
                     "notes": "mika_epi_blessingofwaves_3"
                 }
             ]
-        },{
+        },
+        {
             "cardId": "c7",
             "options": [
                 {
@@ -157,7 +158,6 @@
                 }
             ]
         }
-
     ],
     "copy": [
         {
@@ -186,8 +186,8 @@
             ]
         },
         {
-            "cardId":"c6",
-            "options":[
+            "cardId": "c6",
+            "options": [
                 {
                     "epiphanyId": "epi_tacticalanalysis_2",
                     "copies": 1,
@@ -197,9 +197,18 @@
         }
     ],
     "neutrals": [
-        {"id":"gear_bag","best":true},
-        {"id":"rally","best":true},
-        {"id":"attack","best":true}
+        {
+            "id": "gear_bag",
+            "best": true
+        },
+        {
+            "id": "rally",
+            "best": true
+        },
+        {
+            "id": "attack",
+            "best": true
+        }
     ],
     "removal": [
         {
@@ -207,16 +216,18 @@
             "best": true
         },
         {
-            "cardId": "c7", 
+            "cardId": "c7",
             "best": true
         },
         {
-            "cardId": "c2", 
+            "cardId": "c2",
             "best": true
         }
     ],
     "partners": [
-        "nyx","arwen","yvonne"
+        "nyx",
+        "arwen",
+        "yvonne"
     ],
     "potentials": {
         "1": {
