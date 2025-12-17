@@ -143,12 +143,29 @@
 
     "mika_set_1":"Increases healing along with defense and survivability.",
 
+    "veronica_epi_repose_1":"Repose with cost 0 allows it to be played for free.",
+    "veronica_epi_repose_2":"Reduces the cost of a drawn card, recovering the value spent.",
+    "veronica_epi_sirkowalski_1":"Draw 2 cards and generate a crossbow.",
+    "veronica_epi_sirkowalski_2":"Draw 2 cards and increase the damage of a crossbow.",
+    "veronica_epi_firingpreparation_1":"AOE crossbow that helps with clearing.",
+    "veronica_epi_firingpreparation_2":"Chance to generate a double crossbow (as if it were a second critical hit).",
+    "veronica_epi_firingpreparation_3":"Increases critical hit chance.",
+
+    "veronica_set_1":"triple set",
 
 
 
 
 
+    "home.title": "Shahoran",
+    "home.subtitle": "Character guides and tools for your favorite games",
 
+    "game.chaos.title": "Chaos Zero Nightmare",
+    "game.chaos.characters": "Character guides",
+    "game.chaos.randomizer": "Team randomizer",
+
+    "home.comingSoon.title": "Coming Soon",
+    "home.comingSoon.text": "More games and guides will be added soon.",
 
     "footer_follow": "Follow me on my social networks:"
 }

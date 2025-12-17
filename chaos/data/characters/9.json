@@ -1,0 +1,237 @@
+{
+    "id":9,
+    "name":"Veronica",
+    "class":"ranger",
+    "element":"passion",
+    "faction":"stellafamilia",
+    "subfaction":"Black Spica",
+    "img":"veronica.png",
+    "rarity":5,
+    "cards": [
+        {
+            "id": "c1",
+            "name": "Rapid Fire",
+            "img": "veronica_rapidfire.png",
+            "type": "Attack",
+            "basic": true
+        },
+        {
+            "id": "c2",
+            "name": "Rapid Fire",
+            "img": "veronica_rapidfire.png",
+            "type": "Attack",
+            "basic": true
+        },
+        {
+            "id": "c3",
+            "name": "Illusion of Golden Daffodils",
+            "img": "veronica_illusionofgoldendaffodils.png",
+            "type": "Skill",
+            "basic": true
+        },
+        {
+            "id": "c4",
+            "name": "Firing Preparation",
+            "img": "veronica_firingpreparation.png",
+            "type": "Upgrade",
+            "basic": false
+        },
+        {
+            "id": "c5",
+            "name": "Repose",
+            "img": "veronica_repose.png",
+            "type": "Skill",
+            "basic": false
+        },
+        {
+            "id": "c6",
+            "name": "Pendant of Resolution",
+            "img": "veronica_pendantofresolution.png",
+            "type": "Upgrade",
+            "basic": false
+        },
+        {
+            "id": "c7",
+            "name": "Sir Kowalski",
+            "img": "veronica_sirkowalski.png",
+            "type": "Skill",
+            "basic": false
+        },
+        {
+            "id": "c8",
+            "name": "Bombardment Prep",
+            "img": "veronica_bombradmentprep.png",
+            "type": "Upgrade",
+            "basic": false
+        }
+    ],
+    "epiphanies": [
+        {
+            "cardId": "c5",
+            "options": [
+                {
+                    "id": "epi_repose_1",
+                    "best": true,
+                    "img": "veronica_epi_repose_costocero.png",
+                    "notes": "veronica_epi_repose_1"
+                },
+                {
+                    "id": "epi_repose_2",
+                    "best": false,
+                    "img": "veronica_epi_repose_bajarcosto.png",
+                    "notes": "veronica_epi_repose_2"
+                }
+            ]
+        },
+        {
+            "cardId": "c7",
+            "options": [
+                {
+                    "id": "epi_sirkowalski_1",
+                    "best": true,
+                    "img": "veronica_epi_sirkowalski_create.png",
+                    "notes": "veronica_epi_sirkowalski_1"
+                },
+                {
+                    "id": "epi_sirkowalski_2",
+                    "best": false,
+                    "img": "veronica_epi_sirkowalski_bajarcosto.png",
+                    "notes": "veronica_epi_sirkowalski_1"
+                }
+            ]
+        },
+        {
+            "cardId": "c4",
+            "options": [
+                {
+                    "id": "epi_firingpreparation_1",
+                    "best": true,
+                    "img": "veronica_epi_firingpreparation_giant.png",
+                    "notes": "veronica_epi_firingpreparation_1"
+                },
+                {
+                    "id": "epi_firingpreparation_2",
+                    "best": true,
+                    "img": "veronica_epi_firingpreparation_create.png",
+                    "notes": "veronica_epi_firingpreparation_2"
+                },
+                {
+                    "id": "epi_firingpreparation_3",
+                    "best": false,
+                    "img": "veronica_epi_firingpreparation_crit.png",
+                    "notes": "veronica_epi_firingpreparation_3"
+                }
+            ]
+        }
+    ],
+    "copy": [
+        {
+            "cardId": "c5",
+            "options": [
+                {
+                    "epiphanyId": "epi_repose_1",
+                    "copies": 3,
+                    "best": true
+                },{
+                    "epiphanyId": "epi_repose_2",
+                    "copies": 2,
+                    "best": true
+                }
+            ]
+        },
+        {
+            "cardId": "c7",
+            "options": [
+                {
+                    "epiphanyId": "epi_sirkowalski_1",
+                    "copies": 1,
+                    "best": true
+                },
+                {
+                    "epiphanyId": "epi_sirkowalski_2",
+                    "copies": 1,
+                    "best": true
+                }
+            ]
+        }
+    ],
+    "neutrals": [
+    ],
+    "removal": [
+        {
+            "cardId": "c3",
+            "best": true
+        },
+        {
+            "cardId": "c2", 
+            "best": true
+        },
+        {
+            "cardId": "c1", 
+            "best": true
+        }
+    ],
+    "partners": [
+        "marin","rosaria"
+    ],
+    "potentials": {
+        "1": {
+            "name": "Ephifany Bonus",
+            "description": "When entering Chaos, obtain 1 Rare Card with an activated Epiphany.",
+            "priority": 2
+        },
+        "2": {
+            "name": "Basic Card Upgrade",
+            "description": "Increase Damage, Shield Gain and Healing amount of Basic Cards by 20%.",
+            "priority": 2
+        },
+        "3": {
+            "name": "Common Card Upgrade",
+            "description": "Increase Damage, Shield Gain and Healing amount of Common Cards by 20%.",
+            "priority": 1
+        },
+        "4": {
+            "name": "Basic Card Proficiency",
+            "description": "Add to Rapid Fire card effect: 20% chance to create 1 random Ballista card in hand.",
+            "priority": 2
+        },
+        "5": {
+            "name": "Unique Card Upgrade",
+            "description": "Increase Damage, Shield Gain and Healing amount of Unique Cards by 20%.",
+            "priority": 2
+        },
+        "6": {
+            "name": "Critical Damage Proficiency",
+            "description": "+12% Critical Damage",
+            "priority": 2
+        },
+        "7": {
+            "name": "Critical Chance Proficiency",
+            "description": "+10% Critical Chance",
+            "priority": 2
+        },
+        "8": {
+            "name": "Basic Card Proficiency 2",
+            "description": "+5% Damage for Veronica's Rapid Fire.<br>If Veronica's Attack is greater than 500, an additional +5% to that value",
+            "priority": 1
+        },
+        "9": {
+            "name": "Unique Stat Upgrade",
+            "description": "If Veronica’s Attack is greater than 700,<br>+5% Ballista Shot damage.<br>For every 40 Attack exceeding that value, +1%<br>(up to an additional +10%)",
+            "priority": 2
+        }
+    },
+    "fragments": [
+        {
+            "name": "veronica_set_1",
+            "sets": [
+                "f14",
+                "f10",
+                "f12"
+            ]
+        }
+        
+    ],
+    "teams": [
+    ]
+}

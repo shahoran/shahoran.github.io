@@ -1,25 +1,78 @@
 <html>
-  <head>
-    <title>Chaos Zero Nightmare</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
-    <link rel="stylesheet" href="/css/styles.css">
-    <link rel="icon" type="image/png" href="/img/favicon.png">
-    
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-  </head>
-  <body  data-bs-theme="dark">
-    <div id="header"></div>
-    <div id="content">
-      <h1>Welcome to Shahoran</h1>
-      <p>This is the main page.</p>
-    </div>
 
-    
-    <div id="footer"></div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
-    <script src="/js/general.js"></script>
-  </body>
+<head>
+  <title>Chaos Zero Nightmare</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="/css/styles.css">
+  <link rel="icon" type="image/png" href="/img/favicon.png">
+
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+
+<body data-bs-theme="dark">
+  <div id="header"></div>
+  <div id="content">
+    <div class="container py-5">
+
+      <!-- Título principal -->
+      <div class="text-center mb-5">
+        <h1 class="fw-bold" data-i18n="home.title">Shahoran</h1>
+        <p class="text-secondary" data-i18n="home.subtitle">
+          Guías de personajes y herramientas para tus juegos favoritos
+        </p>
+      </div>
+
+      <!-- Grid de juegos -->
+      <div class="row g-4">
+
+        <!-- Chaos Zero Nightmare -->
+        <div class="col-md-6 col-lg-4">
+          <div class="card bg-dark text-light h-100 border-secondary shadow-sm">
+            <div class="card-body d-flex flex-column">
+              <h4 class="card-title fw-bold mb-2" data-i18n="game.chaos.title">
+                Chaos Zero Nightmare
+              </h4>
+
+              <div class="mt-auto d-grid gap-2">
+                <a href="/chaos/characters.html" class="btn btn-outline-light" data-i18n="game.chaos.characters">
+                  Guías de personajes
+                </a>
+                <a href="/chaos/randomizer" class="btn btn-outline-light" data-i18n="game.chaos.randomizer">
+                  Randomizer de equipos
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Placeholder para futuros juegos -->
+        <div class="col-md-6 col-lg-4">
+          <div class="card bg-dark text-secondary h-100 border-secondary border-dashed">
+            <div class="card-body d-flex flex-column justify-content-center text-center">
+              <h5 class="fw-bold mb-2" data-i18n="home.comingSoon.title">
+                Próximamente
+              </h5>
+              <p class="mb-0" data-i18n="home.comingSoon.text">
+                Más juegos y guías serán añadidos proximamente.
+              </p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+
+  <div id="footer"></div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+    crossorigin="anonymous"></script>
+  <script src="/js/general.js"></script>
+</body>
+
 </html>

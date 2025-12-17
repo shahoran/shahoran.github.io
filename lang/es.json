@@ -148,10 +148,32 @@
 
 
 
-    
+    "veronica_epi_repose_1":"Repose de costo 0 permite jugarla gratis.",
+    "veronica_epi_repose_2":"Baja el costo de una carta robada, recuperando el value gastado.",
+    "veronica_epi_sirkowalski_1":"roba 2 cartas y genera una ballesta.",
+    "veronica_epi_sirkowalski_2":"roba 2 cartas y aumenta el daño de una ballesta.",
+    "veronica_epi_firingpreparation_1":"Ballesta AOE que ayuda a limpiar.",
+    "veronica_epi_firingpreparation_2":"Probabilidad de generar doble ballesta(como si de un segundo critico se tratase).",
+    "veronica_epi_firingpreparation_3":"Aumenta la probabilidad de critico.",
+
+    "veronica_set_1":"triple set",
 
 
 
+
+
+
+
+
+    "home.title": "Shahoran",
+    "home.subtitle": "Guías de personajes y herramientas para tus juegos favoritos",
+
+    "game.chaos.title": "Chaos Zero Nightmare",
+    "game.chaos.characters": "Guías de personajes",
+    "game.chaos.randomizer": "Randomizer de equipos",
+
+    "home.comingSoon.title": "Próximamente",
+    "home.comingSoon.text": "Más juegos y guías serán añadidos proximamente.",
 
     "footer_follow": "Sígueme en mis redes:"
 }
