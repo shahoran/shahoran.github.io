@@ -1,0 +1,68 @@
+{
+    "id": 15,
+    "name": "Nia",
+    "class": "controller",
+    "element": "instinct",
+    "faction": "terrascion",
+    "subfaction": "N/A",
+    "img": "nia.png",
+    "rarity": 4,
+    "cards": [
+        {
+            "id": "c1",
+            "name": "Stroke",
+            "img": "stroke.png",
+            "type": "Attack",
+            "basic": true
+        },
+        {
+            "id": "c2",
+            "name": "Amp Therapy",
+            "img": "amp_therapy.png",
+            "type": "Skill",
+            "basic": true
+        },
+        {
+            "id": "c3",
+            "name": "Amp TherapyShpere",
+            "img": "amp_therapy.png",
+            "type": "Skill",
+            "basic": true
+        },
+        {
+            "id": "c4",
+            "name": "G Chord",
+            "img": "g_chord.png",
+            "type": "Skill",
+            "basic": false
+        },
+        {
+            "id": "c5",
+            "name": "Mute Accent",
+            "img": "mute_accent.png",
+            "type": "Skill",
+            "basic": false
+        },
+        {
+            "id": "c6",
+            "name": "Soul Rip",
+            "img": "soul_rip.png",
+            "type": "Skill",
+            "basic": false
+        },
+        {
+            "id": "c7",
+            "name": "Adagio",
+            "img": "adagio.png",
+            "type": "Skill",
+            "basic": false
+        },
+        {
+            "id": "c8",
+            "name": "Nia Curiosity",
+            "img": "nia_curiositi.png",
+            "type": "Skill",
+            "basic": false
+        }
+    ]
+}
