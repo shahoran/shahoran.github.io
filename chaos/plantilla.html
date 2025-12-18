@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8">
   <title>Character JSON Builder</title>
@@ -16,6 +17,7 @@
       background: #0f172a;
       color: #e5e7eb;
     }
+
     pre {
       background: #020617;
       color: #a5f3fc;
@@ -23,95 +25,94 @@
       border-radius: 8px;
       overflow: auto;
     }
+
     .card {
       background: #020617;
       border: 1px solid #1e293b;
     }
+
     input {
       background: #020617 !important;
       color: #e5e7eb !important;
       border: 1px solid #334155 !important;
     }
+
     input::placeholder {
       color: #64748b;
     }
   </style>
 </head>
+
 <body>
 
-<div class="container py-4">
+  <div class="container py-4">
 
-  <h2 class="mb-3">Chaos Character JSON Builder</h2>
+    <h2 class="mb-3">Chaos Character JSON Builder</h2>
 
-  <!-- Character code -->
-  <div class="mb-3">
-    <label class="form-label">Character Code</label>
-    <input
-      id="charCode"
-      class="form-control"
-      autocomplete="off"
-      placeholder="Ej: 20"
-    >
+    <!-- Character code -->
+    <div class="mb-3">
+      <label class="form-label">Character Code</label>
+      <input id="charCode" class="form-control" autocomplete="off" placeholder="Ej: 20">
+    </div>
+
+    <!-- Base info -->
+    <h5>Base Info</h5>
+    <pre id="baseInfo">{}</pre>
+
+    <!-- Cards -->
+    <h5 class="mt-4">Cards</h5>
+    <div id="cards"></div>
+
+    <!-- Generate -->
+    <button id="generate" class="btn btn-primary mt-3">
+      GENERAR ARCHIVOS
+    </button>
+
+    <!-- Output -->
+    <h5 class="mt-3">Output</h5>
+    <pre id="output">esperando...</pre>
+
   </div>
 
-  <!-- Base info -->
-  <h5>Base Info</h5>
-  <pre id="baseInfo">{}</pre>
+  <script>
+    let CHARACTERS = {};
+    let currentChar = null;
 
-  <!-- Cards -->
-  <h5 class="mt-4">Cards</h5>
-  <div id="cards"></div>
+    // Load characters.json
+    (async () => {
+      CHARACTERS = await $.getJSON("/chaos/data/characters.json");
+    })();
 
-  <!-- Generate -->
-  <button id="generate" class="btn btn-primary mt-3">
-    Generate JSON
-  </button>
+    // Load character by code (TAB)
+    $("#charCode").on("keydown", function (e) {
+      if (e.key === "Tab") {
+        e.preventDefault();
+        loadCharacter($(this).val().trim());
+      }
+    });
 
-  <!-- Output -->
-  <h5 class="mt-3">Output</h5>
-  <pre id="output">{}</pre>
+    function loadCharacter(code) {
+      const data = CHARACTERS[code];
+      if (!data) return;
 
-</div>
+      currentChar = data;
 
-<script>
-let CHARACTERS = {};
-let currentChar = null;
+      $("#baseInfo").text(JSON.stringify(data, null, 2));
+      createCards();
+    }
+    function toTitleCase(text) {
+      return text
+        .toLowerCase()
+        .split(" ")
+        .filter(w => w.length)
+        .map(w => w[0].toUpperCase() + w.slice(1))
+        .join(" ");
+    }
+    function createCards() {
+      $("#cards").empty();
 
-// Load characters.json
-(async () => {
-  CHARACTERS = await $.getJSON("/chaos/data/characters.json");
-})();
-
-// Load character by code (TAB)
-$("#charCode").on("keydown", function (e) {
-  if (e.key === "Tab") {
-    e.preventDefault();
-    loadCharacter($(this).val().trim());
-  }
-});
-
-function loadCharacter(code) {
-  const data = CHARACTERS[code];
-  if (!data) return;
-
-  currentChar = data;
-
-  $("#baseInfo").text(JSON.stringify(data, null, 2));
-  createCards();
-}
-function toTitleCase(text) {
-  return text
-    .toLowerCase()
-    .split(" ")
-    .filter(w => w.length)
-    .map(w => w[0].toUpperCase() + w.slice(1))
-    .join(" ");
-}
-function createCards() {
-  $("#cards").empty();
-
-  for (let i = 1; i <= 8; i++) {
-    $("#cards").append(`
+      for (let i = 1; i <= 8; i++) {
+        $("#cards").append(`
       <div class="card p-2 mb-2">
         <strong style="color:white">Card ${i}</strong>
 
@@ -128,57 +129,78 @@ function createCards() {
           placeholder="Type (1=Attack 2=Skill 3=Upgrade)"
           autocomplete="off"
         >
+
+        <input
+        type="file"
+        class="form-control mt-1 card-img"
+        data-index="${i}"
+        accept="image/png"
+        >
       </div>
     `);
-  }
+      }
+      $("#output").text("esperando...")
+      // Focus first card automatically
+      $(".card-name").first().focus();
+    }
 
-  // Focus first card automatically
-  $(".card-name").first().focus();
-}
+    $("#generate").on("click", function () {
+      if (!currentChar) return;
 
-$("#generate").on("click", function () {
-  if (!currentChar) return;
+      const cards = [];
+      const formData = new FormData();
 
-  const cards = [];
+      $(".card-name").each(function () {
+        const index = $(this).data("index");
+        const nameRaw = $(this).val().trim();
+        if (!nameRaw) return;
 
-  $(".card-name").each(function () {
-    const index = $(this).data("index");
-    const nameRaw = $(this).val().trim();
-    if (!nameRaw) return;
+        const typeInput = $(`.card-type[data-index="${index}"]`).val();
+        const imgInput = $(`.card-img[data-index="${index}"]`)[0];
 
-    const typeInput = $(`.card-type[data-index="${index}"]`).val();
+        const type =
+          typeInput == "1" ? "Attack" :
+            typeInput == "2" ? "Skill" :
+              "Upgrade";
 
-    const type =
-      typeInput == "1" ? "Attack" :
-      typeInput == "2" ? "Skill" :
-      "Upgrade";
+        const charPrefix = currentChar.name.toLowerCase().replace(/\s+/g, "");
+        const imgName =
+          charPrefix + "_" +
+          nameRaw.toLowerCase().replace(/\s+/g, "") +
+          ".png";
 
-    const charPrefix = currentChar.name
-      .toLowerCase()
-      .replace(/\s+/g, "");
+        if (imgInput.files.length) {
+          formData.append("img_" + index, imgInput.files[0], imgName);
+        }
 
-    const img =
-      charPrefix + "_" +
-      nameRaw.toLowerCase().replace(/\s+/g, "") +
-      ".png";
+        cards.push({
+          id: "c" + index,
+          name: toTitleCase(nameRaw),
+          img: imgName,
+          type,
+          basic: index <= 3
+        });
+      });
 
-    cards.push({
-      id: "c" + index,
-      name: toTitleCase(nameRaw),
-      img,
-      type,
-      basic: index <= 3
+      const finalJson = {
+        ...currentChar,
+        cards
+      };
+
+      formData.append("json", JSON.stringify(finalJson));
+
+      $.ajax({
+        url: "/save-character",
+        method: "POST",
+        data: formData,
+        processData: false,
+        contentType: false,
+        success: () => $("#output").text("Saved ✔"),
+        error: (err) => $("#output").text(err.responseJSON.error)
+      });
     });
-  });
-
-  const finalJson = {
-    ...currentChar,
-    cards
-  };
-
-  $("#output").text(JSON.stringify(finalJson, null, 2));
-});
-</script>
+  </script>
 
 </body>
+
 </html>
