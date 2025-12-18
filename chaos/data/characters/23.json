@@ -1,0 +1,68 @@
+{
+  "id": 23,
+  "name": "Owen",
+  "class": "striker",
+  "element": "passion",
+  "faction": "terrascion",
+  "subfaction": "Planet-Born",
+  "img": "owen.png",
+  "rarity": 4,
+  "cards": [
+    {
+      "id": "c1",
+      "name": "Downward Cut",
+      "img": "owen_downwardcut.png",
+      "type": "Attack",
+      "basic": true
+    },
+    {
+      "id": "c2",
+      "name": "Downward Cut",
+      "img": "owen_downwardcut.png",
+      "type": "Attack",
+      "basic": true
+    },
+    {
+      "id": "c3",
+      "name": "Weapon Block",
+      "img": "owen_weaponblock.png",
+      "type": "Skill",
+      "basic": true
+    },
+    {
+      "id": "c4",
+      "name": "Wind Charge",
+      "img": "owen_windcharge.png",
+      "type": "Skill",
+      "basic": false
+    },
+    {
+      "id": "c5",
+      "name": "Wind Slash",
+      "img": "owen_windslash.png",
+      "type": "Attack",
+      "basic": false
+    },
+    {
+      "id": "c6",
+      "name": "Break Armor",
+      "img": "owen_breakarmor.png",
+      "type": "Attack",
+      "basic": false
+    },
+    {
+      "id": "c7",
+      "name": "Wind Riding",
+      "img": "owen_windriding.png",
+      "type": "Skill",
+      "basic": false
+    },
+    {
+      "id": "c8",
+      "name": "Gale Strike",
+      "img": "owen_galestrike.png",
+      "type": "Attack",
+      "basic": false
+    }
+  ]
+}

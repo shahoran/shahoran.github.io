@@ -1,0 +1,67 @@
+{
+    "id": 24,
+    "name": "Rei",
+    "class": "controller",
+    "element": "void",
+    "faction": "terrascion",
+    "subfaction": "SS Edenity",
+    "img": "rei.png",
+    "rarity": 4,
+"cards": [
+    {
+        "id": "c1",
+        "name": "Dark Blade",
+        "img": "rei_darkblade.png",
+        "type": "Attack",
+        "basic": true
+    },
+    {
+        "id": "c2",
+        "name": "Dark Blade",
+        "img": "rei_darkblade.png",
+        "type": "Attack",
+        "basic": true
+    },
+    {
+        "id": "c3",
+        "name": "Material Regeneration",
+        "img": "rei_materialregeneration.png",
+        "type": "Skill",
+        "basic": true
+    },
+    {
+        "id": "c4",
+        "name": "Strike of Darkness",
+        "img": "rei_strikeofdarkness.png",
+        "type": "Attack",
+        "basic": false
+    },
+    {
+        "id": "c5",
+        "name": "Resonating Darkness",
+        "img": "rei_resonatingdarkness.png",
+        "type": "Upgrade",
+        "basic": false
+    },
+    {
+        "id": "c6",
+        "name": "Snack Time",
+        "img": "rei_snacktime.png",
+        "type": "Skill",
+        "basic": false
+    },
+    {
+        "id": "c7",
+        "name": "Dark Condensation",
+        "img": "rei_darkcondensation.png",
+        "type": "Skill",
+        "basic": false
+    },
+    {
+        "id": "c8",
+        "name": "Predator's Blade",
+        "img": "rei_predatorsblade.png",
+        "type": "Attack",
+        "basic": false
+    }]
+}
