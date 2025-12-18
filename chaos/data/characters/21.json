@@ -1,0 +1,68 @@
+{
+  "id": 21,
+  "name": "beryl",
+  "class": "ranger",
+  "element": "justice",
+  "faction": "ironrain",
+  "subfaction": "Wolf Platton",
+  "img": "beryl.png",
+  "rarity": 4,
+  "cards": [
+    {
+      "id": "c1",
+      "name": "Launcher",
+      "img": "beryl_launcher.png",
+      "type": "Attack",
+      "basic": true
+    },
+    {
+      "id": "c2",
+      "name": "Charge Launcher",
+      "img": "beryl_chargelauncher.png",
+      "type": "Attack",
+      "basic": true
+    },
+    {
+      "id": "c3",
+      "name": "Barrier",
+      "img": "beryl_barrier.png",
+      "type": "Skill",
+      "basic": true
+    },
+    {
+      "id": "c4",
+      "name": "Opening Found",
+      "img": "beryl_openingfound.png",
+      "type": "Attack",
+      "basic": false
+    },
+    {
+      "id": "c5",
+      "name": "Charged Shot",
+      "img": "beryl_chargedshot.png",
+      "type": "Attack",
+      "basic": false
+    },
+    {
+      "id": "c6",
+      "name": "Guity Pleasure",
+      "img": "beryl_guitypleasure.png",
+      "type": "Skill",
+      "basic": false
+    },
+    {
+      "id": "c7",
+      "name": "Unlimited Firepower",
+      "img": "beryl_unlimitedfirepower.png",
+      "type": "Skill",
+      "basic": false
+    },
+    {
+      "id": "c8",
+      "name": "Heavy Weapons Specialist",
+      "img": "beryl_heavyweaponsspecialist.png",
+      "type": "Skill",
+      "basic": false
+    }
+  ]
+}

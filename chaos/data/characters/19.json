@@ -1,0 +1,68 @@
+{
+  "id": 19,
+  "name": "Maribell",
+  "class": "vanguard",
+  "element": "passion",
+  "faction": "ironrain",
+  "subfaction": "Wolf Platton",
+  "img": "maribell.png",
+  "rarity": 4,
+  "cards": [
+    {
+      "id": "c1",
+      "name": "Shelter Kick",
+      "img": "maribell_shelterkick.png",
+      "type": "Attack",
+      "basic": true
+    },
+    {
+      "id": "c2",
+      "name": "Shelter Defense",
+      "img": "maribell_shelterdefense.png",
+      "type": "Skill",
+      "basic": true
+    },
+    {
+      "id": "c3",
+      "name": "Shelter Hold",
+      "img": "maribell_shelterhold.png",
+      "type": "Skill",
+      "basic": true
+    },
+    {
+      "id": "c4",
+      "name": "Resolute Blitz",
+      "img": "maribell_resoluteblitz.png",
+      "type": "Attack",
+      "basic": false
+    },
+    {
+      "id": "c5",
+      "name": "Maribell Shelter Mk.ii",
+      "img": "maribell_maribellsheltermkii.png",
+      "type": "Attack",
+      "basic": false
+    },
+    {
+      "id": "c6",
+      "name": "Wolves' Dome",
+      "img": "maribell_wolvesdome.png",
+      "type": "Upgrade",
+      "basic": false
+    },
+    {
+      "id": "c7",
+      "name": "Oh... I See.",
+      "img": "maribell_ohisee.png",
+      "type": "Skill",
+      "basic": false
+    },
+    {
+      "id": "c8",
+      "name": "Shelter Strike",
+      "img": "maribell_shelterstrike.png",
+      "type": "Attack",
+      "basic": false
+    }
+  ]
+}

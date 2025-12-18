@@ -1,0 +1,90 @@
+{
+    "id": 22,
+    "name": "Cassius",
+    "class": "controller",
+    "element": "instinct",
+    "faction": "peltion",
+    "subfaction": "Company 110",
+    "img": "cassius.png",
+    "rarity": 4,
+    "cards": [
+    {
+        "id": "c1",
+        "name": "Cards",
+        "img": "cassius_cards.png",
+        "type": "Attack",
+        "basic": true
+    },
+    {
+        "id": "c2",
+        "name": "Wild Cards",
+        "img": "cassius_wild_cards.png",
+        "type": "Attack",
+        "basic": true
+    },
+    {
+        "id": "c3",
+        "name": "Mana Field",
+        "img": "cassius_mana_field.png",
+        "type": "Skill",
+        "basic": true
+    },
+    {
+        "id": "c4",
+        "name": "Pop eyed Popper",
+        "img": "cassius_pop_eyed_popper.png",
+        "type": "Upgrade",
+        "basic": false
+    },
+    {
+        "id": "c5",
+        "name": "Devil Dice",
+        "img": "cassius_devil_dice.png",
+        "type": "Attack",
+        "basic": false
+    },
+    {
+        "id": "c6",
+        "name": "Shuffle",
+        "img": "cassius_shuffle.png",
+        "type": "Skill",
+        "basic": false
+    },
+    {
+        "id": "c7",
+        "name": "Dice Trick",
+        "img": "cassius_dice_trick.png",
+        "type": "Attack",
+        "basic": false
+    },
+    {
+        "id": "c8",
+        "name": "Joker",
+        "img": "cassius_joker.png",
+        "type": "Skill",
+        "basic": false
+    }
+], "epiphanies": [],
+   "copy": [],
+   "neutrals":[ {
+            "id": "gear_bag",
+            "best": true
+        },
+        {
+            "id": "rally",
+            "best": true
+        },
+        {
+            "id": "gear_bag",
+            "best": true
+        }
+    ],
+   "removal": [],
+   "partners": [],
+   "potentials": {},
+   "fragments" : [{}],
+   "teams": [{"name": "", "pj":[],"bestepihanies": [{"pj": 0, "card":"","epi" : ""}]}]
+
+
+
+}

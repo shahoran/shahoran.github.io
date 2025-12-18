@@ -1,0 +1,68 @@
+{
+  "id": 12,
+  "name": "Yuki",
+  "class": "striker",
+  "element": "order",
+  "faction": "terrascion",
+  "subfaction": "Special Investigation Department",
+  "img": "yuki.png",
+  "rarity": 5,
+  "cards": [
+    {
+      "id": "c1",
+      "name": "Longword Slash",
+      "img": "yuki_longwordslash.png",
+      "type": "Attack",
+      "basic": true
+    },
+    {
+      "id": "c2",
+      "name": "Rapid Slash",
+      "img": "yuki_rapidslash.png",
+      "type": "Attack",
+      "basic": true
+    },
+    {
+      "id": "c3",
+      "name": "Flowing Parry",
+      "img": "yuki_flowingparry.png",
+      "type": "Skill",
+      "basic": true
+    },
+    {
+      "id": "c4",
+      "name": "Prepare To Subdue",
+      "img": "yuki_preparetosubdue.png",
+      "type": "Skill",
+      "basic": false
+    },
+    {
+      "id": "c5",
+      "name": "Flash Slash",
+      "img": "yuki_flashslash.png",
+      "type": "Attack",
+      "basic": false
+    },
+    {
+      "id": "c6",
+      "name": "Trickery Strike",
+      "img": "yuki_trickerystrike.png",
+      "type": "Attack",
+      "basic": false
+    },
+    {
+      "id": "c7",
+      "name": "Frezzing Blade",
+      "img": "yuki_frezzingblade.png",
+      "type": "Upgrade",
+      "basic": false
+    },
+    {
+      "id": "c8",
+      "name": "Iceberg Cleave",
+      "img": "yuki_icebergcleave.png",
+      "type": "Attack",
+      "basic": false
+    }
+  ]
+}

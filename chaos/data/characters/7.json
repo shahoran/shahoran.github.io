@@ -1,0 +1,68 @@
+{
+  "id": 7,
+  "name": "Orlea",
+  "class": "controller",
+  "element": "instinct",
+  "faction": "theholycrusaders",
+  "subfaction": "Sanctuary Sisters",
+  "img": "orlea.png",
+  "rarity": 5,
+  "cards": [
+    {
+      "id": "c1",
+      "name": "Attack, My Minions",
+      "img": "orlea_attackmyminions.png",
+      "type": "Attack",
+      "basic": true
+    },
+    {
+      "id": "c2",
+      "name": "Attack, My Minions",
+      "img": "orlea_attackmyminions.png",
+      "type": "Attack",
+      "basic": true
+    },
+    {
+      "id": "c3",
+      "name": "Heaven's Healing",
+      "img": "orlea_heavenshealing.png",
+      "type": "Skill",
+      "basic": true
+    },
+    {
+      "id": "c4",
+      "name": "Sacred Censer",
+      "img": "orlea_sacredcenser.png",
+      "type": "Skill",
+      "basic": false
+    },
+    {
+      "id": "c5",
+      "name": "Growth Acceleration",
+      "img": "orlea_growthacceleration.png",
+      "type": "Skill",
+      "basic": false
+    },
+    {
+      "id": "c6",
+      "name": "Annoyin",
+      "img": "orlea_annoyin.png",
+      "type": "Attack",
+      "basic": false
+    },
+    {
+      "id": "c7",
+      "name": "Growing Creature",
+      "img": "orlea_growingcreature.png",
+      "type": "Skill",
+      "basic": false
+    },
+    {
+      "id": "c8",
+      "name": "Will Of Light",
+      "img": "orlea_willoflight.png",
+      "type": "Skill",
+      "basic": false
+    }
+  ]
+}

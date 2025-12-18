@@ -1,0 +1,68 @@
+{
+  "id": 18,
+  "name": "Lucas",
+  "class": "hunter",
+  "element": "passion",
+  "faction": "ironrain",
+  "subfaction": "Wolf Platton",
+  "img": "lucas.png",
+  "rarity": 4,
+  "cards": [
+    {
+      "id": "c1",
+      "name": "Machine Gun",
+      "img": "lucas_machinegun.png",
+      "type": "Attack",
+      "basic": true
+    },
+    {
+      "id": "c2",
+      "name": "Machine Gun",
+      "img": "lucas_machinegun.png",
+      "type": "Attack",
+      "basic": true
+    },
+    {
+      "id": "c3",
+      "name": "Shielding Incendiary Bomb",
+      "img": "lucas_shieldingincendiarybomb.png",
+      "type": "Skill",
+      "basic": true
+    },
+    {
+      "id": "c4",
+      "name": "Extended Magazine",
+      "img": "lucas_extendedmagazine.png",
+      "type": "Upgrade",
+      "basic": false
+    },
+    {
+      "id": "c5",
+      "name": "S.s.s",
+      "img": "lucas_sss.png",
+      "type": "Attack",
+      "basic": false
+    },
+    {
+      "id": "c6",
+      "name": "Flame Thrower",
+      "img": "lucas_flamethrower.png",
+      "type": "Attack",
+      "basic": false
+    },
+    {
+      "id": "c7",
+      "name": "Flashbang",
+      "img": "lucas_flashbang.png",
+      "type": "Attack",
+      "basic": false
+    },
+    {
+      "id": "c8",
+      "name": "R.p.g-7",
+      "img": "lucas_rpg-7.png",
+      "type": "Upgrade",
+      "basic": false
+    }
+  ]
+}

@@ -1,0 +1,68 @@
+{
+  "id": 4,
+  "name": "Luke",
+  "class": "hunter",
+  "element": "order",
+  "faction": "ironrain",
+  "subfaction": "Wolf Platton",
+  "img": "luke.png",
+  "rarity": 5,
+  "cards": [
+    {
+      "id": "c1",
+      "name": "Single Shot",
+      "img": "luke_singleshot.png",
+      "type": "Attack",
+      "basic": true
+    },
+    {
+      "id": "c2",
+      "name": "Single Shot",
+      "img": "luke_singleshot.png",
+      "type": "Attack",
+      "basic": true
+    },
+    {
+      "id": "c3",
+      "name": "Shadow Concealment",
+      "img": "luke_shadowconcealment.png",
+      "type": "Skill",
+      "basic": true
+    },
+    {
+      "id": "c4",
+      "name": "Rapid Fire",
+      "img": "luke_rapidfire.png",
+      "type": "Attack",
+      "basic": false
+    },
+    {
+      "id": "c5",
+      "name": "Stealth Reload",
+      "img": "luke_stealthreload.png",
+      "type": "Skill",
+      "basic": false
+    },
+    {
+      "id": "c6",
+      "name": "Seize The Oportunity",
+      "img": "luke_seizetheoportunity.png",
+      "type": "Skill",
+      "basic": false
+    },
+    {
+      "id": "c7",
+      "name": "Dance Of The Demon",
+      "img": "luke_danceofthedemon.png",
+      "type": "Attack",
+      "basic": false
+    },
+    {
+      "id": "c8",
+      "name": "Finisher Round",
+      "img": "luke_finisherround.png",
+      "type": "Attack",
+      "basic": false
+    }
+  ]
+}
