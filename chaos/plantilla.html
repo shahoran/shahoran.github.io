@@ -87,7 +87,7 @@
 
       let cardName = $(`.card-name[data-index="${index}"]`).val().trim();
       if (!cardName) {
-        cardName="___";
+        cardName = "___";
       }
 
       const charPrefix = currentChar.name.toLowerCase().replace(/\s+/g, "");
@@ -187,7 +187,13 @@
       // Focus first card automatically
       $(".card-name").first().focus();
     }
-
+    function slug(text) {
+      return text
+        .toLowerCase()
+        .normalize("NFD")                 // separa acentos
+        .replace(/[\u0300-\u036f]/g, "")  // elimina acentos
+        .replace(/[^a-z0-9_-]+/g, "")       // elimina TODO excepto letras y números
+    }
     $("#generate").on("click", function () {
       if (!currentChar) return;
 
@@ -207,10 +213,10 @@
             typeInput == "2" ? "Skill" :
               "Upgrade";
 
-        const charPrefix = currentChar.name.toLowerCase().replace(/\s+/g, "");
+        const charPrefix = slug(currentChar.name);
         const imgName =
           charPrefix + "_" +
-          nameRaw.toLowerCase().replace(/\s+/g, "") +
+          slug(nameRaw) +
           ".png";
 
         if (imgInput.files.length) {
