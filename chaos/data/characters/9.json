@@ -1,12 +1,12 @@
 {
-    "id":9,
-    "name":"Veronica",
-    "class":"ranger",
-    "element":"passion",
-    "faction":"stellafamilia",
-    "subfaction":"Black Spica",
-    "img":"veronica.png",
-    "rarity":5,
+    "id": 9,
+    "name": "Veronica",
+    "class": "ranger",
+    "element": "passion",
+    "faction": "stellafamilia",
+    "subfaction": "Black Spica",
+    "img": "veronica.png",
+    "rarity": 5,
     "cards": [
         {
             "id": "c1",
@@ -122,6 +122,29 @@
                     "notes": "veronica_epi_firingpreparation_3"
                 }
             ]
+        },
+        {
+            "cardId": "c6",
+            "options": [
+                {
+                    "id": "epi_pendantofresolution_1",
+                    "best": true,
+                    "img": "veronica_epi_pendantofresolution_unique.png",
+                    "note": "veronica_epi_pendantofresolution_1"
+                },
+                {
+                    "id": "epi_pendantofresolution_2",
+                    "best": false,
+                    "img": "veronica_epi_pendantofresolution_skill.png",
+                    "note": "veronica_epi_pendantofresolution_2"
+                },
+                {
+                    "id": "epi_pendantofresolution_3",
+                    "best": false,
+                    "img": "veronica_epi_pendantofresolution_doble.png",
+                    "note": "veronica_epi_pendantofresolution_3"
+                }
+            ]
         }
     ],
     "copy": [
@@ -132,7 +155,8 @@
                     "epiphanyId": "epi_repose_1",
                     "copies": 3,
                     "best": true
-                },{
+                },
+                {
                     "epiphanyId": "epi_repose_2",
                     "copies": 2,
                     "best": true
@@ -155,24 +179,24 @@
             ]
         }
     ],
-    "neutrals": [
-    ],
+    "neutrals": [],
     "removal": [
         {
             "cardId": "c3",
             "best": true
         },
         {
-            "cardId": "c2", 
+            "cardId": "c2",
             "best": true
         },
         {
-            "cardId": "c1", 
+            "cardId": "c1",
             "best": true
         }
     ],
     "partners": [
-        "marin","rosaria"
+        "marin",
+        "rosaria"
     ],
     "potentials": {
         "1": {
@@ -230,8 +254,6 @@
                 "f12"
             ]
         }
-        
     ],
-    "teams": [
-    ]
+    "teams": []
 }

@@ -6,9 +6,11 @@ PORT = 8000
 
 CHAR_DIR = "chaos/data/characters"
 IMG_DIR = "chaos/img/cards"
+IMG_EPI_DIR = "chaos/img/epiphanies"
 
 os.makedirs(CHAR_DIR, exist_ok=True)
 os.makedirs(IMG_DIR, exist_ok=True)
+os.makedirs(IMG_EPI_DIR, exist_ok=True)
 
 class Handler(SimpleHTTPRequestHandler):
 
@@ -105,7 +107,7 @@ class Handler(SimpleHTTPRequestHandler):
                 skipped.append(file.filename)
                 continue
 
-            img_path = os.path.join(IMG_DIR, file.filename)
+            img_path = os.path.join(IMG_EPI_DIR, file.filename)
 
             # 🔒 no sobrescribir
             if os.path.exists(img_path):

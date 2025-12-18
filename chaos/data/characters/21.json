@@ -64,5 +64,120 @@
       "type": "Skill",
       "basic": false
     }
+  ],
+  "epiphanies": [
+    {
+      "cardId": "c4",
+      "options": [
+        {
+          "id": "epi_openingfound_1",
+          "best": true,
+          "img": "beryl_epi_openingfound_upgrade.png",
+          "note": "beryl_epi_openingfound_1"
+        },
+        {
+          "id": "epi_openingfound_2",
+          "best": false,
+          "img": "beryl_epi_openingfound_2hits.png",
+          "note": "beryl_epi_openingfound_2"
+        },
+        {
+          "id": "epi_openingfound_3",
+          "best": false,
+          "img": "beryl_epi_openingfound_dano.png",
+          "note": "beryl_epi_openingfound_3"
+        }
+      ]
+    },
+    {
+      "cardId": "c6",
+      "options": [
+        {
+          "id": "epi_guitypleasure_1",
+          "best": true,
+          "img": "beryl_epi_guitypleasure_draw5.png",
+          "note": "beryl_epi_guitypleasure_1"
+        },
+        {
+          "id": "epi_guitypleasure_2",
+          "best": false,
+          "img": "beryl_epi_guitypleasure_exhaust2.png",
+          "note": "beryl_epi_guitypleasure_2"
+        },
+        {
+          "id": "epi_guitypleasure_3",
+          "best": false,
+          "img": "beryl_epi_guitypleasure_moral.png",
+          "note": "beryl_epi_guitypleasure_3"
+        }
+      ]
+    },
+    {
+      "cardId": "c5",
+      "options": [
+        {
+          "id": "epi_chargedshot_1",
+          "best": true,
+          "img": "beryl_epi_chargedshot_masdano.png",
+          "note": "beryl_epi_chargedshot_1"
+        },
+        {
+          "id": "epi_chargedshot_2",
+          "best": true,
+          "img": "beryl_epi_chargedshot_doshits.png",
+          "note": "beryl_epi_chargedshot_2"
+        }
+      ]
+    },
+    {
+      "cardId": "c7",
+      "options": [
+        {
+          "id": "epi_unlimitedfirepower_1",
+          "best": true,
+          "img": "beryl_epi_unlimitedfirepower_upgrade.png",
+          "note": "beryl_epi_unlimitedfirepower_1"
+        },
+        {
+          "id": "epi_unlimitedfirepower_2",
+          "best": false,
+          "img": "beryl_epi_unlimitedfirepower_danoaditivo.png",
+          "note": "beryl_epi_unlimitedfirepower_2"
+        },
+        {
+          "id": "epi_unlimitedfirepower_3",
+          "best": false,
+          "img": "beryl_epi_unlimitedfirepower_base.png",
+          "note": "beryl_epi_unlimitedfirepower_3"
+        }
+      ]
+    }
+  ],
+  "copy": [
+    {
+      "cardId": "c4",
+      "options": [
+        {
+          "epiphanyId": "epi_openingfound_1",
+          "copies": 3,
+          "best": true
+        }
+      ]
+    },
+    {
+      "cardId": "c6",
+      "options": [
+        {
+          "epiphanyId": "epi_guitypleasure_1",
+          "copies": 2,
+          "best": true
+        },
+        {
+          "epiphanyId": "epi_guitypleasure_3",
+          "copies": 2,
+          "best": false
+        }
+      ]
+    }
   ]
 }

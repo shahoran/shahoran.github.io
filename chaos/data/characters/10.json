@@ -64,5 +64,145 @@
       "type": "Attack",
       "basic": false
     }
+  ],
+  "epiphanies": [
+    {
+      "cardId": "c4",
+      "hide": false,
+      "options": [
+        {
+          "id": "epi_echoofsorrow_1",
+          "best": true,
+          "img": "renoa_epi_echoofsorrow_upgrade.png",
+          "note": "renoa_epi_echoofsorrow_1"
+        },
+        {
+          "id": "epi_echoofsorrow_2",
+          "best": false,
+          "img": "renoa_epi_echoofsorrow_3balas.png",
+          "note": "renoa_epi_echoofsorrow_2"
+        }
+      ]
+    },
+    {
+      "cardId": "c7",
+      "hide": false,
+      "options": [
+        {
+          "id": "epi_floweofdevouredfate_1",
+          "best": true,
+          "img": "renoa_epi_floweofdevouredfate_discard3.png",
+          "note": "renoa_epi_floweofdevouredfate_1"
+        },
+        {
+          "id": "epi_floweofdevouredfate_2",
+          "best": false,
+          "img": "renoa_epi_floweofdevouredfate_dano.png",
+          "note": "renoa_epi_floweofdevouredfate_2"
+        },
+        {
+          "id": "epi_floweofdevouredfate_3",
+          "best": false,
+          "img": "renoa_epi_floweofdevouredfate_exhaust.png",
+          "note": "renoa_epi_floweofdevouredfate_3"
+        },
+        {
+          "id": "epi_floweofdevouredfate_4",
+          "best": false,
+          "img": "renoa_epi_floweofdevouredfate_draw.png",
+          "note": "renoa_epi_floweofdevouredfate_4"
+        }
+      ]
+    },
+    {
+      "cardId": "c6",
+      "hide": false,
+      "options": [
+        {
+          "id": "epi_balladofpichblack_1",
+          "best": true,
+          "img": "renoa_epi_balladofpichblack_danobullet.png",
+          "note": "renoa_epi_balladofpichblack_1"
+        },
+        {
+          "id": "epi_balladofpichblack_2",
+          "best": false,
+          "img": "renoa_epi_balladofpichblack_base.png",
+          "note": "renoa_epi_balladofpichblack_2"
+        },
+        {
+          "id": "epi_balladofpichblack_3",
+          "best": false,
+          "img": "renoa_epi_balladofpichblack_marca.png",
+          "note": "renoa_epi_balladofpichblack_3"
+        }
+      ]
+    },
+    {
+      "cardId": "c5",
+      "hide": false,
+      "options": [
+        {
+          "id": "epi_instantjudgment_1",
+          "best": true,
+          "img": "renoa_epi_instantjudgment_upgrade.png",
+          "note": "renoa_epi_instantjudgment_1"
+        },
+        {
+          "id": "epi_instantjudgment_2",
+          "best": true,
+          "img": "renoa_epi_instantjudgment_base.png",
+          "note": "renoa_epi_instantjudgment_2"
+        },
+        {
+          "id": "epi_instantjudgment_3",
+          "best": false,
+          "img": "renoa_epi_instantjudgment_1hit.png",
+          "note": "renoa_epi_instantjudgment_3"
+        }
+      ]
+    }
+  ],
+  "copy": [
+    {
+      "cardId": "c4",
+      "options": [
+        {
+          "epiphanyId": "epi_echoofsorrow_1",
+          "copies": 2,
+          "best": true
+        },
+        {
+          "epiphanyId": "epi_echoofsorrow_2",
+          "copies": 1,
+          "best": false
+        }
+      ]
+    },
+    {
+      "cardId": "c7",
+      "options": [
+        {
+          "epiphanyId": "epi_floweofdevouredfate_1",
+          "copies": 1,
+          "best": true
+        },
+        {
+          "epiphanyId": "epi_floweofdevouredfate_2",
+          "copies": 1,
+          "best": false
+        },
+        {
+          "epiphanyId": "epi_floweofdevouredfate_3",
+          "copies": 1,
+          "best": false
+        },
+        {
+          "epiphanyId": "epi_floweofdevouredfate_4",
+          "copies": 3,
+          "best": false
+        }
+      ]
+    }
   ]
 }

@@ -149,9 +149,13 @@ $(document).ready(async function () {
         }
 
         epifanias.forEach(epi => {
-            const cardInfo = cards.find(c => c.id === epi.cardId);
+            if (epi.hide) {
 
-            const $card = $(`
+            } else {
+
+                const cardInfo = cards.find(c => c.id === epi.cardId);
+
+                const $card = $(`
             <div class="copy-block mb-4 p-3 d-flex align-items-start gap-4">
 
                 <!-- IZQUIERDA: CARTA BASE + NOMBRE -->
@@ -168,10 +172,10 @@ $(document).ready(async function () {
             </div>
         `);
 
-            const $optRow = $card.find(".epifania-row");
+                const $optRow = $card.find(".epifania-row");
 
-            epi.options.forEach(op => {
-                const $op = $(`
+                epi.options.forEach(op => {
+                    const $op = $(`
         <div class="epifania-option ${op.best ? "epifania-best" : ""}"
             data-bs-toggle="tooltip"
             data-bs-html="true"
@@ -183,17 +187,17 @@ $(document).ready(async function () {
 
             <div class="epifania-name">
                 ${op.best
-                        ? `<span class="badge bg-danger ms-1" data-i18n="recomendada">${t("recomendada")}</span>`
-                        : `<span class="badge bg-secondary ms-1" data-i18n="opcional">${t("opcional")}</span>`
-                    }
+                            ? `<span class="badge bg-danger ms-1" data-i18n="recomendada">${t("recomendada")}</span>`
+                            : `<span class="badge bg-secondary ms-1" data-i18n="opcional">${t("opcional")}</span>`
+                        }
             </div>
         </div>
     `);
 
-                $optRow.append($op);
-            });
-
-            $container.append($card);
+                    $optRow.append($op);
+                });
+                $container.append($card);
+            }
         });
         initTooltips()
     }

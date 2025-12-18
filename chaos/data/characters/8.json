@@ -64,5 +64,113 @@
       "type": "Attack",
       "basic": false
     }
+  ],
+  "epiphanies": [
+    {
+      "cardId": "c6",
+      "options": [
+        {
+          "id": "epi_unityofattackanddefense_1",
+          "best": true,
+          "img": "meilin_epi_unityofattackanddefense_move.png",
+          "note": "meilin_epi_unityofattackanddefense_1"
+        },
+        {
+          "id": "epi_unityofattackanddefense_2",
+          "best": false,
+          "img": "meilin_epi_unityofattackanddefense_draw.png",
+          "note": "meilin_epi_unityofattackanddefense_2"
+        }
+      ]
+    },
+    {
+      "cardId": "c5",
+      "options": [
+        {
+          "id": "epi_risingdragonspire_1",
+          "best": true,
+          "img": "meilin_epi_risingdragonspire_30hits.png",
+          "note": "meilin_epi_risingdragonspire_1"
+        },
+        {
+          "id": "epi_risingdragonspire_2",
+          "best": false,
+          "img": "meilin_epi_risingdragonspire_basicos.png",
+          "note": "meilin_epi_risingdragonspire_2"
+        }
+      ]
+    },
+    {
+      "cardId": "c4",
+      "options": [
+        {
+          "id": "epi_flamedragonsjewel_1",
+          "best": true,
+          "img": "meilin_epi_flamedragonsjewel_prob.png",
+          "note": "meilin_epi_flamedragonsjewel_1"
+        },
+        {
+          "id": "epi_flamedragonsjewel_2",
+          "best": false,
+          "img": "meilin_epi_flamedragonsjewel_30porciento.png",
+          "note": "meilin_epi_flamedragonsjewel_2"
+        }
+      ]
+    },
+    {
+      "cardId": "c7",
+      "options": [
+        {
+          "id": "epi_spiritofthearomata_1",
+          "best": true,
+          "img": "meilin_epi_spiritofthearomata_passion.png",
+          "note": "meilin_epi_spiritofthearomata_1"
+        },
+        {
+          "id": "epi_spiritofthearomata_2",
+          "best": true,
+          "img": "meilin_epi_spiritofthearomata_30porciento.png",
+          "note": "meilin_epi_spiritofthearomata_2"
+        },
+        {
+          "id": "epi_spiritofthearomata_3",
+          "best": true,
+          "img": "meilin_epi_spiritofthearomata_basicos.png",
+          "note": "meilin_epi_spiritofthearomata_3"
+        }
+      ]
+    }
+  ],
+  "copy": [
+    {
+      "cardId": "c6",
+      "options": [
+        {
+          "epiphanyId": "epi_unityofattackanddefense_1",
+          "copies": 3,
+          "best": true
+        },
+        {
+          "epiphanyId": "epi_unityofattackanddefense_2",
+          "copies": 1,
+          "best": false
+        }
+      ]
+    },
+    {
+      "cardId": "c5",
+      "options": [
+        {
+          "epiphanyId": "epi_risingdragonspire_1",
+          "copies": 1,
+          "best": true
+        },
+        {
+          "epiphanyId": "epi_risingdragonspire_2",
+          "copies": 1,
+          "best": false
+        }
+      ]
+    }
   ]
 }

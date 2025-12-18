@@ -278,7 +278,7 @@
       $("#epicards").empty();
 
       currentChar.cards
-        .filter(c => ["c4", "c5", "c6", "c7"].includes(c.id))
+        .filter(c => ["c4", "c5", "c6", "c7", "c8"].includes(c.id))
         .forEach(renderCard);
     });
 
@@ -422,6 +422,7 @@
 
         const epiOptions = [];
         const copyOptions = [];
+        const hide = cardId==="c8" ? true : false;
 
         $(this).find(".epi-row").each(function (i) {
           const diff = slug($(this).find(".epi-diff").val());
@@ -444,7 +445,7 @@
           }
         });
 
-        if (epiOptions.length) epiphanies.push({ cardId, options: epiOptions });
+        if (epiOptions.length) epiphanies.push({ cardId, hide, options: epiOptions });
         if (copyOptions.length) copy.push({ cardId, options: copyOptions });
       });
 

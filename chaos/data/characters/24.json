@@ -7,61 +7,188 @@
     "subfaction": "SS Edenity",
     "img": "rei.png",
     "rarity": 4,
-"cards": [
-    {
-        "id": "c1",
-        "name": "Dark Blade",
-        "img": "rei_darkblade.png",
-        "type": "Attack",
-        "basic": true
-    },
-    {
-        "id": "c2",
-        "name": "Dark Blade",
-        "img": "rei_darkblade.png",
-        "type": "Attack",
-        "basic": true
-    },
-    {
-        "id": "c3",
-        "name": "Material Regeneration",
-        "img": "rei_materialregeneration.png",
-        "type": "Skill",
-        "basic": true
-    },
-    {
-        "id": "c4",
-        "name": "Strike of Darkness",
-        "img": "rei_strikeofdarkness.png",
-        "type": "Attack",
-        "basic": false
-    },
-    {
-        "id": "c5",
-        "name": "Resonating Darkness",
-        "img": "rei_resonatingdarkness.png",
-        "type": "Upgrade",
-        "basic": false
-    },
-    {
-        "id": "c6",
-        "name": "Snack Time",
-        "img": "rei_snacktime.png",
-        "type": "Skill",
-        "basic": false
-    },
-    {
-        "id": "c7",
-        "name": "Dark Condensation",
-        "img": "rei_darkcondensation.png",
-        "type": "Skill",
-        "basic": false
-    },
-    {
-        "id": "c8",
-        "name": "Predator's Blade",
-        "img": "rei_predatorsblade.png",
-        "type": "Attack",
-        "basic": false
-    }]
+    "cards": [
+        {
+            "id": "c1",
+            "name": "Dark Blade",
+            "img": "rei_darkblade.png",
+            "type": "Attack",
+            "basic": true
+        },
+        {
+            "id": "c2",
+            "name": "Dark Blade",
+            "img": "rei_darkblade.png",
+            "type": "Attack",
+            "basic": true
+        },
+        {
+            "id": "c3",
+            "name": "Material Regeneration",
+            "img": "rei_materialregeneration.png",
+            "type": "Skill",
+            "basic": true
+        },
+        {
+            "id": "c4",
+            "name": "Strike of Darkness",
+            "img": "rei_strikeofdarkness.png",
+            "type": "Attack",
+            "basic": false
+        },
+        {
+            "id": "c5",
+            "name": "Resonating Darkness",
+            "img": "rei_resonatingdarkness.png",
+            "type": "Upgrade",
+            "basic": false
+        },
+        {
+            "id": "c6",
+            "name": "Snack Time",
+            "img": "rei_snacktime.png",
+            "type": "Skill",
+            "basic": false
+        },
+        {
+            "id": "c7",
+            "name": "Dark Condensation",
+            "img": "rei_darkcondensation.png",
+            "type": "Skill",
+            "basic": false
+        },
+        {
+            "id": "c8",
+            "name": "Predator's Blade",
+            "img": "rei_predatorsblade.png",
+            "type": "Attack",
+            "basic": false
+        }
+    ],
+    "epiphanies": [
+        {
+            "cardId": "c6",
+            "hide": false,
+            "options": [
+                {
+                    "id": "epi_snacktime_1",
+                    "best": true,
+                    "img": "rei_epi_snacktime_draw2.png",
+                    "note": "rei_epi_snacktime_1"
+                }
+            ]
+        },
+        {
+            "cardId": "c8",
+            "hide": true,
+            "options": [
+                {
+                    "id": "epi_predatorsblade_1",
+                    "best": true,
+                    "img": "rei_epi_predatorsblade_base.png",
+                    "note": "rei_epi_predatorsblade_1"
+                }
+            ]
+        },
+        {
+            "cardId": "c5",
+            "hide": false,
+            "options": [
+                {
+                    "id": "epi_resonatingdarkness_1",
+                    "best": true,
+                    "img": "rei_epi_resonatingdarkness_1menos.png",
+                    "note": "rei_epi_resonatingdarkness_1"
+                },
+                {
+                    "id": "epi_resonatingdarkness_2",
+                    "best": true,
+                    "img": "rei_epi_resonatingdarkness_60dano.png",
+                    "note": "rei_epi_resonatingdarkness_2"
+                },
+                {
+                    "id": "epi_resonatingdarkness_3",
+                    "best": true,
+                    "img": "rei_epi_resonatingdarkness_void.png",
+                    "note": "rei_epi_resonatingdarkness_3"
+                }
+            ]
+        },
+        {
+            "cardId": "c4",
+            "hide": false,
+            "options": [
+                {
+                    "id": "epi_strikeofdarkness_1",
+                    "best": true,
+                    "img": "rei_epi_strikeofdarkness_upgrade.png",
+                    "note": "rei_epi_strikeofdarkness_1"
+                },
+                {
+                    "id": "epi_strikeofdarkness_2",
+                    "best": false,
+                    "img": "rei_epi_strikeofdarkness_150dano.png",
+                    "note": "rei_epi_strikeofdarkness_2"
+                },
+                {
+                    "id": "epi_strikeofdarkness_3",
+                    "best": false,
+                    "img": "rei_epi_strikeofdarkness_activate.png",
+                    "note": "rei_epi_strikeofdarkness_3"
+                }
+            ]
+        },
+        {
+            "cardId": "c7",
+            "hide": false,
+            "options": [
+                {
+                    "id": "epi_darkcondensation_1",
+                    "best": true,
+                    "img": "rei_epi_darkcondensation_150.png",
+                    "note": "rei_epi_darkcondensation_1"
+                },
+                {
+                    "id": "epi_darkcondensation_2",
+                    "best": true,
+                    "img": "rei_epi_darkcondensation_void.png",
+                    "note": "rei_epi_darkcondensation_2"
+                },
+                {
+                    "id": "epi_darkcondensation_3",
+                    "best": true,
+                    "img": "rei_epi_darkcondensation_choose.png",
+                    "note": "rei_epi_darkcondensation_3"
+                },
+                {
+                    "id": "epi_darkcondensation_4",
+                    "best": false,
+                    "img": "rei_epi_darkcondensation_upgrade.png",
+                    "note": "rei_epi_darkcondensation_4"
+                }
+            ]
+        }
+    ],
+    "copy": [
+        {
+            "cardId": "c6",
+            "options": [
+                {
+                    "epiphanyId": "epi_snacktime_1",
+                    "copies": 2,
+                    "best": true
+                }
+            ]
+        },
+        {
+            "cardId": "c8",
+            "options": [
+                {
+                    "epiphanyId": "epi_predatorsblade_1",
+                    "copies": 1,
+                    "best": false
+                }
+            ]
+        }
+    ]
 }
