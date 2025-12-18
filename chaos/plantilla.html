@@ -99,7 +99,14 @@ function loadCharacter(code) {
   $("#baseInfo").text(JSON.stringify(data, null, 2));
   createCards();
 }
-
+function toTitleCase(text) {
+  return text
+    .toLowerCase()
+    .split(" ")
+    .filter(w => w.length)
+    .map(w => w[0].toUpperCase() + w.slice(1))
+    .join(" ");
+}
 function createCards() {
   $("#cards").empty();
 
@@ -157,7 +164,7 @@ $("#generate").on("click", function () {
 
     cards.push({
       id: "c" + index,
-      name: nameRaw.toUpperCase(),
+      name: toTitleCase(nameRaw),
       img,
       type,
       basic: index <= 3
