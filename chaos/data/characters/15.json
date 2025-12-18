@@ -73,19 +73,19 @@
           "id": "epi_adagio_1",
           "best": true,
           "img": "nia_epi_adagio_drawdiscard2.png",
-          "note": "nia_epi_adagio_1"
+          "notes": "nia_epi_adagio_1"
         },
         {
           "id": "epi_adagio_2",
           "best": true,
           "img": "nia_epi_adagio_create.png",
-          "note": "nia_epi_adagio_2"
+          "notes": "nia_epi_adagio_2"
         },
         {
           "id": "epi_adagio_3",
           "best": false,
           "img": "nia_epi_adagio_renoabis.png",
-          "note": "nia_epi_adagio_3"
+          "notes": "nia_epi_adagio_3"
         }
       ]
     },
@@ -96,13 +96,13 @@
           "id": "epi_gchord_1",
           "best": true,
           "img": "nia_epi_gchord_choose.png",
-          "note": "nia_epi_gchord_1"
+          "notes": "nia_epi_gchord_1"
         },
         {
           "id": "epi_gchord_2",
           "best": false,
           "img": "nia_epi_gchord_extraattack.png",
-          "note": "nia_epi_gchord_2"
+          "notes": "nia_epi_gchord_2"
         }
       ]
     },
@@ -113,25 +113,25 @@
           "id": "epi_soulrip_1",
           "best": true,
           "img": "nia_epi_soulrip_descartada.png",
-          "note": "nia_epi_soulrip_1"
+          "notes": "nia_epi_soulrip_1"
         },
         {
           "id": "epi_soulrip_2",
           "best": true,
           "img": "nia_epi_soulrip_cura.png",
-          "note": "nia_epi_soulrip_2"
+          "notes": "nia_epi_soulrip_2"
         },
         {
           "id": "epi_soulrip_3",
           "best": true,
           "img": "nia_epi_soulrip_extraattack.png",
-          "note": "nia_epi_soulrip_3"
+          "notes": "nia_epi_soulrip_3"
         },
         {
           "id": "epi_soulrip_4",
           "best": false,
           "img": "nia_epi_soulrip_upgrade.png",
-          "note": "nia_epi_soulrip_4"
+          "notes": "nia_epi_soulrip_4"
         }
       ]
     },
@@ -142,7 +142,7 @@
           "id": "epi_muteaccent_1",
           "best": false,
           "img": "nia_epi_muteaccent_elegido.png",
-          "note": "nia_epi_muteaccent_1"
+          "notes": "nia_epi_muteaccent_1"
         }
       ]
     },
@@ -154,32 +154,12 @@
           "id": "epi_niacuriosity_1",
           "best": true,
           "img": "nia_epi_niacuriosity.png",
-          "note": "nia_epi_niacuriosity_1"
+          "notes": "nia_epi_niacuriosity_1"
         }
       ]
     }
   ],
   "copy": [
-    {
-      "cardId": "c7",
-      "options": [
-        {
-          "epiphanyId": "epi_adagio_1",
-          "copies": 2,
-          "best": true
-        },
-        {
-          "epiphanyId": "epi_adagio_2",
-          "copies": 2,
-          "best": true
-        },
-        {
-          "epiphanyId": "epi_adagio_3",
-          "copies": 2,
-          "best": false
-        }
-      ]
-    },
     {
       "cardId": "c7",
       "options": [

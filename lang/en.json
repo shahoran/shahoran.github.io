@@ -63,6 +63,8 @@
 
 
 
+
+
     "khalipe_epi_1":"Plays itself with the Celestial.",
     "khalipe_epi_2":"Allows you to choose what to draw.",
     "khalipe_epi_rally_3":"Guarantees drawing a Vulture.",
@@ -110,6 +112,7 @@
 
 
 
+
     "chizuru_epi_onihunt_1":"Oni Hunt with 4 hits to charge more Bind.",
     "chizuru_epi_onihunt_2":"Creates 2 basic cards with cost 0, helps combo with Tsukuyomi upgrade.",
     "chizuru_epi_onihunt_3":"Further increases Shadow of the Moon damage, helps combo with Tsukuyomi +2 hits to Shadow of the Moon.",
@@ -124,6 +127,8 @@
     "chizuru_epi_karmicflames_3":"Increases damage if the target already has the curse.",
 
     "chizuru_set_1":"Triple set, a good general option.",
+
+
 
 
 
@@ -143,6 +148,10 @@
 
     "mika_set_1":"Increases healing along with defense and survivability.",
 
+
+
+
+
     "veronica_epi_repose_1":"Repose with cost 0 allows it to be played for free.",
     "veronica_epi_repose_2":"Reduces the cost of a drawn card, recovering the value spent.",
     "veronica_epi_sirkowalski_1":"Draw 2 cards and generate a crossbow.",
@@ -150,8 +159,102 @@
     "veronica_epi_firingpreparation_1":"AOE crossbow that helps with clearing.",
     "veronica_epi_firingpreparation_2":"Chance to generate a double crossbow (as if it were a second critical hit).",
     "veronica_epi_firingpreparation_3":"Increases critical hit chance.",
+    "veronica_epi_pendantofresolution_1": "Makes it unique, it will not appear to be copied in chaos",
+    "veronica_epi_pendantofresolution_2": "Veronica’s cards also grant reload",
+    "veronica_epi_pendantofresolution_3": "There is a chance to reload 2",
 
     "veronica_set_1":"triple set",
+
+
+
+
+
+    "yuki_epi_preparetosubdue_1": "Draw another attack card next turn",
+    "yuki_epi_preparetosubdue_2": "If you have Inspiration, draw one more card",
+    "yuki_epi_preparetosubdue_3": "Adds retain and extra damage",
+    "yuki_epi_flashslash_1": "If you have good AP generation, it provides a lot of damage",
+    "yuki_epi_flashslash_2": "If you do not have good AP generation, it provides 0 cost",
+    "yuki_epi_flashslash_3": "Applies vulnerable, increasing damage for the next card",
+    "yuki_epi_flashslash_4": "Grants morale, increasing damage for the next card",
+    "yuki_epi_trickerystrike_1": "Adds retrieve with retain, giving it an extra use",
+    "yuki_epi_trickerystrike_2": "Allows you to choose who receives Inspiration",
+    "yuki_epi_frezzingblade_1": "Adds initiation at 0 cost, making it free to use",
+    "yuki_epi_frezzingblade_2": "Increases damage dealt multiplicatively",
+    "yuki_epi_frezzingblade_3": "Increases its base damage",
+    "yuki_epi_icebergcleave_1": "The most important card in Yuki’s DPS, even without the first dupe",
+
+    "meilin_epi_unityofattackanddefense_1": "The most important Mei Lin card, you always look for move",
+    "meilin_epi_unityofattackanddefense_2": "Only in case you did not get move",
+    "meilin_epi_risingdragonspire_1": "A strong kick that stacks infinitely with passion cards, especially good with Veronica",
+    "meilin_epi_risingdragonspire_2": "Kick for Mei Lin basic build",
+    "meilin_epi_flamedragonsjewel_1": "Increases critical chance",
+    "meilin_epi_flamedragonsjewel_2": "Increases damage by 30%",
+    "meilin_epi_spiritofthearomata_1": "Increases damage based on the number of passion cards used, good with Veronica",
+    "meilin_epi_spiritofthearomata_2": "Increases damage by 30%, a good general option",
+    "meilin_epi_spiritofthearomata_3": "Greatly increases basic damage, good for basic builds",
+
+    "beryl_epi_openingfound_1": "The upgrade that is the core card of the extra attacks build",
+    "beryl_epi_openingfound_2": "Adds an extra hit, more damage",
+    "beryl_epi_openingfound_3": "Increases the card’s base damage",
+    "beryl_epi_guitypleasure_1": "Allows you to draw 5",
+    "beryl_epi_guitypleasure_2": "Allows 2 uses of the card and adds <b>Unique</b>, which depending on what you want can be good or bad",
+    "beryl_epi_guitypleasure_3": "Grants 1 permanent morale",
+    "beryl_epi_chargedshot_1": "Increases base damage",
+    "beryl_epi_chargedshot_2": "Adds an extra hit",
+    "beryl_epi_unlimitedfirepower_1": "Turns it into an upgrade and provides multiplicative damage increase",
+    "beryl_epi_unlimitedfirepower_2": "Greatly increases damage additively",
+    "beryl_epi_unlimitedfirepower_3": "Allows the damage increase to affect others as well, making her a semi-support",
+
+    "nia_epi_adagio_1": "Draw 2 and then discard 2, and those return to the draw pile, very good in combo with the forbidden eternal hunger",
+    "nia_epi_adagio_2": "Does what an adagio does and then creates another one, very useful when played well because the first discard does not go to the top of the draw pile, the second one does",
+    "nia_epi_adagio_3": "Useful to cycle the DPS or whoever you choose",
+    "nia_epi_gchord_1": "Allows you to select the card you activate, reducing RNG",
+    "nia_epi_gchord_2": "Before activating the card, triggers an extra attack; if you get lucky and discard the DPS card, it is extra damage",
+    "nia_epi_soulrip_1": "Discarding it also triggers the effect, making it free",
+    "nia_epi_soulrip_2": "For each discard you heal, providing survivability",
+    "nia_epi_soulrip_3": "Causes an extra attack when you discard, good combo with Renoa",
+    "nia_epi_soulrip_4": "The upgrade lets you generate a lot of decibel, but the 2 cost is bad",
+    "nia_epi_muteaccent_1": "Allows you to choose the discard, removing RNG",
+    "nia_epi_niacuriosity_1": "Allows you to choose a card to draw",
+
+    "rei_epi_snacktime_1": "Heals and draws 2 without needing to exhaust",
+    "rei_epi_predatorsblade_1": "4 morale is a very strong buff",
+    "rei_epi_resonatingdarkness_1": "Allows lowering the requirement to 0 or 1 cost, making it work with Mei Lin and others",
+    "rei_epi_resonatingdarkness_2": "Increases damage",
+    "rei_epi_resonatingdarkness_3": "Increases <b>Void</b> damage",
+    "rei_epi_strikeofdarkness_1": "Turns it into an <b>Upgrade</b>, making it a permanent buff",
+    "rei_epi_strikeofdarkness_2": "Greatly increases basic damage",
+    "rei_epi_strikeofdarkness_3": "Activates all basics, very situational",
+    "rei_epi_darkcondensation_1": "Greatly increases the damage of one card",
+    "rei_epi_darkcondensation_2": "Increases <b>Void</b> damage, very good for mono-void teams",
+    "rei_epi_darkcondensation_3": "Allows you to choose a card that is not in your hand",
+    "rei_epi_darkcondensation_4": "Turns it into an Upgrade and permanent buff, but it is situational because characters often create and remove cards",
+
+    "renoa_epi_echoofsorrow_1": "Creates one bullet each turn; having several provides good bullet generation",
+    "renoa_epi_echoofsorrow_2": "Generates many bullets at once",
+    "renoa_epi_floweofdevouredfate_1": "Discard 3 and create 3 bullets, generally good",
+    "renoa_epi_floweofdevouredfate_2": "Increases the damage of the next card",
+    "renoa_epi_floweofdevouredfate_3": "Can only be played once but creates a large number of bullets at once",
+    "renoa_epi_floweofdevouredfate_4": "Draws 2 cards, only useful in Renoa support",
+    "renoa_epi_balladofpichblack_1": "Doubles bullet damage, very good if you are firing many bullets that turn",
+    "renoa_epi_balladofpichblack_2": "Increases the base card damage",
+    "renoa_epi_balladofpichblack_3": "Applies marks for each bullet",
+    "renoa_epi_instantjudgment_1": "Turns it into an <b>Upgrade</b> and hits every turn",
+    "renoa_epi_instantjudgment_2": "Increases the card’s base damage",
+    "renoa_epi_instantjudgment_3": "Exhausts a bullet in the graveyard in exchange for more damage",
+
+    "selena_epi_highpowerscope_1": "Turns it into an <b>Upgrade</b>, so it is played only once and applies one mark every turn",
+    "selena_epi_highpowerscope_2": "Increases mark damage that turn",
+    "selena_epi_highpowerscope_3": "Can apply up to 4 marks",
+    "selena_epi_targetspotted_1": "4 marks",
+    "selena_epi_targetspotted_2": "Triggers an extra attack when you draw it",
+    "selena_epi_targetspotted_3": "Turns it into an <b>Upgrade</b>, so it is played only once",
+    "selena_epi_dronebombing_1": "Turns it into an upgrade and is good with Mei Lin",
+    "selena_epi_dronebombing_2": "Applies marks to all enemies",
+    "selena_epi_tacticalmanuever_1": "Applies AoE mark",
+    "selena_epi_tacticalmanuever_2": "3 tenacity",
+    "selena_epi_tacticalmanuever_3": "Only damage",
+
 
 
 

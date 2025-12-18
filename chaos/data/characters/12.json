@@ -73,19 +73,19 @@
           "id": "epi_preparetosubdue_1",
           "best": true,
           "img": "yuki_epi_preparetosubdue_drawnextturn.png",
-          "note": "yuki_epi_preparetosubdue_1"
+          "notes": "yuki_epi_preparetosubdue_1"
         },
         {
           "id": "epi_preparetosubdue_2",
           "best": false,
           "img": "yuki_epi_preparetosubdue_inspiracion.png",
-          "note": "yuki_epi_preparetosubdue_2"
+          "notes": "yuki_epi_preparetosubdue_2"
         },
         {
           "id": "epi_preparetosubdue_3",
           "best": false,
           "img": "yuki_epi_preparetosubdue_retain.png",
-          "note": "yuki_epi_preparetosubdue_3"
+          "notes": "yuki_epi_preparetosubdue_3"
         }
       ]
     },
@@ -96,25 +96,25 @@
           "id": "epi_flashslash_1",
           "best": true,
           "img": "yuki_epi_flashslash_1hit.png",
-          "note": "yuki_epi_flashslash_1"
+          "notes": "yuki_epi_flashslash_1"
         },
         {
           "id": "epi_flashslash_2",
           "best": true,
           "img": "yuki_epi_flashslash_costo0.png",
-          "note": "yuki_epi_flashslash_2"
+          "notes": "yuki_epi_flashslash_2"
         },
         {
           "id": "epi_flashslash_3",
           "best": false,
           "img": "yuki_epi_flashslash_2vulnerable.png",
-          "note": "yuki_epi_flashslash_3"
+          "notes": "yuki_epi_flashslash_3"
         },
         {
           "id": "epi_flashslash_4",
           "best": false,
           "img": "yuki_epi_flashslash_3moral.png",
-          "note": "yuki_epi_flashslash_4"
+          "notes": "yuki_epi_flashslash_4"
         }
       ]
     },
@@ -125,13 +125,13 @@
           "id": "epi_trickerystrike_1",
           "best": false,
           "img": "yuki_epi_trickerystrike_retrieve.png",
-          "note": "yuki_epi_trickerystrike_1"
+          "notes": "yuki_epi_trickerystrike_1"
         },
         {
           "id": "epi_trickerystrike_2",
           "best": false,
           "img": "yuki_epi_trickerystrike_elegir.png",
-          "note": "yuki_epi_trickerystrike_2"
+          "notes": "yuki_epi_trickerystrike_2"
         }
       ]
     },
@@ -142,19 +142,19 @@
           "id": "epi_frezzingblade_1",
           "best": true,
           "img": "yuki_epi_frezzingblade_initiation.png",
-          "note": "yuki_epi_frezzingblade_1"
+          "notes": "yuki_epi_frezzingblade_1"
         },
         {
           "id": "epi_frezzingblade_2",
           "best": true,
           "img": "yuki_epi_frezzingblade_danomultiplicativo.png",
-          "note": "yuki_epi_frezzingblade_2"
+          "notes": "yuki_epi_frezzingblade_2"
         },
         {
           "id": "epi_frezzingblade_3",
           "best": true,
           "img": "yuki_epi_frezzingblade_90dano.png",
-          "note": "yuki_epi_frezzingblade_3"
+          "notes": "yuki_epi_frezzingblade_3"
         }
       ]
     },
@@ -166,7 +166,7 @@
           "id": "epi_icebergcleave_1",
           "best": true,
           "img": "yuki_epi_icebergcleave_base.png",
-          "note": "yuki_epi_icebergcleave_1"
+          "notes": "yuki_epi_icebergcleave_1"
         }
       ]
     }

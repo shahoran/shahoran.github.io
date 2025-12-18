@@ -155,12 +155,142 @@
     "veronica_epi_firingpreparation_1":"Ballesta AOE que ayuda a limpiar.",
     "veronica_epi_firingpreparation_2":"Probabilidad de generar doble ballesta(como si de un segundo critico se tratase).",
     "veronica_epi_firingpreparation_3":"Aumenta la probabilidad de critico.",
+    "veronica_epi_pendantofresolution_1":"La vuelve unique, no va a salir para copiar en el caos",
+    "veronica_epi_pendantofresolution_2":"Las cartas de veronica tambien dan reload",
+    "veronica_epi_pendantofresolution_3":"hay posibilidad de recargar 2 reload",
 
     "veronica_set_1":"triple set",
 
 
 
 
+
+
+
+    "yuki_epi_preparetosubdue_1":"Roba otra carta de ataque el siguiente turno",
+    "yuki_epi_preparetosubdue_2":"Si tiene inspiracion roba otra carta mas",
+    "yuki_epi_preparetosubdue_3":"Añade retain y daño extra",
+    "yuki_epi_flashslash_1":"Si tienes buena generacion de AP aporta mucho daño",
+    "yuki_epi_flashslash_2":"Si no tienes buena generacion de AP aporta costo 0",
+    "yuki_epi_flashslash_3":"Pone vulnerable dando mas daño a la proxima carta",
+    "yuki_epi_flashslash_4":"Da moral dando mas daño a la proxima carta",
+    "yuki_epi_trickerystrike_1":"Añade retrieve con retain dandole un uso extra",
+    "yuki_epi_trickerystrike_2":"Te permite elegir a quien activar inspiracion",
+    "yuki_epi_frezzingblade_1":"Añade iniciacion a costo 0, asi que se vuelve gratis de usar",
+    "yuki_epi_frezzingblade_2":"Incrementa el daño hecho de forma multiplicativa",
+    "yuki_epi_frezzingblade_3":"Incrementa el daño que hace de base",
+    "yuki_epi_icebergcleave_1":"La carta mas importante en el DPS de yuki, aun sin el primer dupe",
+
+
+
+
+
+    "meilin_epi_unityofattackanddefense_1":"La carta mas importante de mei lin, siempre buscas move",
+    "meilin_epi_unityofattackanddefense_2":"Solo en el caso que no te salio move",
+    "meilin_epi_risingdragonspire_1":"Buena patada que se stackea infinito con cartas de passion, especialmente buena con veronica",
+    "meilin_epi_risingdragonspire_2":"Patada para build de basicos de mei lin",
+    "meilin_epi_flamedragonsjewel_1":"Aumenta la probabilidad de critico",
+    "meilin_epi_flamedragonsjewel_2":"Aumenta el daño un 30%",
+    "meilin_epi_spiritofthearomata_1":"Aumenta el daño con la cantidad de cartas passion usadas, buena con veronica",
+    "meilin_epi_spiritofthearomata_2":"Aumenta el daño un 30%, buena opcion en general",
+    "meilin_epi_spiritofthearomata_3":"Aumenta mucho el daño a basicos, buena para build de basicos",
+
+
+    
+
+
+
+
+
+
+
+
+
+
+    "beryl_epi_openingfound_1":"La upgrade que es la carta fundamental de la build de extra attacks",
+    "beryl_epi_openingfound_2":"Añade un hit extra, mas daño",
+    "beryl_epi_openingfound_3":"Aumenta el daño base de la carta",
+    "beryl_epi_guitypleasure_1":"permite hacer draw 5",
+    "beryl_epi_guitypleasure_2":"Permite hacer 2 usos de la carta, y le añade <b>Unique</b>, que dependiendo de lo que buscas puede ser bueno o malo",
+    "beryl_epi_guitypleasure_3":"da 1 de moral permanente",
+    "beryl_epi_chargedshot_1":"Aumenta el daño base",
+    "beryl_epi_chargedshot_2":"Aumenta un hit extra",
+    "beryl_epi_unlimitedfirepower_1":"La vuelve upgrade y aumento de daño multiplicativo",
+    "beryl_epi_unlimitedfirepower_2":"Aumenta mucho el daño en forma aditiva",
+    "beryl_epi_unlimitedfirepower_3":"Permite que el aumento de daño no solo le afecte a ella, y se hace medio soporte",
+
+
+
+
+
+
+
+
+    "nia_epi_adagio_1":"Roba 2 y luego descarta 2, y esas se devuelven al draw, muy buena en combo con la forbbiden eternal hunger",
+    "nia_epi_adagio_2":"hace lo que un adagio y luego crea otro, muy util bien jugado porque el primer descarte no se va a la cima del draw, el segundo si",
+    "nia_epi_adagio_3":"Sirve para ciclar al DPS o a quien eligas",
+    "nia_epi_gchord_1":"Te permite seleccionar la carta que activas y no sea tanto RNG",
+    "nia_epi_gchord_2":"Antes de activar la carta actiiva un ataque extra, si tienes suerte para descartar la del dps es daño extra",
+    "nia_epi_soulrip_1":"Descartandola tambien activa el efecto, asi que se vuelve gratis",
+    "nia_epi_soulrip_2":"por cada descarte curas, dando supervivencia",
+    "nia_epi_soulrip_3":"Hace que cuando descartes se haga un extraattack, buen combo con renoa",
+    "nia_epi_soulrip_4":"La upgrade te permite generar mucho decibel, pero el costo 2 es malo",
+    "nia_epi_muteaccent_1":"Te permite elegir el descarte, quitando RNG",
+    "nia_epi_niacuriosity_1":"Te permite elegir una carta para robar",
+
+
+
+
+
+
+    "rei_epi_snacktime_1":"Cura y hace draw 2 sin necesitar hacer exhaust",
+    "rei_epi_predatorsblade_1":"4 de moral es un buff muy grande",
+    "rei_epi_resonatingdarkness_1":"Permite bajar el requisito a costos 0 o 1, haciendo que sirva con mei lin y otros",
+    "rei_epi_resonatingdarkness_2":"Aumenta el daño",
+    "rei_epi_resonatingdarkness_3":"Aumenta el daño de <b>Void</b>",
+    "rei_epi_strikeofdarkness_1":"La vuelve <b>Upgrade</b> asi que es buff permanente",
+    "rei_epi_strikeofdarkness_2":"Aumenta mucho el daño de los basicos",
+    "rei_epi_strikeofdarkness_3":"Activa todos los basicos, es muy situacional",
+    "rei_epi_darkcondensation_1":"Aumenta mucho el daño de una carta",
+    "rei_epi_darkcondensation_2":"Aumenta el daño a <b>Void</b>, para un equipo mono void sirve mucho",
+    "rei_epi_darkcondensation_3":"Te permite elegir una carta que no tengas en mano",
+    "rei_epi_darkcondensation_4":"La vuelve Upgrade y buff permanente, pero es situacional porque los personajes muchas veces crean y eliminan cartas",
+
+
+
+
+
+
+
+    "renoa_epi_echoofsorrow_1":"Crea una bala cada turno, si se tienen varias da buena generacion de balas",
+    "renoa_epi_echoofsorrow_2":"Genera muchas balas de una vez",
+    "renoa_epi_floweofdevouredfate_1":"Descarta 3 y crea 3 balas, buena en general",
+    "renoa_epi_floweofdevouredfate_2":"Aumenta el daño de la proxima carta",
+    "renoa_epi_floweofdevouredfate_3":"Solo se puede jugar una vez pero crea mucha cantidad de balas de una vez",
+    "renoa_epi_floweofdevouredfate_4":"Roba 2 cartas, sirve solo en renoa support",
+    "renoa_epi_balladofpichblack_1":"Duplica el daño de las balas, muy buena si vas a tirar muchas balas ese turno",
+    "renoa_epi_balladofpichblack_2":"Aumenta el daño de la carta base",
+    "renoa_epi_balladofpichblack_3":"Pone marcas por cada bala",
+    "renoa_epi_instantjudgment_1":"La vuelve <b>Upgrade</b> y pega todos los turnos",
+    "renoa_epi_instantjudgment_2":"Aumenta el daño base de la carta",
+    "renoa_epi_instantjudgment_3":"Hace Exhaust a una bala en el cementerio y a cambio tiene mas daño",
+
+
+
+
+
+
+    "selena_epi_highpowerscope_1":"La vuelve <b>Upgrade</b> asi que solo se juega una vez y pone una marca todos los turnos",
+    "selena_epi_highpowerscope_2":"Aumenta el daño de las marcas en ese turno",
+    "selena_epi_highpowerscope_3":"Puede llegar a poner 4 marcas",
+    "selena_epi_targetspotted_1":"4 marcas",
+    "selena_epi_targetspotted_2":"Hace un extra attack cuando la robas",
+    "selena_epi_targetspotted_3":"La vuelve <b>Upgrade</b>, asi que solo se juega una vez",
+    "selena_epi_dronebombing_1":"La vuelve upgrade y es buena con mei lin",
+    "selena_epi_dronebombing_2":"Aplica marcas a todos los enemigos",
+    "selena_epi_tacticalmanuever_1":"Pone marca AOE",
+    "selena_epi_tacticalmanuever_2":"3 de tenacity",
+    "selena_epi_tacticalmanuever_3":"Solo daño",
 
 
 

@@ -130,19 +130,19 @@
                     "id": "epi_pendantofresolution_1",
                     "best": true,
                     "img": "veronica_epi_pendantofresolution_unique.png",
-                    "note": "veronica_epi_pendantofresolution_1"
+                    "notes": "veronica_epi_pendantofresolution_1"
                 },
                 {
                     "id": "epi_pendantofresolution_2",
                     "best": false,
                     "img": "veronica_epi_pendantofresolution_skill.png",
-                    "note": "veronica_epi_pendantofresolution_2"
+                    "notes": "veronica_epi_pendantofresolution_2"
                 },
                 {
                     "id": "epi_pendantofresolution_3",
                     "best": false,
                     "img": "veronica_epi_pendantofresolution_doble.png",
-                    "note": "veronica_epi_pendantofresolution_3"
+                    "notes": "veronica_epi_pendantofresolution_3"
                 }
             ]
         }

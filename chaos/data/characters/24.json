@@ -74,7 +74,7 @@
                     "id": "epi_snacktime_1",
                     "best": true,
                     "img": "rei_epi_snacktime_draw2.png",
-                    "note": "rei_epi_snacktime_1"
+                    "notes": "rei_epi_snacktime_1"
                 }
             ]
         },
@@ -86,7 +86,7 @@
                     "id": "epi_predatorsblade_1",
                     "best": true,
                     "img": "rei_epi_predatorsblade_base.png",
-                    "note": "rei_epi_predatorsblade_1"
+                    "notes": "rei_epi_predatorsblade_1"
                 }
             ]
         },
@@ -98,19 +98,19 @@
                     "id": "epi_resonatingdarkness_1",
                     "best": true,
                     "img": "rei_epi_resonatingdarkness_1menos.png",
-                    "note": "rei_epi_resonatingdarkness_1"
+                    "notes": "rei_epi_resonatingdarkness_1"
                 },
                 {
                     "id": "epi_resonatingdarkness_2",
                     "best": true,
                     "img": "rei_epi_resonatingdarkness_60dano.png",
-                    "note": "rei_epi_resonatingdarkness_2"
+                    "notes": "rei_epi_resonatingdarkness_2"
                 },
                 {
                     "id": "epi_resonatingdarkness_3",
                     "best": true,
                     "img": "rei_epi_resonatingdarkness_void.png",
-                    "note": "rei_epi_resonatingdarkness_3"
+                    "notes": "rei_epi_resonatingdarkness_3"
                 }
             ]
         },
@@ -122,19 +122,19 @@
                     "id": "epi_strikeofdarkness_1",
                     "best": true,
                     "img": "rei_epi_strikeofdarkness_upgrade.png",
-                    "note": "rei_epi_strikeofdarkness_1"
+                    "notes": "rei_epi_strikeofdarkness_1"
                 },
                 {
                     "id": "epi_strikeofdarkness_2",
                     "best": false,
                     "img": "rei_epi_strikeofdarkness_150dano.png",
-                    "note": "rei_epi_strikeofdarkness_2"
+                    "notes": "rei_epi_strikeofdarkness_2"
                 },
                 {
                     "id": "epi_strikeofdarkness_3",
                     "best": false,
                     "img": "rei_epi_strikeofdarkness_activate.png",
-                    "note": "rei_epi_strikeofdarkness_3"
+                    "notes": "rei_epi_strikeofdarkness_3"
                 }
             ]
         },
@@ -146,25 +146,25 @@
                     "id": "epi_darkcondensation_1",
                     "best": true,
                     "img": "rei_epi_darkcondensation_150.png",
-                    "note": "rei_epi_darkcondensation_1"
+                    "notes": "rei_epi_darkcondensation_1"
                 },
                 {
                     "id": "epi_darkcondensation_2",
                     "best": true,
                     "img": "rei_epi_darkcondensation_void.png",
-                    "note": "rei_epi_darkcondensation_2"
+                    "notes": "rei_epi_darkcondensation_2"
                 },
                 {
                     "id": "epi_darkcondensation_3",
                     "best": true,
                     "img": "rei_epi_darkcondensation_choose.png",
-                    "note": "rei_epi_darkcondensation_3"
+                    "notes": "rei_epi_darkcondensation_3"
                 },
                 {
                     "id": "epi_darkcondensation_4",
                     "best": false,
                     "img": "rei_epi_darkcondensation_upgrade.png",
-                    "note": "rei_epi_darkcondensation_4"
+                    "notes": "rei_epi_darkcondensation_4"
                 }
             ]
         }

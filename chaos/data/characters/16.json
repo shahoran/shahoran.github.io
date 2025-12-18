@@ -74,19 +74,19 @@
           "id": "epi_highpowerscope_1",
           "best": true,
           "img": "selena_epi_highpowerscope_upgrade.png",
-          "note": "selena_epi_highpowerscope_1"
+          "notes": "selena_epi_highpowerscope_1"
         },
         {
           "id": "epi_highpowerscope_2",
           "best": true,
           "img": "selena_epi_highpowerscope_danomarcas.png",
-          "note": "selena_epi_highpowerscope_2"
+          "notes": "selena_epi_highpowerscope_2"
         },
         {
           "id": "epi_highpowerscope_3",
           "best": true,
           "img": "selena_epi_highpowerscope_4marcas.png",
-          "note": "selena_epi_highpowerscope_3"
+          "notes": "selena_epi_highpowerscope_3"
         }
       ]
     },
@@ -97,19 +97,19 @@
           "id": "epi_targetspotted_1",
           "best": true,
           "img": "selena_epi_targetspotted_4marcas.png",
-          "note": "selena_epi_targetspotted_1"
+          "notes": "selena_epi_targetspotted_1"
         },
         {
           "id": "epi_targetspotted_2",
           "best": true,
           "img": "selena_epi_targetspotted_dano.png",
-          "note": "selena_epi_targetspotted_2"
+          "notes": "selena_epi_targetspotted_2"
         },
         {
           "id": "epi_targetspotted_3",
           "best": false,
           "img": "selena_epi_targetspotted_upgrade.png",
-          "note": "selena_epi_targetspotted_3"
+          "notes": "selena_epi_targetspotted_3"
         }
       ]
     },
@@ -117,16 +117,16 @@
       "cardId": "c6",
       "options": [
         {
-          "id": "epi_dronebombing_1",
-          "best": false,
-          "img": "selena_epi_dronebombing_upgrade.png",
-          "note": "selena_epi_dronebombing_1"
-        },
-        {
           "id": "epi_dronebombing_2",
           "best": false,
           "img": "selena_epi_dronebombing_aoe.png",
-          "note": "selena_epi_dronebombing_2"
+          "notes": "selena_epi_dronebombing_2"
+        },
+        {
+          "id": "epi_dronebombing_1",
+          "best": false,
+          "img": "selena_epi_dronebombing_upgrade.png",
+          "notes": "selena_epi_dronebombing_1"
         }
       ]
     },
@@ -137,19 +137,19 @@
           "id": "epi_tacticalmanuever_1",
           "best": true,
           "img": "selena_epi_tacticalmanuever_aoe.png",
-          "note": "selena_epi_tacticalmanuever_1"
+          "notes": "selena_epi_tacticalmanuever_1"
         },
         {
           "id": "epi_tacticalmanuever_2",
           "best": false,
           "img": "selena_epi_tacticalmanuever_3tenacity.png",
-          "note": "selena_epi_tacticalmanuever_2"
+          "notes": "selena_epi_tacticalmanuever_2"
         },
         {
           "id": "epi_tacticalmanuever_3",
           "best": false,
           "img": "selena_epi_tacticalmanuever_dano.png",
-          "note": "selena_epi_tacticalmanuever_3"
+          "notes": "selena_epi_tacticalmanuever_3"
         }
       ]
     }

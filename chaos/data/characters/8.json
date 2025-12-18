@@ -73,13 +73,13 @@
           "id": "epi_unityofattackanddefense_1",
           "best": true,
           "img": "meilin_epi_unityofattackanddefense_move.png",
-          "note": "meilin_epi_unityofattackanddefense_1"
+          "notes": "meilin_epi_unityofattackanddefense_1"
         },
         {
           "id": "epi_unityofattackanddefense_2",
           "best": false,
           "img": "meilin_epi_unityofattackanddefense_draw.png",
-          "note": "meilin_epi_unityofattackanddefense_2"
+          "notes": "meilin_epi_unityofattackanddefense_2"
         }
       ]
     },
@@ -90,13 +90,13 @@
           "id": "epi_risingdragonspire_1",
           "best": true,
           "img": "meilin_epi_risingdragonspire_30hits.png",
-          "note": "meilin_epi_risingdragonspire_1"
+          "notes": "meilin_epi_risingdragonspire_1"
         },
         {
           "id": "epi_risingdragonspire_2",
           "best": false,
           "img": "meilin_epi_risingdragonspire_basicos.png",
-          "note": "meilin_epi_risingdragonspire_2"
+          "notes": "meilin_epi_risingdragonspire_2"
         }
       ]
     },
@@ -107,13 +107,13 @@
           "id": "epi_flamedragonsjewel_1",
           "best": true,
           "img": "meilin_epi_flamedragonsjewel_prob.png",
-          "note": "meilin_epi_flamedragonsjewel_1"
+          "notes": "meilin_epi_flamedragonsjewel_1"
         },
         {
           "id": "epi_flamedragonsjewel_2",
           "best": false,
           "img": "meilin_epi_flamedragonsjewel_30porciento.png",
-          "note": "meilin_epi_flamedragonsjewel_2"
+          "notes": "meilin_epi_flamedragonsjewel_2"
         }
       ]
     },
@@ -124,19 +124,19 @@
           "id": "epi_spiritofthearomata_1",
           "best": true,
           "img": "meilin_epi_spiritofthearomata_passion.png",
-          "note": "meilin_epi_spiritofthearomata_1"
+          "notes": "meilin_epi_spiritofthearomata_1"
         },
         {
           "id": "epi_spiritofthearomata_2",
           "best": true,
           "img": "meilin_epi_spiritofthearomata_30porciento.png",
-          "note": "meilin_epi_spiritofthearomata_2"
+          "notes": "meilin_epi_spiritofthearomata_2"
         },
         {
           "id": "epi_spiritofthearomata_3",
           "best": true,
           "img": "meilin_epi_spiritofthearomata_basicos.png",
-          "note": "meilin_epi_spiritofthearomata_3"
+          "notes": "meilin_epi_spiritofthearomata_3"
         }
       ]
     }
