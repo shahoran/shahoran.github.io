@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Character JSON Builder</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bootstrap (opcional pero cómodo) -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+  <style>
+    body {
+      background: #0f172a;
+      color: #e5e7eb;
+    }
+    pre {
+      background: #020617;
+      color: #a5f3fc;
+      padding: 12px;
+      border-radius: 8px;
+      overflow: auto;
+    }
+    .card {
+      background: #020617;
+      border: 1px solid #1e293b;
+    }
+    input {
+      background: #020617 !important;
+      color: #e5e7eb !important;
+      border: 1px solid #334155 !important;
+    }
+    input::placeholder {
+      color: #64748b;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container py-4">
+
+  <h2 class="mb-3">Chaos Character JSON Builder</h2>
+
+  <!-- Character code -->
+  <div class="mb-3">
+    <label class="form-label">Character Code</label>
+    <input
+      id="charCode"
+      class="form-control"
+      autocomplete="off"
+      placeholder="Ej: 20"
+    >
+  </div>
+
+  <!-- Base info -->
+  <h5>Base Info</h5>
+  <pre id="baseInfo">{}</pre>
+
+  <!-- Cards -->
+  <h5 class="mt-4">Cards</h5>
+  <div id="cards"></div>
+
+  <!-- Generate -->
+  <button id="generate" class="btn btn-primary mt-3">
+    Generate JSON
+  </button>
+
+  <!-- Output -->
+  <h5 class="mt-3">Output</h5>
+  <pre id="output">{}</pre>
+
+</div>
+
+<script>
+let CHARACTERS = {};
+let currentChar = null;
+
+// Load characters.json
+(async () => {
+  CHARACTERS = await $.getJSON("/chaos/data/characters.json");
+})();
+
+// Load character by code (TAB)
+$("#charCode").on("keydown", function (e) {
+  if (e.key === "Tab") {
+    e.preventDefault();
+    loadCharacter($(this).val().trim());
+  }
+});
+
+function loadCharacter(code) {
+  const data = CHARACTERS[code];
+  if (!data) return;
+
+  currentChar = data;
+
+  $("#baseInfo").text(JSON.stringify(data, null, 2));
+  createCards();
+}
+
+function createCards() {
+  $("#cards").empty();
+
+  for (let i = 1; i <= 8; i++) {
+    $("#cards").append(`
+      <div class="card p-2 mb-2">
+        <strong style="color:white">Card ${i}</strong>
+
+        <input
+          class="form-control mt-1 card-name"
+          data-index="${i}"
+          placeholder="Card name"
+          autocomplete="off"
+        >
+
+        <input
+          class="form-control mt-1 card-type"
+          data-index="${i}"
+          placeholder="Type (1=Attack 2=Skill 3=Upgrade)"
+          autocomplete="off"
+        >
+      </div>
+    `);
+  }
+
+  // Focus first card automatically
+  $(".card-name").first().focus();
+}
+
+$("#generate").on("click", function () {
+  if (!currentChar) return;
+
+  const cards = [];
+
+  $(".card-name").each(function () {
+    const index = $(this).data("index");
+    const nameRaw = $(this).val().trim();
+    if (!nameRaw) return;
+
+    const typeInput = $(`.card-type[data-index="${index}"]`).val();
+
+    const type =
+      typeInput == "1" ? "Attack" :
+      typeInput == "2" ? "Skill" :
+      "Upgrade";
+
+    const charPrefix = currentChar.name
+      .toLowerCase()
+      .replace(/\s+/g, "");
+
+    const img =
+      charPrefix + "_" +
+      nameRaw.toLowerCase().replace(/\s+/g, "") +
+      ".png";
+
+    cards.push({
+      id: "c" + index,
+      name: nameRaw.toUpperCase(),
+      img,
+      type,
+      basic: index <= 3
+    });
+  });
+
+  const finalJson = {
+    ...currentChar,
+    cards
+  };
+
+  $("#output").text(JSON.stringify(finalJson, null, 2));
+});
+</script>
+
+</body>
+</html>
