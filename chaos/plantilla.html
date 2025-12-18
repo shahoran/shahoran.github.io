@@ -78,11 +78,55 @@
     let CHARACTERS = {};
     let currentChar = null;
 
+    let activeCardIndex = null;
+
+
+    function attachImageToCard(blob, index) {
+      const input = $(`.card-img[data-index="${index}"]`)[0];
+      if (!input) return;
+
+      let cardName = $(`.card-name[data-index="${index}"]`).val().trim();
+      if (!cardName) {
+        cardName="___";
+      }
+
+      const charPrefix = currentChar.name.toLowerCase().replace(/\s+/g, "");
+      const fileName =
+        charPrefix + "_" +
+        cardName.toLowerCase().replace(/\s+/g, "") +
+        ".png";
+
+      const file = new File([blob], fileName, { type: blob.type });
+
+      const dt = new DataTransfer();
+      dt.items.add(file);
+      input.files = dt.files;
+
+      // feedback visual opcional
+      $(input).addClass("border-success");
+    }
+    $(document).on("focus", ".card-name, .card-type, .card-img", function () {
+      activeCardIndex = $(this).data("index");
+    });
     // Load characters.json
     (async () => {
       CHARACTERS = await $.getJSON("/chaos/data/characters.json");
     })();
 
+    $(document).on("paste", function (e) {
+      if (!activeCardIndex) return;
+
+      const items = e.originalEvent.clipboardData.items;
+
+      for (const item of items) {
+        if (item.type.startsWith("image/")) {
+          const blob = item.getAsFile();
+          attachImageToCard(blob, activeCardIndex);
+          e.preventDefault();
+          break;
+        }
+      }
+    });
     // Load character by code (TAB)
     $("#charCode").on("keydown", function (e) {
       if (e.key === "Tab") {
