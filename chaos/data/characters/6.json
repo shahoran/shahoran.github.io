@@ -1,0 +1,68 @@
+{
+  "id": 6,
+  "name": "Rin",
+  "class": "striker",
+  "element": "void",
+  "faction": "wanderer",
+  "subfaction": "N/A",
+  "img": "rin.png",
+  "rarity": 5,
+  "cards": [
+    {
+      "id": "c1",
+      "name": "Dark Mist Sword First Form",
+      "img": "rin_darkmistswordfirstform.png",
+      "type": "Attack",
+      "basic": true
+    },
+    {
+      "id": "c2",
+      "name": "Dark Mist Sword Thirdform",
+      "img": "rin_darkmistswordthirdform.png",
+      "type": "Attack",
+      "basic": true
+    },
+    {
+      "id": "c3",
+      "name": "Protection",
+      "img": "rin_protection.png",
+      "type": "Skill",
+      "basic": true
+    },
+    {
+      "id": "c4",
+      "name": "Drawing Slash",
+      "img": "rin_drawingslash.png",
+      "type": "Attack",
+      "basic": false
+    },
+    {
+      "id": "c5",
+      "name": "Dark Mist Secret Art Destruction",
+      "img": "rin_darkmistsecretartdestruction.png",
+      "type": "Skill",
+      "basic": false
+    },
+    {
+      "id": "c6",
+      "name": "Dark Mist Secret Art Annihilation",
+      "img": "rin_darkmistsecretartannihilation.png",
+      "type": "Attack",
+      "basic": false
+    },
+    {
+      "id": "c7",
+      "name": "Dark Mist Inner Art",
+      "img": "rin_darkmistinnerart.png",
+      "type": "Skill",
+      "basic": false
+    },
+    {
+      "id": "c8",
+      "name": "Dark Mist Secret Art Black Dance",
+      "img": "rin_darkmistsecretartblackdance.png",
+      "type": "Attack",
+      "basic": false
+    }
+  ]
+}

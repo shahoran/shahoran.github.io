@@ -1,0 +1,68 @@
+{
+  "id": 5,
+  "name": "Magna",
+  "class": "vanguard",
+  "element": "justice",
+  "faction": "stellafamilia",
+  "subfaction": "White Altair",
+  "img": "magna.png",
+  "rarity": 5,
+  "cards": [
+    {
+      "id": "c1",
+      "name": "Frozen Fist",
+      "img": "magna_frozenfist.png",
+      "type": "Attack",
+      "basic": true
+    },    
+  {
+      "id": "c2",
+      "name": "Frozen Shield",
+      "img": "magna_frozenshield.png",
+      "type": "Skill",
+      "basic": true
+    },
+    {
+      "id": "c3",
+      "name": "Frozen Shield",
+      "img": "magna_frozenshield.png",
+      "type": "Skill",
+      "basic": true
+    },
+    {
+      "id": "c4",
+      "name": "Ice Fragment",
+      "img": "magna_icefragment.png",
+      "type": "Upgrade",
+      "basic": true
+    },
+    {
+      "id": "c5",
+      "name": "Glacial Iron Fist",
+      "img": "magna_glacialironfist.png",
+      "type": "Attack",
+      "basic": false
+    },
+    {
+      "id": "c6",
+      "name": "Ice Wall",
+      "img": "magna_icewall.png",
+      "type": "Skill",
+      "basic": false
+    },
+    {
+      "id": "c7",
+      "name": "Frost Charge",
+      "img": "magna_frostcharge.png",
+      "type": "Skill",
+      "basic": false
+    },
+    {
+      "id": "c8",
+      "name": "Storm Of Bitter Cold",
+      "img": "magna_stormofbittercold.png",
+      "type": "Upgrade",
+      "basic": false
+    }
+  ]
+}

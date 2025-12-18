@@ -1,0 +1,79 @@
+{
+    "id": 14,
+    "name": "Kayron",
+    "class": "psionic",
+    "element": "void",
+    "faction": "wanderer",
+    "subfaction": "N/A",
+    "img": "kayron.png",
+    "rarity": 5
+  ,"cards": [
+    {
+        "id": "c1",
+        "name": "Elimination",
+        "img": "kayron_elimination.png",
+        "type": "Attack",
+        "basic": true
+    },
+    {
+        "id": "c2",
+        "name": "Elimination",
+        "img": "kayron_elimination.png",
+        "type": "Attack",
+        "basic": true
+    },
+    {
+        "id": "c3",
+        "name": "Shpere",
+        "img": "kayron_shpere.png",
+        "type": "Skill",
+        "basic": true
+    },
+    {
+        "id": "c4",
+        "name": "Echo of Fultility",
+        "img": "kayron_echo_of_futility.png",
+        "type": "Attack",
+        "basic": false
+    },
+    {
+        "id": "c5",
+        "name": "Brand of Annihilation",
+        "img": "kayron_brand_of_annihilation.png",
+        "type": "Attack",
+        "basic": false
+    },
+    {
+        "id": "c6",
+        "name": "Black Hole",
+        "img": "kayron_black_hole.png",
+        "type": "Attack",
+        "basic": false
+    },
+    {
+        "id": "c7",
+        "name": "Oath Of Vanity",
+        "img": "kayron_oath_of_vanity.png",
+        "type": "Upgrade",
+        "basic": false
+    },
+    {
+        "id": "c8",
+        "name": "Echoes of True Abyss",
+        "img": "kayron_echoes_of_true_abyss.png",
+        "type": "Attack",
+        "basic": false
+    }
+] ,"epiphanies": [],
+   "copy": [],
+   "neutral": [],
+   "removal": [],
+   "partners": [],
+   "potentials": {},
+   "fragments" : [{}],
+   "teams": [{"name": "", "pj":[],"bestepihanies": [{"pj": 0, "card":"","epi" : ""}]}]
+
+
+
+
+}

@@ -1,0 +1,68 @@
+{
+  "id": 10,
+  "name": "Renoa",
+  "class": "hunter",
+  "element": "void",
+  "faction": "terrascion",
+  "subfaction": "SS Justitia",
+  "img": "renoa.png",
+  "rarity": 5,
+  "cards": [
+    {
+      "id": "c1",
+      "name": "Annihilation Shot",
+      "img": "renoa_annihilationshot.png",
+      "type": "Attack",
+      "basic": true
+    },
+    {
+      "id": "c2",
+      "name": "Annihilation Shot",
+      "img": "renoa_anihilationshot.png",
+      "type": "Attack",
+      "basic": true
+    },
+    {
+      "id": "c3",
+      "name": "Black Veil",
+      "img": "renoa_blackveil.png",
+      "type": "Skill",
+      "basic": true
+    },
+    {
+      "id": "c4",
+      "name": "Echo Of Sorrow",
+      "img": "renoa_echoofsorrow.png",
+      "type": "Attack",
+      "basic": false
+    },
+    {
+      "id": "c5",
+      "name": "Instant Judgment",
+      "img": "renoa_instantjudgment.png",
+      "type": "Attack",
+      "basic": false
+    },
+    {
+      "id": "c6",
+      "name": "Ballad Of Pich Black",
+      "img": "renoa_balladofpichblack.png",
+      "type": "Attack",
+      "basic": false
+    },
+    {
+      "id": "c7",
+      "name": "Flowe Of Devoured Fate",
+      "img": "renoa_floweofdevouredfate.png",
+      "type": "Skill",
+      "basic": false
+    },
+    {
+      "id": "c8",
+      "name": "Last- Ditch Assault",
+      "img": "renoa_last-ditchassault.png",
+      "type": "Attack",
+      "basic": false
+    }
+  ]
+}

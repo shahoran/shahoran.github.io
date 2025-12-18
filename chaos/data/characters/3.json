@@ -1,0 +1,68 @@
+{
+  "id": 3,
+  "name": "Amir",
+  "class": "vanguard",
+  "element": "order",
+  "faction": "terrascion",
+  "subfaction": "Special Investigation Department",
+  "img": "amir.png",
+  "rarity": 4,
+  "cards": [
+    {
+      "id": "c1",
+      "name": "Rapier",
+      "img": "amir_rapier.png",
+      "type": "Attack",
+      "basic": true
+    },
+    {
+      "id": "c2",
+      "name": "Rapier",
+      "img": "amir_rapier.png",
+      "type": "Attack",
+      "basic": true
+    },
+    {
+      "id": "c3",
+      "name": "Steel Barrier",
+      "img": "amir_steelbarrier.png",
+      "type": "Skill",
+      "basic": true
+    },
+    {
+      "id": "c4",
+      "name": "Hovering Metal",
+      "img": "amir_hoveringmetal.png",
+      "type": "Skill",
+      "basic": false
+    },
+    {
+      "id": "c5",
+      "name": "Metal Piece",
+      "img": "amir_metalpiece.png",
+      "type": "Attack",
+      "basic": false
+    },
+    {
+      "id": "c6",
+      "name": "Metal Extraction",
+      "img": "amir_metalextraction.png",
+      "type": "Skill",
+      "basic": false
+    },
+    {
+      "id": "c7",
+      "name": "Full Metal Hurricane",
+      "img": "amir_fullmetalhurricane.png",
+      "type": "Attack",
+      "basic": false
+    },
+    {
+      "id": "c8",
+      "name": "Iron Skin",
+      "img": "amir_ironskin.png",
+      "type": "Skill",
+      "basic": false
+    }
+  ]
+}

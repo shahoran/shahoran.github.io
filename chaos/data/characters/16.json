@@ -1,0 +1,68 @@
+{
+  "id": 16,
+  "name": "Selena",
+  "class": "ranger",
+  "element": "passion",
+  "faction": "stellafamilia",
+  "subfaction": "White Altair",
+  "img": "selena.png",
+  "rarity": 4,
+  "cards": [
+    {
+      "id": "c1",
+      "name": "Engagement Fire",
+      "img": "selena_engagementfire.png",
+      "type": "Attack",
+      "basic": true
+    },
+    {
+      "id": "c2",
+      "name": "Engagement Fire",
+      "img": "selena_engagementfire.png",
+      "type": "Attack",
+      "basic": true
+    },
+    {
+      "id": "c3",
+      "name": "Emergency Shielding",
+      "img": "selena_emergencyshielding.png",
+      "type": "Skill",
+      "basic": true
+    },
+    {
+      "id": "c4",
+      "name": "High-power Scope",
+      "img": "selena_high-powerscope.png",
+      "type": "Skill",
+      "basic": false
+    },
+    {
+      "id": "c5",
+      "name": "Target Spotted",
+      "img": "selena_targetspotted.png",
+      "type": "Attack",
+      "basic": false
+    },
+    {
+      "id": "c6",
+      "name": "Drone Bombing",
+      "img": "selena_dronebombing.png",
+      "type": "Attack",
+      "basic": false
+    },
+    {
+      "id": "c7",
+      "name": "Tactical Manuever",
+      "img": "selena_tacticalmanuever.png",
+      "type": "Skill",
+      "basic": false
+    },
+    {
+      "id": "c8",
+      "name": "Sniper's Domain",
+      "img": "selena_snipersdomain.png",
+      "type": "Upgrade",
+      "basic": false
+    }
+  ]
+}

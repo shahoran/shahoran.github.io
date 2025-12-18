@@ -11,56 +11,56 @@
         {
             "id": "c1",
             "name": "Stroke",
-            "img": "stroke.png",
+            "img": "nia_stroke.png",
             "type": "Attack",
             "basic": true
         },
         {
             "id": "c2",
             "name": "Amp Therapy",
-            "img": "amp_therapy.png",
+            "img": "nia_amp_therapy.png",
             "type": "Skill",
             "basic": true
         },
         {
             "id": "c3",
             "name": "Amp TherapyShpere",
-            "img": "amp_therapy.png",
+            "img": "nia_amp_therapy.png",
             "type": "Skill",
             "basic": true
         },
         {
             "id": "c4",
             "name": "G Chord",
-            "img": "g_chord.png",
+            "img": "nia_g_chord.png",
             "type": "Skill",
             "basic": false
         },
         {
             "id": "c5",
             "name": "Mute Accent",
-            "img": "mute_accent.png",
+            "img": "nia_mute_accent.png",
             "type": "Skill",
             "basic": false
         },
         {
             "id": "c6",
             "name": "Soul Rip",
-            "img": "soul_rip.png",
+            "img": "nia_soul_rip.png",
             "type": "Skill",
             "basic": false
         },
         {
             "id": "c7",
             "name": "Adagio",
-            "img": "adagio.png",
+            "img": "nia_adagio.png",
             "type": "Skill",
             "basic": false
         },
         {
             "id": "c8",
             "name": "Nia Curiosity",
-            "img": "nia_curiositi.png",
+            "img": "nia_curiosity.png",
             "type": "Skill",
             "basic": false
         }

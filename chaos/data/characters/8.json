@@ -1,0 +1,68 @@
+{
+  "id": 8,
+  "name": "Mei Lin",
+  "class": "striker",
+  "element": "passion",
+  "faction": "terrascion",
+  "subfaction": "Planet-Born",
+  "img": "meilin.png",
+  "rarity": 5,
+  "cards": [
+    {
+      "id": "c1",
+      "name": "Strike",
+      "img": "meilin_strike.png",
+      "type": "Attack",
+      "basic": true
+    },
+    {
+      "id": "c2",
+      "name": "Strike",
+      "img": "meilin_strike.png",
+      "type": "Attack",
+      "basic": true
+    },
+    {
+      "id": "c3",
+      "name": "Flame Dragon Guardian",
+      "img": "meilin_flamedragonguardian.png",
+      "type": "Attack",
+      "basic": true
+    },
+    {
+      "id": "c4",
+      "name": "Flame Dragon's Jewel",
+      "img": "meilin_flamedragonsjewel.png",
+      "type": "Upgrade",
+      "basic": false
+    },
+    {
+      "id": "c5",
+      "name": "Rising Dragon Spire",
+      "img": "meilin_risingdragonspire.png",
+      "type": "Attack",
+      "basic": false
+    },
+    {
+      "id": "c6",
+      "name": "Unity O F Attack And Defense",
+      "img": "meilin_unityofattackanddefense.png",
+      "type": "Skill",
+      "basic": false
+    },
+    {
+      "id": "c7",
+      "name": "Spirit Of The Aromata",
+      "img": "meilin_spiritofthearomata.png",
+      "type": "Skill",
+      "basic": false
+    },
+    {
+      "id": "c8",
+      "name": "Flame Dragon's Sovereignty",
+      "img": "meilin_flamedragonssovereignty.png",
+      "type": "Attack",
+      "basic": false
+    }
+  ]
+}

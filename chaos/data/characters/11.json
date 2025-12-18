@@ -1,0 +1,68 @@
+{
+  "id": 11,
+  "name": "Hugo",
+  "class": "ranger",
+  "element": "order",
+  "faction": "stellafamilia",
+  "subfaction": "Azure Merchant Guild",
+  "img": "hugo.png",
+  "rarity": 5,
+  "cards": [
+    {
+      "id": "c1",
+      "name": "Throw Dagger",
+      "img": "hugo_throwdagger.png",
+      "type": "Attack",
+      "basic": true
+    },
+    {
+      "id": "c2",
+      "name": "Throw Dagger",
+      "img": "hugo_throwdagger.png",
+      "type": "Attack",
+      "basic": true
+    },
+    {
+      "id": "c3",
+      "name": "Defense System",
+      "img": "hugo_defensesystem.png",
+      "type": "Skill",
+      "basic": true
+    },
+    {
+      "id": "c4",
+      "name": "Hunting Instincts",
+      "img": "hugo_huntinginstincts.png",
+      "type": "Upgrade",
+      "basic": false
+    },
+    {
+      "id": "c5",
+      "name": "Fan Of Daggers",
+      "img": "hugo_fanofdaggers.png",
+      "type": "Attack",
+      "basic": false
+    },
+    {
+      "id": "c6",
+      "name": "Quick Fix",
+      "img": "hugo_quickfix.png",
+      "type": "Attack",
+      "basic": false
+    },
+    {
+      "id": "c7",
+      "name": "Ding Howling",
+      "img": "hugo_dinghowling.png",
+      "type": "Skill",
+      "basic": false
+    },
+    {
+      "id": "c8",
+      "name": "Fixer's Approach",
+      "img": "hugo_fixersapproach.png",
+      "type": "Upgrade",
+      "basic": false
+    }
+  ]
+}
