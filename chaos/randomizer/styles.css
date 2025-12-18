@@ -9,8 +9,8 @@
 
 /* Caja del personaje */
 .personaje-box {
-    width: 130px;
-    height: 160px;
+    width: 90px;
+    height: 90px;
     position: relative;
     cursor: pointer;
     text-align: center;
@@ -18,17 +18,21 @@
 
 /* Imagen circular */
 .personaje-box img {
-    width: 130px;
-    height: 130px;
+    width: 80px;
+    height: 80px;
     object-fit: cover;
-    border-radius: 50%;
+    border-radius: 30%;
     border: 3px solid transparent;
     transition: .2s;
 }
 
 /* Imagen seleccionada */
 .personaje-box.seleccionado img {
-    border-color: #4CAF50;
+    border-color: #903921;
+}
+/* Imagen seleccionada */
+.personaje-box.elegido img {
+    border-color: #46b413;
 }
 
 /* Check de selección invisible inicialmente */

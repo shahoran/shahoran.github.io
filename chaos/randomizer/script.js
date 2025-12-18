@@ -82,14 +82,8 @@ function mostrarEquipo(equipo) {
         const nombre = p.name.toLowerCase().replace(/\b\w/g, c => c.toUpperCase());
 
         html += `
-            <div style="text-align:center;" class="personaje-box seleccionado">
-                <img src="pjs/${p.img}" style="
-                    width:120px;
-                    height:120px;
-                    border-radius:50%;
-                    object-fit:cover;
-                    border:3px solid #444;">
-                <div class="check-marca">✔</div>
+            <div style="text-align:center;" class="personaje-box elegido">
+                <img src="/chaos/img/pjs/${p.img}">
                 <div style="margin-top:5px;">${nombre}</div>
             </div>
         `;
@@ -104,16 +98,23 @@ function generateFacilRandomizer() {
     const supports = [];
     const otros = [];
 
-    for (const id in PERSONAJES) {
-        const pj = PERSONAJES[id];
-        if (!pj.activo) continue;
+    for (const id in CHARACTERS) {
+        // estado cliente
+        if (!CHARACTERS_STATE[id]) continue;
 
-        if (pj.rol === "support") supports.push({ id, ...pj });
-        else otros.push({ id, ...pj });
+        const pj = CHARACTERS[id];
+
+        if (pj.class === "controller") {
+            supports.push({ id, ...pj });
+        } else {
+            otros.push({ id, ...pj });
+        }
     }
 
     if (supports.length < 1) {
-        $("#result").html('<p data-i18n="no_support">'+t("no_support")+"</p>");
+        $("#result").html(
+            `<p data-i18n="no_support">${t("no_support")}</p>`
+        );
         return;
     }
 
@@ -122,7 +123,9 @@ function generateFacilRandomizer() {
     const disponibles = otros.filter(p => p.id !== support.id);
 
     if (disponibles.length < 2) {
-        $("#result").html('<p data-i18n="no_personajes_suficientes">'+t("no_personajes_suficientes")+"</p>");
+        $("#result").html(
+            `<p data-i18n="no_personajes_suficientes">${t("no_personajes_suficientes")}</p>`
+        );
         return;
     }
 
@@ -133,15 +136,16 @@ function generateFacilRandomizer() {
 function generateFullRandom() {
     const activos = [];
 
-    for (const id in PERSONAJES) {
-        const pj = PERSONAJES[id];
-        if (!pj.activo) continue;
+    for (const id in CHARACTERS) {
+        if (!CHARACTERS_STATE[id]) continue;
 
-        activos.push({ id, ...pj });
+        activos.push({ id, ...CHARACTERS[id] });
     }
 
     if (activos.length < 3) {
-        $("#result").html('<p data-i18n="no_personajes_suficientes">'+t("no_personajes_suficientes")+"</p>");
+        $("#result").html(
+            `<p data-i18n="no_personajes_suficientes">${t("no_personajes_suficientes")}</p>`
+        );
         return;
     }
 
