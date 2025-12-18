@@ -12,11 +12,24 @@ os.makedirs(IMG_DIR, exist_ok=True)
 
 class Handler(SimpleHTTPRequestHandler):
 
+    # =========================
+    # POST ROUTER
+    # =========================
     def do_POST(self):
-        if self.path != "/save-character":
-            self.send_error(404)
+        if self.path == "/save-character":
+            self.save_character()
             return
 
+        if self.path == "/save-epiphanies-images":
+            self.save_epiphanies_images()
+            return
+
+        self.send_error(404)
+
+    # =========================
+    # SAVE CHARACTER (ORIGINAL)
+    # =========================
+    def save_character(self):
         form = cgi.FieldStorage(
             fp=self.rfile,
             headers=self.headers,
@@ -29,13 +42,14 @@ class Handler(SimpleHTTPRequestHandler):
         character = json.loads(form["json"].value)
         code = str(character["id"])
 
-        # 🔒 JSON: no sobrescribir
         json_path = os.path.join(CHAR_DIR, f"{code}.json")
+
+        # 🔒 no sobrescribir
         if os.path.exists(json_path):
             self._error(f"Character {code}.json already exists")
             return
 
-        # 🔒 Imágenes: validar colisiones
+        # 🔒 validar colisión de imágenes
         for key in form:
             if key.startswith("img_"):
                 file = form[key]
@@ -60,6 +74,64 @@ class Handler(SimpleHTTPRequestHandler):
                     ) as f:
                         f.write(file.file.read())
 
+        self._ok()
+
+    # =========================
+    # SAVE EPIPHANIES IMAGES
+    # =========================
+    def save_epiphanies_images(self):
+        form = cgi.FieldStorage(
+            fp=self.rfile,
+            headers=self.headers,
+            environ={
+                "REQUEST_METHOD": "POST",
+                "CONTENT_TYPE": self.headers["Content-Type"],
+            }
+        )
+
+        saved = []
+        skipped = []
+
+        for key in form:
+            if not key.startswith("img_"):
+                continue
+
+            file = form[key]
+            if not file.filename:
+                continue
+
+            # solo png
+            if not file.filename.lower().endswith(".png"):
+                skipped.append(file.filename)
+                continue
+
+            img_path = os.path.join(IMG_DIR, file.filename)
+
+            # 🔒 no sobrescribir
+            if os.path.exists(img_path):
+                skipped.append(file.filename)
+                continue
+
+            with open(img_path, "wb") as f:
+                f.write(file.file.read())
+
+            saved.append(file.filename)
+
+        self.send_response(200)
+        self.send_header("Content-Type", "application/json")
+        self.end_headers()
+        self.wfile.write(
+            json.dumps({
+                "status": "ok",
+                "saved": saved,
+                "skipped": skipped
+            }).encode("utf-8")
+        )
+
+    # =========================
+    # RESPUESTAS
+    # =========================
+    def _ok(self):
         self.send_response(200)
         self.send_header("Content-Type", "application/json")
         self.end_headers()
