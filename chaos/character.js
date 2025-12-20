@@ -71,7 +71,7 @@ $(document).ready(async function () {
     }
     $("#pj-rango").text(stars || "—");
     // ---- ENVIAR DATOS A GOOGLE -----
-    gtag('event', 'select_epiphany', {
+    gtag('event', 'pj_view', {
         pj_id: pjId,
         pj_name: pjData.name
     });
