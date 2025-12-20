@@ -70,6 +70,7 @@ $(document).ready(async function () {
         stars += "★";
     }
     $("#pj-rango").text(stars || "—");
+    document.title = pjData.name+" Guia | Chaos Zero Nightmare";
     // ---- ENVIAR DATOS A GOOGLE -----
     gtag('event', 'pj_view', {
         pj_id: pjId,
