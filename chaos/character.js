@@ -70,7 +70,11 @@ $(document).ready(async function () {
         stars += "★";
     }
     $("#pj-rango").text(stars || "—");
-
+    // ---- ENVIAR DATOS A GOOGLE -----
+    gtag('event', 'select_epiphany', {
+        pj_id: pjId,
+        pj_name: pjData.name
+    });
     // --- EVENTOS PESTAÑAS ---
     $("#pj-tabs button").on("click", function () {
         const target = $(this).data("target");
