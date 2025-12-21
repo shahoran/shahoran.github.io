@@ -179,7 +179,12 @@
             ]
         }
     ],
-    "neutrals": [],
+    "neutrals": [
+        {
+            "id": "forbiden_ecstasy_of_violence",
+            "best": true
+        }
+    ],
     "removal": [
         {
             "cardId": "c3",

@@ -34,5 +34,9 @@
     "iron_wall":{
         "name":"Iron Wall",
         "img":"iron_wall.png"
+    },
+    "forbiden_ecstasy_of_violence":{
+        "name":"Forbidden:Ecstasy of Violence",
+        "img":"forbidden_ecstasy_of_violence.png"
     }
 }
