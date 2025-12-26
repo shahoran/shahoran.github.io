@@ -66,6 +66,30 @@
   ],
   "epiphanies": [
     {
+      "cardId": "c6",
+      "hide": false,
+      "options": [
+        {
+          "id": "epi_shiningcore_1",
+          "best": true,
+          "img": "sereniel_epi_shiningcore_upgrade.png",
+          "notes": "sereniel_epi_shiningcore_1"
+        },
+        {
+          "id": "epi_shiningcore_2",
+          "best": false,
+          "img": "sereniel_epi_shiningcore_tres.png",
+          "notes": "sereniel_epi_shiningcore_2"
+        },
+        {
+          "id": "epi_shiningcore_3",
+          "best": false,
+          "img": "sereniel_epi_shiningcore_4exhaust.png",
+          "notes": "sereniel_epi_shiningcore_3"
+        }
+      ]
+    },
+    {
       "cardId": "c4",
       "hide": false,
       "options": [
@@ -110,30 +134,6 @@
           "best": false,
           "img": "sereniel_epi_plasmamissile_dano.png",
           "notes": "sereniel_epi_plasmamissile_3"
-        }
-      ]
-    },
-    {
-      "cardId": "c6",
-      "hide": false,
-      "options": [
-        {
-          "id": "epi_shiningcore_1",
-          "best": true,
-          "img": "sereniel_epi_shiningcore_upgrade.png",
-          "notes": "sereniel_epi_shiningcore_1"
-        },
-        {
-          "id": "epi_shiningcore_2",
-          "best": false,
-          "img": "sereniel_epi_shiningcore_tres.png",
-          "notes": "sereniel_epi_shiningcore_2"
-        },
-        {
-          "id": "epi_shiningcore_3",
-          "best": false,
-          "img": "sereniel_epi_shiningcore_4exhaust.png",
-          "notes": "sereniel_epi_shiningcore_3"
         }
       ]
     },
