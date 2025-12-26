@@ -64,95 +64,232 @@
       "type": "Upgrade",
       "basic": false
     }
-  ]
-  ,
+  ],
   "epiphanies": [
     {
       "cardId": "c4",
+      "hide": false,
       "options": [
         {
-          "id": "epi_highpowerscope_1",
+          "id": "epi_high-powerscope_1",
           "best": true,
-          "img": "selena_epi_highpowerscope_upgrade.png",
-          "notes": "selena_epi_highpowerscope_1"
+          "img": "selena_epi_high-powerscope_sere.png",
+          "notes": "selena_epi_high-powerscope_1"
         },
         {
-          "id": "epi_highpowerscope_2",
+          "id": "epi_high-powerscope_2",
           "best": true,
-          "img": "selena_epi_highpowerscope_danomarcas.png",
-          "notes": "selena_epi_highpowerscope_2"
+          "img": "selena_epi_high-powerscope_upgrade.png",
+          "notes": "selena_epi_high-powerscope_2"
         },
         {
-          "id": "epi_highpowerscope_3",
+          "id": "epi_high-powerscope_3",
           "best": true,
-          "img": "selena_epi_highpowerscope_4marcas.png",
-          "notes": "selena_epi_highpowerscope_3"
+          "img": "selena_epi_high-powerscope_danomarcas.png",
+          "notes": "selena_epi_high-powerscope_3"
+        },
+        {
+          "id": "epi_high-powerscope_4",
+          "best": false,
+          "img": "selena_epi_high-powerscope_4marcas.png",
+          "notes": "selena_epi_high-powerscope_4"
         }
       ]
     },
     {
       "cardId": "c5",
+      "hide": false,
       "options": [
         {
           "id": "epi_targetspotted_1",
           "best": true,
-          "img": "selena_epi_targetspotted_4marcas.png",
+          "img": "selena_epi_targetspotted_upgrade.png",
           "notes": "selena_epi_targetspotted_1"
         },
         {
           "id": "epi_targetspotted_2",
           "best": true,
-          "img": "selena_epi_targetspotted_dano.png",
+          "img": "selena_epi_targetspotted_4marcas.png",
           "notes": "selena_epi_targetspotted_2"
         },
         {
           "id": "epi_targetspotted_3",
           "best": false,
-          "img": "selena_epi_targetspotted_upgrade.png",
+          "img": "selena_epi_targetspotted_dano.png",
           "notes": "selena_epi_targetspotted_3"
         }
       ]
     },
     {
       "cardId": "c6",
+      "hide": false,
       "options": [
         {
-          "id": "epi_dronebombing_2",
-          "best": false,
+          "id": "epi_dronebombing_1",
+          "best": true,
           "img": "selena_epi_dronebombing_aoe.png",
+          "notes": "selena_epi_dronebombing_1"
+        },
+        {
+          "id": "epi_dronebombing_2",
+          "best": true,
+          "img": "selena_epi_dronebombing_upgrade.png",
           "notes": "selena_epi_dronebombing_2"
         },
         {
-          "id": "epi_dronebombing_1",
-          "best": false,
-          "img": "selena_epi_dronebombing_upgrade.png",
-          "notes": "selena_epi_dronebombing_1"
+          "id": "epi_dronebombing_3",
+          "best": true,
+          "img": "selena_epi_dronebombing_weak.png",
+          "notes": "selena_epi_dronebombing_3"
         }
       ]
     },
     {
       "cardId": "c7",
+      "hide": false,
       "options": [
         {
           "id": "epi_tacticalmanuever_1",
           "best": true,
-          "img": "selena_epi_tacticalmanuever_aoe.png",
+          "img": "selena_epi_tacticalmanuever_recharge.png",
           "notes": "selena_epi_tacticalmanuever_1"
         },
         {
           "id": "epi_tacticalmanuever_2",
-          "best": false,
-          "img": "selena_epi_tacticalmanuever_3tenacity.png",
+          "best": true,
+          "img": "selena_epi_tacticalmanuever_aoe.png",
           "notes": "selena_epi_tacticalmanuever_2"
         },
         {
           "id": "epi_tacticalmanuever_3",
           "best": false,
-          "img": "selena_epi_tacticalmanuever_dano.png",
+          "img": "selena_epi_tacticalmanuever_3tenacity.png",
           "notes": "selena_epi_tacticalmanuever_3"
+        },
+        {
+          "id": "epi_tacticalmanuever_4",
+          "best": false,
+          "img": "selena_epi_tacticalmanuever_dano.png",
+          "notes": "selena_epi_tacticalmanuever_4"
         }
       ]
     }
   ],
-  "copy": []
+  "copy": [
+    {
+      "cardId": "c7",
+      "options": [
+        {
+          "epiphanyId": "epi_tacticalmanuever_1",
+          "copies": 2,
+          "best": true
+        }
+      ]
+    }
+  ],
+  "neutrals": [],
+  "removal": [
+    {
+      "cardId": "c3",
+      "best": true
+    },
+    {
+      "cardId": "c2",
+      "best": true
+    },
+    {
+      "cardId": "c1",
+      "best": true
+    }
+  ],
+  "partners": [
+    "rosaria"
+  ],
+  "potentials": {
+    "1": {
+      "name": "Ephifany Bonus",
+      "description": "When entering Chaos, obtain 1 Rare Card with an activated Epiphany.",
+      "priority": 2
+    },
+    "2": {
+      "name": "Basic Card Upgrade",
+      "description": "Increase Damage, Shield Gain and Healing amount of Basic Cards by 20%.",
+      "priority": 1
+    },
+    "3": {
+      "name": "Common Card Upgrade",
+      "description": "Increase Damage, Shield Gain and Healing amount of Common Cards by 20%.",
+      "priority": 0
+    },
+    "4": {
+      "name": "Basic Card Proficiency",
+      "description": "Add a 50% chance to create 1 Homing Laser L to Pulse Fire.",
+      "priority": 2
+    },
+    "5": {
+      "name": "Unique Card Upgrade",
+      "description": "Increase Damage, Shield Gain and Healing amount of Unique Cards by 20%.",
+      "priority": 2
+    },
+    "6": {
+      "name": "Critical Damage Proficiency",
+      "description": "+12% Critical Damage",
+      "priority": 2
+    },
+    "7": {
+      "name": "Critical Chance Proficiency",
+      "description": "+10% Critical Chance",
+      "priority": 2
+    },
+    "8": {
+      "name": "Basic Card Proficiency 2",
+      "description": "+5% Damage for Selena's Engagement Fire<br>If Selena's Additional Damage is greater than 15%, an additional +5% to that value",
+      "priority": 0
+    },
+    "9": {
+      "name": "Unique Stat Upgrade",
+      "description": "+4% Passion-attribute Damage<br>If Selena’s Bonus Damage exceeds 30%, an additional +4%",
+      "priority": 2
+    }
+  },
+  "fragments": [
+    {
+      "name": "selena_set_1",
+      "sets": [
+        "f10",
+        "f14"
+      ],
+      "sub": [
+        "f12"
+      ]
+    }
+  ],
+  "teams": [
+    {
+      "name": "selena_team_1",
+      "pjs": [
+        25
+      ],
+      "bestepiphanies": [
+        {
+          "pj": 0,
+          "card": "c7",
+          "epi": "epi_tacticalmanuever_1"
+        }
+      ]
+    },
+    {
+      "name": "selena_team_2",
+      "pjs": [
+        8
+      ],
+      "bestepiphanies": [
+        {
+          "pj": 0,
+          "card": "c6",
+          "epi": "epi_dronebombing_2"
+        }
+      ]
+    }
+  ]
 }

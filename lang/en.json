@@ -243,20 +243,29 @@
     "renoa_epi_instantjudgment_2": "Increases the card’s base damage",
     "renoa_epi_instantjudgment_3": "Exhausts a bullet in the graveyard in exchange for more damage",
 
-    "selena_epi_highpowerscope_1": "Turns it into an <b>Upgrade</b>, so it is played only once and applies one mark every turn",
-    "selena_epi_highpowerscope_2": "Increases mark damage that turn",
-    "selena_epi_highpowerscope_3": "Can apply up to 4 marks",
-    "selena_epi_targetspotted_1": "4 marks",
-    "selena_epi_targetspotted_2": "Triggers an extra attack when you draw it",
-    "selena_epi_targetspotted_3": "Turns it into an <b>Upgrade</b>, so it is played only once",
-    "selena_epi_dronebombing_1": "Turns it into an upgrade and is good with Mei Lin",
-    "selena_epi_dronebombing_2": "Applies marks to all enemies",
-    "selena_epi_tacticalmanuever_1": "Applies AoE mark",
-    "selena_epi_tacticalmanuever_2": "3 tenacity",
-    "selena_epi_tacticalmanuever_3": "Only damage",
 
 
 
+
+    "selena_epi_high-powerscope_1": "Good card for characters that play many cards, e.g. Sereniel",
+    "selena_epi_high-powerscope_2": "Turns it into an <b>Upgrade</b>, so it is only played once and applies a mark every turn",
+    "selena_epi_high-powerscope_3": "Increases mark damage for that turn",
+    "selena_epi_high-powerscope_4": "Can apply up to 4 marks",
+    "selena_epi_targetspotted_1": "Turns it into an <b>Upgrade</b>, so it is only played once, a good support card for Sereniel",
+    "selena_epi_targetspotted_2": "4 marks",
+    "selena_epi_targetspotted_3": "Performs an extra attack when drawn",
+    "selena_epi_dronebombing_1": "Applies marks to all enemies",
+    "selena_epi_dronebombing_2": "Turns it into an Upgrade and works well with Mei Lin",
+    "selena_epi_dronebombing_3": "If the DPS character applies Weakness, this is a good option",
+    "selena_epi_tacticalmanuever_1": "Good support card for Sereniel, helping her combo",
+    "selena_epi_tacticalmanuever_2": "Applies an AOE mark",
+    "selena_epi_tacticalmanuever_3": "3 Ravage",
+    "selena_epi_tacticalmanuever_4": "Damage only",
+
+    "selena_set_1":"General set, just aim for the best stats",
+
+    "selena_team_1": "Good duo with Sereniel, she refills Ravage, allowing Sereniel to perform her combo again",
+    "selena_team_2": "Team with Mei Lin, landing many hits triggers marks, and both are Passion",
 
 
 

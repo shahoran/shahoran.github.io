@@ -280,17 +280,26 @@
 
 
 
-    "selena_epi_highpowerscope_1":"La vuelve <b>Upgrade</b> asi que solo se juega una vez y pone una marca todos los turnos",
-    "selena_epi_highpowerscope_2":"Aumenta el daño de las marcas en ese turno",
-    "selena_epi_highpowerscope_3":"Puede llegar a poner 4 marcas",
-    "selena_epi_targetspotted_1":"4 marcas",
-    "selena_epi_targetspotted_2":"Hace un extra attack cuando la robas",
-    "selena_epi_targetspotted_3":"La vuelve <b>Upgrade</b>, asi que solo se juega una vez",
-    "selena_epi_dronebombing_1":"La vuelve upgrade y es buena con mei lin",
-    "selena_epi_dronebombing_2":"Aplica marcas a todos los enemigos",
-    "selena_epi_tacticalmanuever_1":"Pone marca AOE",
-    "selena_epi_tacticalmanuever_2":"3 de tenacity",
-    "selena_epi_tacticalmanuever_3":"Solo daño",
+    "selena_epi_high-powerscope_1": "Buena carta para personajes que usen muchas cartas, ej. sereniel",
+    "selena_epi_high-powerscope_2":"La vuelve <b>Upgrade</b> asi que solo se juega una vez y pone una marca todos los turnos",
+    "selena_epi_high-powerscope_3":"Aumenta el daño de las marcas en ese turno",
+    "selena_epi_high-powerscope_4":"Puede llegar a poner 4 marcas",
+    "selena_epi_targetspotted_1":"La vuelve <b>Upgrade</b>, asi que solo se juega una vez, buena carta para soporte de sereniel",
+    "selena_epi_targetspotted_2":"4 marcas",
+    "selena_epi_targetspotted_3":"Hace un extra attack cuando la robas",
+    "selena_epi_dronebombing_1":"Aplica marcas a todos los enemigos",
+    "selena_epi_dronebombing_2":"La vuelve upgrade y es buena con mei lin",
+    "selena_epi_dronebombing_3": "Si el personaje DPS pone debilidad, es buena opción",
+    "selena_epi_tacticalmanuever_2":"Pone marca AOE",
+    "selena_epi_tacticalmanuever_3":"3 de tenacity",
+    "selena_epi_tacticalmanuever_4":"Solo daño",
+    "selena_epi_tacticalmanuever_1": "Buena carta para soporte de Sereniel, ayudando a su combo",
+
+    "selena_set_1":"Set general, solo busca las mejores estadisticas",
+    
+    "selena_team_1":"Buen duo con Sereniel, recarga el ravage haciendo que sereniel pueda tirar el combo otra vez",
+    "selena_team_2":"Equipo con Mei Lin, al pegar muchos hits activa las marcas y ambas son passion",
+
 
 
 
