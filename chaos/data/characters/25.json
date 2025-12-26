@@ -235,5 +235,71 @@
     "peko",
     "yuri",
     "serithea"
+  ],
+  "potentials": {
+    "1": {
+      "name": "Ephifany Bonus",
+      "description": "When entering Chaos, obtain 1 Rare Card with an activated Epiphany.",
+      "priority": 2
+    },
+    "2": {
+      "name": "Basic Card Upgrade",
+      "description": "Increase Damage, Shield Gain and Healing amount of Basic Cards by 20%.",
+      "priority": 1
+    },
+    "3": {
+      "name": "Common Card Upgrade",
+      "description": "Increase Damage, Shield Gain and Healing amount of Common Cards by 20%.",
+      "priority": 0
+    },
+    "4": {
+      "name": "Basic Card Proficiency",
+      "description": "Add a 50% chance to create 1 Homing Laser L to Pulse Fire.",
+      "priority": 2
+    },
+    "5": {
+      "name": "Unique Card Upgrade",
+      "description": "Increase Damage, Shield Gain and Healing amount of Unique Cards by 20%.",
+      "priority": 2
+    },
+    "6": {
+      "name": "Critical Chance Proficiency",
+      "description": "+10% Critical Chance",
+      "priority": 2
+    },
+    "7": {
+      "name": "Critical Damage Proficiency",
+      "description": "+12% Critical Damage",
+      "priority": 2
+    },
+    "8": {
+      "name": "Basic Card Proficiency 2",
+      "description": "+5% Damage Amount to Sereniel’s Pulse Fire<br>If Sereniel’s Critical Chance is greater than 20%, add an additional +5% to the modifier",
+      "priority": 0
+    },
+    "9": {
+      "name": "Unique Stat Upgrade",
+      "description": "If Sereniel’s Critical Chance is greater than 30%, +10% Damage Amount to Homing Laser<br>If Critical Chance is greater than 60%, add an additional +5% to the modifier",
+      "priority": 2
+    }
+  },
+  "fragments": [
+    {
+      "name": "sereniel_set_1",
+      "sets": [
+        "f1",
+        "f14"
+      ],
+      "sub": [
+        "f10"
+      ]
+    },
+    {
+      "name": "sereniel_set_2",
+      "sets": [
+        "f10",
+        "f14"
+      ]
+    }
   ]
 }

@@ -260,6 +260,30 @@
 
 
 
+
+    "sereniel_epi_shiningcore_1": "Generates 2 lasers at the start of the battle and every time you break Toughness",
+    "sereniel_epi_shiningcore_2": "Creates 3 lasers.",
+    "sereniel_epi_shiningcore_3": "Creates 2 lasers but increases their number of uses",
+    "sereniel_epi_hominglaser_1": "Moves to your hand at the start of each turn, including the first",
+    "sereniel_epi_hominglaser_2": "Creates more lasers that help with combos.",
+    "sereniel_epi_hominglaser_3": "More Afterglow, which means more Toughness",
+    "sereniel_epi_plasmamissile_1": "Applies Weakness to Instinct and increases laser damage",
+    "sereniel_epi_plasmamissile_2": "Increases the Toughness it generates.",
+    "sereniel_epi_plasmamissile_3": "Deals heavy damage to enemies with high Toughness / bosses",
+    "sereniel_epi_cobaltlight_1": "Adds Retain, allowing it to be used in better situations",
+    "sereniel_epi_cobaltlight_2": "Can hit up to 8 times, and with Weakness Attack it applies Toughness",
+    "sereniel_epi_cobaltlight_3": "Reduces its cost with each use of this card (only if you trigger Ravage)",
+    "sereniel_epi_paleshootingstar_1": "When used, it activates the laser that generates more lasers, causing this card to generate them as well (only if you have that laser Epiphany)",
+
+    "sereniel_set_1": "Sereniel applies a lot of Ravage, so lasers usually apply the set very well (do not use with Selena's recharge)",
+    "sereniel_set_2": "General set, just aim for the best stats",
+
+
+
+
+
+
+
     "home.title": "Shahoran",
     "home.subtitle": "Character guides and tools for your favorite games",
 
