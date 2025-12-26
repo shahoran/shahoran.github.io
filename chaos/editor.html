@@ -3,44 +3,12 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Character JSON Builder</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Epiphanies Tool</title>
 
-    <!-- Bootstrap (opcional pero cómodo) -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- jQuery -->
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 
     <style>
-        body {
-            background: #0f172a;
-            color: #e5e7eb;
-        }
-
-        pre {
-            background: #020617;
-            color: #a5f3fc;
-            padding: 12px;
-            border-radius: 8px;
-            overflow: auto;
-        }
-
-        .card {
-            background: #020617;
-            border: 1px solid #1e293b;
-        }
-
-        input {
-            background: #020617 !important;
-            color: #e5e7eb !important;
-            border: 1px solid #334155 !important;
-        }
-
-        input::placeholder {
-            color: #64748b;
-        }
-
         body {
             background: #111;
             color: #ddd;
@@ -235,7 +203,9 @@
             color: #ddd;
             border-color: #333;
         }
-
+        .epi-note{
+            font-size: 11px;
+        }
         .epicard {
             align-items: flex-start;
         }
@@ -244,475 +214,103 @@
             max-height: 360px;
             overflow-x: auto;
         }
+
+        /*---------------AÑADIDO ULTIMO POR CHATGPT ------------------ */
+        .card-thumb {
+            width: 280px;
+            border-radius: 6px;
+        }
+
+        .card-drop {
+            cursor: pointer;
+            background: #222;
+            font-size: 11px;
+            user-select: none;
+        }
+
+        .card-drop.border-success {
+            background: #163;
+        }
+
+        #cards {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+            /* permite que bajen si no entra */
+        }
+
+        #cards .card {
+            background: #181818;
+            border: 1px solid #333;
+            align-self: flex-start;
+            width: 300px;
+        }
     </style>
 </head>
 
-<body>
+<body class="p-3" data-bs-theme="dark">
 
-    <div class="container py-4">
+    <h2 class="mb-3">Chaos Character JSON Builder</h2>
 
-        <h2 class="mb-3">Chaos Character JSON Builder</h2>
+    <!-- Character code -->
+    <div class="mb-3">
+        <label class="form-label">Character Code</label>
+        <input id="charCode" class="form-control" autocomplete="off" placeholder="Ej: 20">
+    </div>
+    <input id="char-name" class="form-control" placeholder="Nombre del personaje">
+    <!-- Cards -->
+    <h5 class="mt-4">Cards</h5>
+    <div id="cards"></div>
 
-        <!-- Character code -->
-        <div class="mb-3">
-            <label class="form-label">Character Code</label>
-            <input id="charCode" class="form-control" autocomplete="off" placeholder="Ej: 20">
-        </div>
+    <h5>Epiphanies Editor</h5>
 
-        <!-- Base info -->
-        <h5>Base Info</h5>
-        <pre id="baseInfo">{}</pre>
+    <div id="epicards"></div>
 
-        <!-- Cards -->
-        <h5 class="mt-4">Cards</h5>
-        <div id="cards"></div>
+    <!-- ------------------------- NEUTRALES------------------------  -->
+    <h5>Neutral Cards</h5>
+    <div id="neutral-section" class="mt-4">
 
-        <!-- Generate -->
-        <button id="generate" class="btn btn-primary mt-3">
-            GENERAR ARCHIVOS
-        </button>
+        <select id="neutral-select" class="form-select form-select-sm mb-2">
+            <option value="">Add neutral card...</option>
+        </select>
 
-        <!-- Output -->
-        <h5 class="mt-3">Output</h5>
-        <pre id="output">esperando...</pre>
-        <h5>Epiphanies Editor</h5>
-
-        <div id="epicards"></div>
-
-        <button id="generateEpi" class="btn btn-success mt-3">
-            Save Epiphanies
-        </button>
-
-        <pre id="salida" class="mt-3 small"></pre>
-        <pre id="epiOutput" class="mt-3 small"></pre>
+        <div id="neutral-list" class="d-flex flex-wrap gap-2"></div>
     </div>
 
-    <script>
-        let CHARACTERS = {};
-        let currentChar = null;
 
-        let activeCardIndex = null;
+    <!-- REMOVAL SECTION -->
+    <div id="removal-section" class="mt-4">
+        <h5>Removal Cards</h5>
 
-        let currentCharCode = null;
-        let epiCounters = {};
-        let activeRow = null;
+        <select id="removal-select" class="form-select form-select-sm mb-2">
+            <option value="">Add character card...</option>
+        </select>
 
-        /* =========================
-           UTILIDADES
-        ========================= */
-
-        const moveBlock = ($el, dir) => {
-            if (dir === "up") $el.prev().before($el);
-            else $el.next().after($el);
-        };
-
-
-        function attachImageToCard(blob, index) {
-            const input = $(`.card-img[data-index="${index}"]`)[0];
-            if (!input) return;
-
-            let cardName = $(`.card-name[data-index="${index}"]`).val().trim();
-            if (!cardName) {
-                cardName = "___";
-            }
-
-            const charPrefix = currentChar.name.toLowerCase().replace(/\s+/g, "");
-            const fileName =
-                charPrefix + "_" +
-                cardName.toLowerCase().replace(/\s+/g, "") +
-                ".png";
-
-            const file = new File([blob], fileName, { type: blob.type });
-
-            const dt = new DataTransfer();
-            dt.items.add(file);
-            input.files = dt.files;
-
-            // feedback visual opcional
-            $(input).addClass("border-success");
-        }
-        $(document).on("focus", ".card-name, .card-type, .card-img", function () {
-            activeCardIndex = $(this).data("index");
-        });
-        // Load characters.json
-        (async () => {
-            CHARACTERS = await $.getJSON("/chaos/data/characters.json");
-        })();
-
-        $(document).on("paste", function (e) {
-            if (!activeCardIndex) return;
-
-            const items = e.originalEvent.clipboardData.items;
-
-            for (const item of items) {
-                if (item.type.startsWith("image/")) {
-                    const blob = item.getAsFile();
-                    attachImageToCard(blob, activeCardIndex);
-                    e.preventDefault();
-                    break;
-                }
-            }
-        });
-        $("#charCode").on("keydown", async function (e) {
-            if (e.key !== "Tab") return;
-            e.preventDefault();
-
-            const code = this.value.trim();
-            if (!code) return;
-
-            // 1. cargar base
-            if (!CHARACTERS[code]) return;
-            currentCharCode = code;
-
-            // base (characters.json)
-            currentChar = CHARACTERS[code];
-            $("#baseInfo").text(JSON.stringify(currentChar, null, 2));
-
-            // 2. cargar cartas + epifanías guardadas (si existen)
-            try {
-                const full = await $.getJSON(`/chaos/data/characters/${code}.json`);
-                currentChar = full;
-            } catch {
-                // si aún no existe el archivo completo
-            }
-
-            createCards();
-            loadEpiphaniesFromCharacter();
-        });
-        function loadCharacter(code) {
-            const data = CHARACTERS[code];
-            if (!data) return;
-
-            currentChar = data;
-
-            $("#baseInfo").text(JSON.stringify(data, null, 2));
-            createCards();
-        }
-        function toTitleCase(text) {
-            return text
-                .toLowerCase()
-                .split(" ")
-                .filter(w => w.length)
-                .map(w => w[0].toUpperCase() + w.slice(1))
-                .join(" ");
-        }
-        function createCards() {
-            $("#cards").empty();
-
-            for (let i = 1; i <= 8; i++) {
-                const existing = currentChar.cards?.find(c => c.id === "c" + i);
-
-                $("#cards").append(`
-        <div class="card p-2 mb-2">
-            <strong>Card ${i}</strong>
-
-            <input class="form-control mt-1 card-name"
-                data-index="${i}"
-                value="${existing?.name ?? ""}"
-                placeholder="Card name">
-
-            <input class="form-control mt-1 card-type"
-                data-index="${i}"
-                value="${existing ? (existing.type === "Attack" ? 1 : existing.type === "Skill" ? 2 : 3) : ""}"
-                placeholder="Type">
-
-            <input type="file" class="form-control mt-1 card-img"
-                data-index="${i}">
-        </div>
-        `);
-            }
-
-            syncCardsToEpiphanies();
-        }
-        function syncCardsToEpiphanies() {
-            $("#epicards").empty();
-            epiCounters = {};
-
-            if (!currentChar.cards) return;
-
-            currentChar.cards
-                .filter(c => ["c4", "c5", "c6", "c7", "c8"].includes(c.id))
-                .forEach(card => {
-                    renderCard(card);
-                    loadExistingEpiphanies(card);
-                });
-        }
-        function loadEpiphaniesFromCharacter() {
-            if (!currentChar.epiphanies) return;
-
-            currentChar.epiphanies.forEach(epiBlock => {
-                const $card = $(`.epicard[data-card="${epiBlock.cardId}"]`);
-                if (!$card.length) return;
-
-                epiBlock.options.forEach((opt, i) => {
-                    $card.find(".add-epi").click();
-
-                    const $row = $card.find(".epi-row").last();
-                    $row.find(".epi-diff").val(opt.id.split("_").pop());
-                    $row.find(".epi-best").prop("checked", opt.best);
-
-                    if (opt.img) {
-                        $row.find(".epi-thumb")
-                            .attr("src", `/chaos/img/epiphanies/${opt.img}`);
-                    }
-                });
-            });
-        }
-        function slug(text) {
-            return text
-                .toLowerCase()
-                .normalize("NFD")                 // separa acentos
-                .replace(/[\u0300-\u036f]/g, "")  // elimina acentos
-                .replace(/[^a-z0-9_-]+/g, "")       // elimina TODO excepto letras y números
-        }
-        $("#generate").on("click", function () {
-            if (!currentChar) return;
-
-            const cards = [];
-            const formData = new FormData();
-
-            $(".card-name").each(function () {
-                const index = $(this).data("index");
-                const nameRaw = $(this).val().trim();
-                if (!nameRaw) return;
-
-                const typeInput = $(`.card-type[data-index="${index}"]`).val();
-                const imgInput = $(`.card-img[data-index="${index}"]`)[0];
-
-                const type =
-                    typeInput == "1" ? "Attack" :
-                        typeInput == "2" ? "Skill" :
-                            "Upgrade";
-
-                const charPrefix = slug(currentChar.name);
-                const imgName =
-                    charPrefix + "_" +
-                    slug(nameRaw) +
-                    ".png";
-
-                if (imgInput.files.length) {
-                    formData.append("img_" + index, imgInput.files[0], imgName);
-                }
-
-                cards.push({
-                    id: "c" + index,
-                    name: toTitleCase(nameRaw),
-                    img: imgName,
-                    type,
-                    basic: index <= 3
-                });
-            });
-
-            const finalJson = {
-                ...currentChar,
-                cards
-            };
-
-            formData.append("json", JSON.stringify(finalJson));
-
-            $.ajax({
-                url: "/save-character",
-                method: "POST",
-                data: formData,
-                processData: false,
-                contentType: false,
-                success: () => {
-                    $("#output").text("Saved ✔");
-                    syncCardsToEpiphanies();
-                },
-                error: (err) => $("#output").text(err.responseJSON.error)
-            });
-        });
-
-        /* =========================
-           RENDER CARTA
-        ========================= */
-
-        function renderCard(card) {
-            epiCounters[card.id] = 1;
-
-            $("#epicards").append(`
-  <div class="epicard border rounded p-2 mb-3" data-card="${card.id}">
-
-    <!-- COLUMNA IZQUIERDA: CARTA -->
-    <div class="card-preview">
-      <img src="/chaos/img/cards/${card.img}">
-      <div class="card-meta">
-        <strong>${card.name}</strong><br>
-        <span class="text-secondary">${card.id}</span>
-      </div>
-
-      <div class="mt-2 d-flex justify-content-center gap-1">
-        <button class="btn btn-xs btn-secondary add-epi">+ Epiphany</button>
-      </div>
-
-      <div class="mt-2 d-flex justify-content-center gap-1">
-        <button class="btn btn-xs btn-dark move-card" data-dir="up">↑</button>
-        <button class="btn btn-xs btn-dark move-card" data-dir="down">↓</button>
-      </div>
+        <div id="removal-list" class="d-flex flex-wrap gap-2"></div>
     </div>
 
-    <!-- COLUMNA DERECHA: EPIFANÍAS -->
-    <div class="epi-panel">
-      <div class="epi-list"></div>
-    </div>
 
-  </div>
-`);
-        }
 
-        /* =========================
-           AÑADIR EPIFANÍA
-        ========================= */
+    <!-- ------------------------- PARTNERS------------------------  -->
+<h5>Partners</h5>
+<div id="partner-section" class="mt-4">
 
-        $(document).on("click", ".add-epi", function () {
-            const $card = $(this).closest(".epicard");
-            const cardId = $card.data("card");
-            const idx = epiCounters[cardId]++;
+    <select id="partner-select" class="form-select form-select-sm mb-2">
+        <option value="">Add partner...</option>
+    </select>
 
-            $card.find(".epi-list").append(`
-  <div class="epi-card epi-row" data-idx="${idx}">
+    <div id="partner-list" class="d-flex flex-wrap gap-2"></div>
+</div>
 
-    <!-- PREVIEW -->
-    <div class="epi-preview">
-      <img class="epi-thumb">
-      <div class="epi-drop border rounded">IMG</div>
-      <input type="file" class="epi-img d-none" accept="image/png">
-    </div>
 
-    <!-- FORM -->
-    <div class="epi-form">
-      <input class="form-control epi-diff" placeholder="diff">
-      <input type="number" class="form-control epi-copies" value="0" min="0">
+    <button id="btn-save-character" class="btn btn-success mt-3">
+        Save All
+    </button>
+    
+    <pre id="salida" class="mt-3 small"></pre>
+    <pre id="traduccion" class="mt-3 small"></pre>
 
-      <label class="small">
-        <input type="checkbox" class="epi-best"> best
-      </label>
-
-      <div class="d-flex justify-content-between">
-        <button class="btn btn-xs btn-dark move-epi" data-dir="up">←</button>
-        <button class="btn btn-xs btn-dark move-epi" data-dir="down">→</button>
-        <button class="btn btn-xs btn-danger remove-epi">✕</button>
-      </div>
-    </div>
-
-  </div>
-`);
-        });
-
-        /* =========================
-           ORDEN + ELIMINAR
-        ========================= */
-
-        $(document).on("click", ".move-card", function () {
-            moveBlock($(this).closest(".epicard"), $(this).data("dir"));
-        });
-
-        $(document).on("click", ".move-epi", function () {
-            moveBlock($(this).closest(".epi-row"), $(this).data("dir"));
-        });
-
-        $(document).on("click", ".remove-epi", function () {
-            $(this).closest(".epi-row").remove();
-        });
-
-        /* =========================
-           FOCO + CTRL V
-        ========================= */
-
-        $(document).on("focus click", ".epi-row *", function () {
-            activeRow = $(this).closest(".epi-row");
-        });
-
-        $(document).on("paste", function (e) {
-            if (!activeRow || !currentChar) return;
-
-            const item = [...e.originalEvent.clipboardData.items]
-                .find(i => i.type.startsWith("image/"));
-            if (!item) return;
-
-            const blob = item.getAsFile();
-            const input = activeRow.find(".epi-img")[0];
-
-            const file = new File([blob], "paste.png", { type: blob.type });
-            const dt = new DataTransfer();
-            dt.items.add(file);
-            input.files = dt.files;
-
-            const reader = new FileReader();
-            reader.onload = e => activeRow.find(".epi-thumb").attr("src", e.target.result);
-            reader.readAsDataURL(blob);
-
-            activeRow.find(".epi-drop").addClass("border-success");
-            e.preventDefault();
-        });
-
-        /* =========================
-           GENERAR JSON
-        ========================= */
-
-        $("#generateEpi").on("click", function () {
-            if (!currentChar) return;
-
-            const epiphanies = [];
-            const copy = [];
-            const formData = new FormData();
-
-            $(".epicard").each(function () {
-                const cardId = $(this).data("card");
-                const card = currentChar.cards.find(c => c.id === cardId);
-
-                const epiOptions = [];
-                const copyOptions = [];
-                const hide = cardId === "c8" ? true : false;
-
-                $(this).find(".epi-row").each(function (i) {
-                    const diff = slug($(this).find(".epi-diff").val());
-                    const best = $(this).find(".epi-best").is(":checked");
-                    const copies = +$(this).find(".epi-copies").val() || 0;
-                    const imgInput = $(this).find(".epi-img")[0];
-
-                    const epiId = `epi_${slug(card.name)}_${i + 1}`;
-                    const imgName = `${slug(currentChar.name)}_epi_${slug(card.name)}_${diff}.png`;
-                    const note = `${slug(currentChar.name)}_epi_${slug(card.name)}_${i + 1}`;
-
-                    epiOptions.push({ id: epiId, best, img: imgName, note: note });
-
-                    if (copies > 0) {
-                        copyOptions.push({ epiphanyId: epiId, copies, best });
-                    }
-
-                    if (imgInput.files.length) {
-                        formData.append("img_" + epiId, imgInput.files[0], imgName);
-                    }
-                });
-
-                if (epiOptions.length) epiphanies.push({ cardId, hide, options: epiOptions });
-                if (copyOptions.length) copy.push({ cardId, options: copyOptions });
-            });
-
-            currentChar.epiphanies = epiphanies;
-            currentChar.copy = copy;
-
-            $("#epiOutput").text(JSON.stringify({ epiphanies, copy }, null, 2));
-
-            formData.append("json", JSON.stringify(currentChar));
-            formData.append("code", currentCharCode);
-
-            $.ajax({
-                url: "/save-epiphanies-images",
-                method: "POST",
-                data: formData,
-                processData: false,
-                contentType: false,
-                success: res => {
-                    $("#salida").text(JSON.stringify(res));
-                },
-                error: (err) => $("#salida").text(err.responseJSON.error)
-            });
-        });
-    </script>
-
+    <script src="editor.js"></script>
 </body>
 
 </html>

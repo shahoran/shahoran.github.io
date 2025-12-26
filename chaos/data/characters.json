@@ -238,5 +238,15 @@
     "subfaction": "SS Edenity",
     "img": "rei.png",
     "rarity": 4
+  },
+  "25": {
+    "id": 25,
+    "name": "Sereniel",
+    "class": "hunter",
+    "element": "instinct",
+    "faction": "terrascion",
+    "subfaction": "Aerospace Defense Command",
+    "img": "sereniel.png",
+    "rarity": 5
   }
 }

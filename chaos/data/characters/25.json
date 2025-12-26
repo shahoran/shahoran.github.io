@@ -1,0 +1,239 @@
+{
+  "name": "Sereniel",
+  "class": "hunter",
+  "element": "instinct",
+  "faction": "terrascion",
+  "subfaction": "Aerospace Defense Command",
+  "img": "sereniel.png",
+  "rarity": 5,
+  "cards": [
+    {
+      "id": "c1",
+      "name": "Pulse Fire",
+      "img": "sereniel_pulsefire.png",
+      "type": "Attack",
+      "basic": true
+    },
+    {
+      "id": "c2",
+      "name": "Pulse Fire",
+      "img": "sereniel_pulsefire.png",
+      "type": "Attack",
+      "basic": true
+    },
+    {
+      "id": "c3",
+      "name": "Magnetic Field",
+      "img": "sereniel_magneticfield.png",
+      "type": "Skill",
+      "basic": true
+    },
+    {
+      "id": "c4",
+      "name": "Homing Laser",
+      "img": "sereniel_hominglaser.png",
+      "type": "Attack",
+      "basic": false
+    },
+    {
+      "id": "c5",
+      "name": "Plasma Missile",
+      "img": "sereniel_plasmamissile.png",
+      "type": "Attack",
+      "basic": false
+    },
+    {
+      "id": "c6",
+      "name": "Shining Core",
+      "img": "sereniel_shiningcore.png",
+      "type": "Skill",
+      "basic": false
+    },
+    {
+      "id": "c7",
+      "name": "Cobalt Light",
+      "img": "sereniel_cobaltlight.png",
+      "type": "Attack",
+      "basic": false
+    },
+    {
+      "id": "c8",
+      "name": "Pale Shooting Star",
+      "img": "sereniel_paleshootingstar.png",
+      "type": "Attack",
+      "basic": false
+    }
+  ],
+  "epiphanies": [
+    {
+      "cardId": "c4",
+      "hide": false,
+      "options": [
+        {
+          "id": "epi_hominglaser_1",
+          "best": true,
+          "img": "sereniel_epi_hominglaser_turn.png",
+          "notes": "sereniel_epi_hominglaser_1"
+        },
+        {
+          "id": "epi_hominglaser_2",
+          "best": true,
+          "img": "sereniel_epi_hominglaser_create.png",
+          "notes": "sereniel_epi_hominglaser_2"
+        },
+        {
+          "id": "epi_hominglaser_3",
+          "best": false,
+          "img": "sereniel_epi_hominglaser_tenacity.png",
+          "notes": "sereniel_epi_hominglaser_3"
+        }
+      ]
+    },
+    {
+      "cardId": "c5",
+      "hide": false,
+      "options": [
+        {
+          "id": "epi_plasmamissile_1",
+          "best": true,
+          "img": "sereniel_epi_plasmamissile_debilidad.png",
+          "notes": "sereniel_epi_plasmamissile_1"
+        },
+        {
+          "id": "epi_plasmamissile_2",
+          "best": true,
+          "img": "sereniel_epi_plasmamissile_tenacidad.png",
+          "notes": "sereniel_epi_plasmamissile_2"
+        },
+        {
+          "id": "epi_plasmamissile_3",
+          "best": false,
+          "img": "sereniel_epi_plasmamissile_dano.png",
+          "notes": "sereniel_epi_plasmamissile_3"
+        }
+      ]
+    },
+    {
+      "cardId": "c6",
+      "hide": false,
+      "options": [
+        {
+          "id": "epi_shiningcore_1",
+          "best": true,
+          "img": "sereniel_epi_shiningcore_upgrade.png",
+          "notes": "sereniel_epi_shiningcore_1"
+        },
+        {
+          "id": "epi_shiningcore_2",
+          "best": false,
+          "img": "sereniel_epi_shiningcore_tres.png",
+          "notes": "sereniel_epi_shiningcore_2"
+        },
+        {
+          "id": "epi_shiningcore_3",
+          "best": false,
+          "img": "sereniel_epi_shiningcore_4exhaust.png",
+          "notes": "sereniel_epi_shiningcore_3"
+        }
+      ]
+    },
+    {
+      "cardId": "c7",
+      "hide": false,
+      "options": [
+        {
+          "id": "epi_cobaltlight_1",
+          "best": true,
+          "img": "sereniel_epi_cobaltlight_retain.png",
+          "notes": "sereniel_epi_cobaltlight_1"
+        },
+        {
+          "id": "epi_cobaltlight_2",
+          "best": true,
+          "img": "sereniel_epi_cobaltlight_weak.png",
+          "notes": "sereniel_epi_cobaltlight_2"
+        },
+        {
+          "id": "epi_cobaltlight_3",
+          "best": false,
+          "img": "sereniel_epi_cobaltlight_menoscosto.png",
+          "notes": "sereniel_epi_cobaltlight_3"
+        }
+      ]
+    },
+    {
+      "cardId": "c8",
+      "hide": true,
+      "options": [
+        {
+          "id": "epi_paleshootingstar_1",
+          "best": false,
+          "img": "sereniel_epi_paleshootingstar_base.png",
+          "notes": "sereniel_epi_paleshootingstar_1"
+        }
+      ]
+    }
+  ],
+  "copy": [
+    {
+      "cardId": "c4",
+      "options": [
+        {
+          "epiphanyId": "epi_hominglaser_1",
+          "copies": 2,
+          "best": true
+        },
+        {
+          "epiphanyId": "epi_hominglaser_2",
+          "copies": 2,
+          "best": true
+        }
+      ]
+    },
+    {
+      "cardId": "c6",
+      "options": [
+        {
+          "epiphanyId": "epi_shiningcore_2",
+          "copies": 2,
+          "best": false
+        },
+        {
+          "epiphanyId": "epi_shiningcore_3",
+          "copies": 2,
+          "best": false
+        }
+      ]
+    },
+    {
+      "cardId": "c8",
+      "options": [
+        {
+          "epiphanyId": "epi_paleshootingstar_1",
+          "copies": 1,
+          "best": false
+        }
+      ]
+    }
+  ],
+  "neutrals": [],
+  "removal": [
+    {
+      "cardId": "c3",
+      "best": true
+    },
+    {
+      "cardId": "c2",
+      "best": true
+    },
+    {
+      "cardId": "c1",
+      "best": true
+    }
+  ],
+  "partners": [
+    "peko",
+    "yuri",
+    "serithea"
+  ]
+}

@@ -166,5 +166,30 @@
         "Ego":"Draw 1 Upgrade Card(s)<br>If there are no Upgrade Cards in Draw Pile, Draw 1",
         "rarity":4,
         "class":"ranger"
+    },
+    "peko":{
+        "name":"Peko",
+        "img":"peko.png",
+        "pasive":"Increase the assigned Combatant’s Attack by 8%.<br>When the assigned Combatant’s card Moves from Graveyard to hand, gain 1 Repairs Complete.<br>Repairs Complete#1: +10% Damage Amount to the assigned Combatant’s Attack Cards (max 3 stacks)<br>Increase Damage Amount of the assigned Combatant’s Attack Cards that are used against Ravaged targets by 15%.",
+        "Ego":"When an ally inflicts Ravage, 1 Overclock to  Designated Combatants (1 time per turn)<br>Overclok: +25% chitical chance for 1 turn",
+        "rarity":5,
+        "class":"hunter"
+    },
+    "serithea":{
+        "name":"Serithea",
+        "img":"serithea.png",
+        "pasive":"The Critical Chance of the combatant’s attack cards increases by 8%.<br>When the assigned combatant's attack results in a Critical Hit, +3% Critical Damage. Stacks up to 5 times.",
+        "Ego":"250% Damage<br>2 Vulnerable",
+        "rarity":5,
+        "class":"hunter"
+    },
+    "yuri":{
+        "name":"Yuri",
+        "img":"yuri.png",
+        "pasive":"The assigned combatant’s Attack is increased by 8%.<br>Upon the first shuffle, the assigned combatant’s damage dealt is increased by 8%.",
+        "Ego":"Draw 2",
+        "rarity":3,
+        "class":"hunter"
     }
+
 }
