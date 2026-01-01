@@ -1,96 +1,74 @@
 {
-    "id": 15,
-    "name": "Nia",
-    "class": "controller",
-    "element": "instinct",
-    "faction": "terrascion",
-    "subfaction": "N/A",
-    "img": "nia.png",
-    "rarity": 4,
-    "cards": [
-        {
-            "id": "c1",
-            "name": "Stroke",
-            "img": "nia_stroke.png",
-            "type": "Attack",
-            "basic": true
-        },
-        {
-            "id": "c2",
-            "name": "Amp Therapy",
-            "img": "nia_amp_therapy.png",
-            "type": "Skill",
-            "basic": true
-        },
-        {
-            "id": "c3",
-            "name": "Amp TherapyShpere",
-            "img": "nia_amp_therapy.png",
-            "type": "Skill",
-            "basic": true
-        },
-        {
-            "id": "c4",
-            "name": "G Chord",
-            "img": "nia_g_chord.png",
-            "type": "Skill",
-            "basic": false
-        },
-        {
-            "id": "c5",
-            "name": "Mute Accent",
-            "img": "nia_mute_accent.png",
-            "type": "Skill",
-            "basic": false
-        },
-        {
-            "id": "c6",
-            "name": "Soul Rip",
-            "img": "nia_soul_rip.png",
-            "type": "Skill",
-            "basic": false
-        },
-        {
-            "id": "c7",
-            "name": "Adagio",
-            "img": "nia_adagio.png",
-            "type": "Skill",
-            "basic": false
-        },
-        {
-            "id": "c8",
-            "name": "Nia Curiosity",
-            "img": "nia_curiosity.png",
-            "type": "Skill",
-            "basic": false
-        }
-    ],
-    "epiphanies": [
+  "id": 15,
+  "name": "Nia",
+  "class": "controller",
+  "element": "instinct",
+  "faction": "terrascion",
+  "subfaction": "N/A",
+  "img": "nia.png",
+  "rarity": 4,
+  "cards": [
     {
-      "cardId": "c7",
-      "options": [
-        {
-          "id": "epi_adagio_1",
-          "best": true,
-          "img": "nia_epi_adagio_drawdiscard2.png",
-          "notes": "nia_epi_adagio_1"
-        },
-        {
-          "id": "epi_adagio_2",
-          "best": true,
-          "img": "nia_epi_adagio_create.png",
-          "notes": "nia_epi_adagio_2"
-        },
-        {
-          "id": "epi_adagio_3",
-          "best": false,
-          "img": "nia_epi_adagio_renoabis.png",
-          "notes": "nia_epi_adagio_3"
-        }
-      ]
+      "id": "c1",
+      "name": "Stroke",
+      "img": "nia_stroke.png",
+      "type": "Attack",
+      "basic": true
     },
     {
+      "id": "c2",
+      "name": "Amp Therapy",
+      "img": "nia_amptherapy.png",
+      "type": "Skill",
+      "basic": true
+    },
+    {
+      "id": "c3",
+      "name": "Amp Therapy",
+      "img": "nia_amptherapy.png",
+      "type": "Skill",
+      "basic": true
+    },
+    {
+      "id": "c4",
+      "name": "G Chord",
+      "img": "nia_gchord.png",
+      "type": "Skill",
+      "basic": false
+    },
+    {
+      "id": "c5",
+      "name": "Mute Accent",
+      "img": "nia_muteaccent.png",
+      "type": "Skill",
+      "basic": false
+    },
+    {
+      "id": "c6",
+      "name": "Soul Rip",
+      "img": "nia_soulrip.png",
+      "type": "Skill",
+      "basic": false
+    },
+    {
+      "id": "c7",
+      "name": "Adagio",
+      "img": "nia_adagio.png",
+      "type": "Skill",
+      "basic": false
+    },
+    {
+      "id": "c8",
+      "name": "Nia's Curiosity",
+      "img": "nia_niascuriosity.png",
+      "type": "Skill",
+      "basic": false
+    }
+  ],
+  "epiphanies": [
+    {
       "cardId": "c4",
+      "hide": false,
       "options": [
         {
           "id": "epi_gchord_1",
@@ -107,7 +85,20 @@
       ]
     },
     {
+      "cardId": "c5",
+      "hide": false,
+      "options": [
+        {
+          "id": "epi_muteaccent_1",
+          "best": false,
+          "img": "nia_epi_muteaccent_elegido.png",
+          "notes": "nia_epi_muteaccent_1"
+        }
+      ]
+    },
+    {
       "cardId": "c6",
+      "hide": false,
       "options": [
         {
           "id": "epi_soulrip_1",
@@ -136,19 +127,32 @@
       ]
     },
     {
-      "cardId": "c5",
+      "cardId": "c7",
+      "hide": false,
       "options": [
         {
-          "id": "epi_muteaccent_1",
+          "id": "epi_adagio_1",
+          "best": true,
+          "img": "nia_epi_adagio_drawdiscard2.png",
+          "notes": "nia_epi_adagio_1"
+        },
+        {
+          "id": "epi_adagio_2",
+          "best": true,
+          "img": "nia_epi_adagio_create.png",
+          "notes": "nia_epi_adagio_2"
+        },
+        {
+          "id": "epi_adagio_3",
           "best": false,
-          "img": "nia_epi_muteaccent_elegido.png",
-          "notes": "nia_epi_muteaccent_1"
+          "img": "nia_epi_adagio_renoabis.png",
+          "notes": "nia_epi_adagio_3"
         }
       ]
     },
     {
       "cardId": "c8",
-      "hide":true,
+      "hide": true,
       "options": [
         {
           "id": "epi_niacuriosity_1",
@@ -190,5 +194,30 @@
         }
       ]
     }
+  ],
+  "neutrals": [
+    {
+      "id": "forbidden_eternal_hunger",
+      "best": true
+    }
+  ],
+  "removal": [
+    {
+      "cardId": "c1",
+      "best": true
+    },
+    {
+      "cardId": "c2",
+      "best": true
+    },
+    {
+      "cardId": "c3",
+      "best": false
+    }
+  ],
+  "partners": [
+    "nyx",
+    "arwen",
+    "yvonne"
   ]
 }

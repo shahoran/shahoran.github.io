@@ -38,5 +38,17 @@
     "forbiden_ecstasy_of_violence":{
         "name":"Forbidden:Ecstasy of Violence",
         "img":"forbidden_ecstasy_of_violence.png"
+    },
+    "wanderer_of_the_void":{
+        "name":"Wanderer of the Void",
+        "img":"wanderer_of_the_void.png"
+    },
+    "confiscation":{
+        "name":"Confiscation",
+        "img":"confiscation.png"
+    },
+    "forbidden_eternal_hunger":{
+        "name":"Forbidden Eternal Hunger",
+        "img":"forbidden_eternal_hunger.png"
     }
 }

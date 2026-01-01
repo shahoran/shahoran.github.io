@@ -1,90 +1,243 @@
 {
-    "id": 22,
-    "name": "Cassius",
-    "class": "controller",
-    "element": "instinct",
-    "faction": "peltion",
-    "subfaction": "Company 110",
-    "img": "cassius.png",
-    "rarity": 4,
-    "cards": [
+  "id": 22,
+  "name": "Cassius",
+  "class": "controller",
+  "element": "instinct",
+  "faction": "peltion",
+  "subfaction": "Company 110",
+  "img": "cassius.png",
+  "rarity": 4,
+  "cards": [
     {
-        "id": "c1",
-        "name": "Cards",
-        "img": "cassius_cards.png",
-        "type": "Attack",
-        "basic": true
+      "id": "c1",
+      "name": "Cards",
+      "img": "cassius_cards.png",
+      "type": "Attack",
+      "basic": true
     },
     {
-        "id": "c2",
-        "name": "Wild Cards",
-        "img": "cassius_wild_cards.png",
-        "type": "Attack",
-        "basic": true
+      "id": "c2",
+      "name": "Wild Cards",
+      "img": "cassius_wildcards.png",
+      "type": "Attack",
+      "basic": true
     },
     {
-        "id": "c3",
-        "name": "Mana Field",
-        "img": "cassius_mana_field.png",
-        "type": "Skill",
-        "basic": true
+      "id": "c3",
+      "name": "Mana Field",
+      "img": "cassius_manafield.png",
+      "type": "Skill",
+      "basic": true
     },
     {
-        "id": "c4",
-        "name": "Pop eyed Popper",
-        "img": "cassius_pop_eyed_popper.png",
-        "type": "Upgrade",
-        "basic": false
+      "id": "c4",
+      "name": "Pop Eyed Popper",
+      "img": "cassius_popeyedpopper.png",
+      "type": "Upgrade",
+      "basic": false
     },
     {
-        "id": "c5",
-        "name": "Devil Dice",
-        "img": "cassius_devil_dice.png",
-        "type": "Attack",
-        "basic": false
+      "id": "c5",
+      "name": "Devil Dice",
+      "img": "cassius_devildice.png",
+      "type": "Attack",
+      "basic": false
     },
     {
-        "id": "c6",
-        "name": "Shuffle",
-        "img": "cassius_shuffle.png",
-        "type": "Skill",
-        "basic": false
+      "id": "c6",
+      "name": "Shuffle",
+      "img": "cassius_shuffle.png",
+      "type": "Skill",
+      "basic": false
     },
     {
-        "id": "c7",
-        "name": "Dice Trick",
-        "img": "cassius_dice_trick.png",
-        "type": "Attack",
-        "basic": false
+      "id": "c7",
+      "name": "Dice Trick",
+      "img": "cassius_dicetrick.png",
+      "type": "Attack",
+      "basic": false
     },
     {
-        "id": "c8",
-        "name": "Joker",
-        "img": "cassius_joker.png",
-        "type": "Skill",
-        "basic": false
+      "id": "c8",
+      "name": "Joker",
+      "img": "cassius_joker.png",
+      "type": "Skill",
+      "basic": false
     }
-], "epiphanies": [],
-   "copy": [],
-   "neutrals":[ {
-            "id": "gear_bag",
-            "best": true
+  ],
+  "epiphanies": [
+    {
+      "cardId": "c4",
+      "hide": false,
+      "options": [
+        {
+          "id": "epi_popeyedpopper_1",
+          "best": true,
+          "img": "cassius_epi_popeyedpopper_choose.png",
+          "notes": "cassius_epi_popeyedpopper_1"
         },
         {
-            "id": "rally",
-            "best": true
-        },
-        {
-            "id": "gear_bag",
-            "best": true
+          "id": "epi_popeyedpopper_2",
+          "best": false,
+          "img": "cassius_epi_popeyedpopper_create.png",
+          "notes": "cassius_epi_popeyedpopper_2"
         }
-    ],
-   "removal": [],
-   "partners": [],
-   "potentials": {},
-   "fragments" : [{}],
-   "teams": [{"name": "", "pj":[],"bestepihanies": [{"pj": 0, "card":"","epi" : ""}]}]
-
-
-
+      ]
+    },
+    {
+      "cardId": "c5",
+      "hide": false,
+      "options": [
+        {
+          "id": "epi_devildice_1",
+          "best": true,
+          "img": "cassius_epi_devildice_retrieve.png",
+          "notes": "cassius_epi_devildice_1"
+        },
+        {
+          "id": "epi_devildice_2",
+          "best": false,
+          "img": "cassius_epi_devildice_costo0.png",
+          "notes": "cassius_epi_devildice_2"
+        }
+      ]
+    },
+    {
+      "cardId": "c6",
+      "hide": false,
+      "options": [
+        {
+          "id": "epi_shuffle_1",
+          "best": true,
+          "img": "cassius_epi_shuffle_nyx.png",
+          "notes": "cassius_epi_shuffle_1"
+        },
+        {
+          "id": "epi_shuffle_2",
+          "best": false,
+          "img": "cassius_epi_shuffle_exhaust.png",
+          "notes": "cassius_epi_shuffle_2"
+        },
+        {
+          "id": "epi_shuffle_3",
+          "best": false,
+          "img": "cassius_epi_shuffle_select.png",
+          "notes": "cassius_epi_shuffle_3"
+        },
+        {
+          "id": "epi_shuffle_4",
+          "best": false,
+          "img": "cassius_epi_shuffle_draw5.png",
+          "notes": "cassius_epi_shuffle_4"
+        }
+      ]
+    },
+    {
+      "cardId": "c7",
+      "hide": false,
+      "options": [
+        {
+          "id": "epi_dicetrick_1",
+          "best": true,
+          "img": "cassius_epi_dicetrick_create.png",
+          "notes": "cassius_epi_dicetrick_1"
+        },
+        {
+          "id": "epi_dicetrick_2",
+          "best": false,
+          "img": "cassius_epi_dicetrick_dano.png",
+          "notes": "cassius_epi_dicetrick_2"
+        }
+      ]
+    },
+    {
+      "cardId": "c8",
+      "hide": true,
+      "options": [
+        {
+          "id": "epi_joker_1",
+          "best": false,
+          "img": "cassius_epi_joker_choose.png",
+          "notes": "cassius_epi_joker_1"
+        }
+      ]
+    }
+  ],
+  "copy": [
+    {
+      "cardId": "c7",
+      "options": [
+        {
+          "epiphanyId": "epi_dicetrick_1",
+          "copies": 2,
+          "best": true
+        },
+        {
+          "epiphanyId": "epi_dicetrick_2",
+          "copies": 1,
+          "best": false
+        }
+      ]
+    },
+    {
+      "cardId": "c8",
+      "options": [
+        {
+          "epiphanyId": "epi_joker_1",
+          "copies": 1,
+          "best": false
+        }
+      ]
+    }
+  ],
+  "neutrals": [
+    {
+      "id": "gear_bag",
+      "best": true
+    },
+    {
+      "id": "confiscation",
+      "best": true
+    },
+    {
+      "id": "wanderer_of_the_void",
+      "best": false
+    }
+  ],
+  "removal": [
+    {
+      "cardId": "c3",
+      "best": true
+    },
+    {
+      "cardId": "c1",
+      "best": true
+    },
+    {
+      "cardId": "c2",
+      "best": false
+    }
+  ],
+  "partners": [
+    "nyx",
+    "arwen",
+    "yvonne"
+  ],
+  "potentials": {},
+  "fragments": [
+    {}
+  ],
+  "teams": [
+    {
+      "name": "",
+      "pj": [],
+      "bestepihanies": [
+        {
+          "pj": 0,
+          "card": "",
+          "epi": ""
+        }
+      ]
+    }
+  ]
 }
