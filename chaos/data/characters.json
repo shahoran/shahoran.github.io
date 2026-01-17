@@ -248,5 +248,15 @@
     "subfaction": "Aerospace Defense Command",
     "img": "sereniel.png",
     "rarity": 5
+  },
+  "26": {
+    "id": 26,
+    "name": "Narja",
+    "class": "controller",
+    "element": "instinct",
+    "faction": "peltion",
+    "subfaction": "Kaguya Pharmaceutical",
+    "img": "narja.png",
+    "rarity": 5
   }
 }

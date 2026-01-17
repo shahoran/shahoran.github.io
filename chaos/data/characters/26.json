@@ -1,0 +1,297 @@
+{
+  "id": 26,
+  "name": "Narja",
+  "class": "controller",
+  "element": "instinct",
+  "faction": "peltion",
+  "subfaction": "Kaguya Pharmaceutical",
+  "img": "narja.png",
+  "rarity": 5,
+  "cards": [
+    {
+      "id": "c1",
+      "name": "Na: Attack Response",
+      "img": "narja_naattackresponse.png",
+      "type": "Attack",
+      "basic": true
+    },
+    {
+      "id": "c2",
+      "name": "Na: Defense Response",
+      "img": "narja_nadefenseresponse.png",
+      "type": "Skill",
+      "basic": true
+    },
+    {
+      "id": "c3",
+      "name": "Na: Defense Response",
+      "img": "narja_nadefenseresponse.png",
+      "type": "Skill",
+      "basic": true
+    },
+    {
+      "id": "c4",
+      "name": "Shackles Of Hunger",
+      "img": "narja_shacklesofhunger.png",
+      "type": "Attack",
+      "basic": false
+    },
+    {
+      "id": "c5",
+      "name": "Bottomless Hunger",
+      "img": "narja_bottomlesshunger.png",
+      "type": "Skill",
+      "basic": false
+    },
+    {
+      "id": "c6",
+      "name": "Voluntary Control",
+      "img": "narja_voluntarycontrol.png",
+      "type": "Skill",
+      "basic": false
+    },
+    {
+      "id": "c7",
+      "name": "Domain Of Voracity",
+      "img": "narja_domainofvoracity.png",
+      "type": "Attack",
+      "basic": false
+    },
+    {
+      "id": "c8",
+      "name": "Mealtime",
+      "img": "narja_mealtime.png",
+      "type": "Attack",
+      "basic": false
+    }
+  ],
+  "epiphanies": [
+    {
+      "cardId": "c4",
+      "hide": false,
+      "options": [
+        {
+          "id": "epi_shacklesofhunger_1",
+          "best": true,
+          "img": "narja_epi_shacklesofhunger_6vooracidad.png",
+          "notes": "narja_epi_shacklesofhunger_1"
+        },
+        {
+          "id": "epi_shacklesofhunger_2",
+          "best": true,
+          "img": "narja_epi_shacklesofhunger_draw.png",
+          "notes": "narja_epi_shacklesofhunger_2"
+        },
+        {
+          "id": "epi_shacklesofhunger_3",
+          "best": true,
+          "img": "narja_epi_shacklesofhunger_dano.png",
+          "notes": "narja_epi_shacklesofhunger_3"
+        }
+      ]
+    },
+    {
+      "cardId": "c5",
+      "hide": false,
+      "options": [
+        {
+          "id": "epi_bottomlesshunger_1",
+          "best": true,
+          "img": "narja_epi_bottomlesshunger_voracity.png",
+          "notes": "narja_epi_bottomlesshunger_1"
+        },
+        {
+          "id": "epi_bottomlesshunger_2",
+          "best": true,
+          "img": "narja_epi_bottomlesshunger_nocondition.png",
+          "notes": "narja_epi_bottomlesshunger_2"
+        },
+        {
+          "id": "epi_bottomlesshunger_3",
+          "best": false,
+          "img": "narja_epi_bottomlesshunger_defense.png",
+          "notes": "narja_epi_bottomlesshunger_3"
+        },
+        {
+          "id": "epi_bottomlesshunger_4",
+          "best": false,
+          "img": "narja_epi_bottomlesshunger_dps.png",
+          "notes": "narja_epi_bottomlesshunger_4"
+        },
+        {
+          "id": "epi_bottomlesshunger_5",
+          "best": false,
+          "img": "narja_epi_bottomlesshunger_unique.png",
+          "notes": "narja_epi_bottomlesshunger_5"
+        }
+      ]
+    },
+    {
+      "cardId": "c6",
+      "hide": false,
+      "options": [
+        {
+          "id": "epi_voluntarycontrol_1",
+          "best": true,
+          "img": "narja_epi_voluntarycontrol_draw1.png",
+          "notes": "narja_epi_voluntarycontrol_1"
+        },
+        {
+          "id": "epi_voluntarycontrol_2",
+          "best": true,
+          "img": "narja_epi_voluntarycontrol_9voracity.png",
+          "notes": "narja_epi_voluntarycontrol_2"
+        },
+        {
+          "id": "epi_voluntarycontrol_3",
+          "best": true,
+          "img": "narja_epi_voluntarycontrol_basicos.png",
+          "notes": "narja_epi_voluntarycontrol_3"
+        },
+        {
+          "id": "epi_voluntarycontrol_4",
+          "best": false,
+          "img": "narja_epi_voluntarycontrol_move.png",
+          "notes": "narja_epi_voluntarycontrol_4"
+        }
+      ]
+    },
+    {
+      "cardId": "c7",
+      "hide": false,
+      "options": [
+        {
+          "id": "epi_domainofvoracity_1",
+          "best": true,
+          "img": "narja_epi_domainofvoracity_draw.png",
+          "notes": "narja_epi_domainofvoracity_1"
+        },
+        {
+          "id": "epi_domainofvoracity_2",
+          "best": true,
+          "img": "narja_epi_domainofvoracity_voracity.png",
+          "notes": "narja_epi_domainofvoracity_2"
+        },
+        {
+          "id": "epi_domainofvoracity_3",
+          "best": true,
+          "img": "narja_epi_domainofvoracity_defensa.png",
+          "notes": "narja_epi_domainofvoracity_3"
+        },
+        {
+          "id": "epi_domainofvoracity_4",
+          "best": false,
+          "img": "narja_epi_domainofvoracity_dps.png",
+          "notes": "narja_epi_domainofvoracity_4"
+        }
+      ]
+    }
+  ],
+  "copy": [
+    {
+      "cardId": "c4",
+      "options": [
+        {
+          "epiphanyId": "epi_shacklesofhunger_1",
+          "copies": 1,
+          "best": true
+        },
+        {
+          "epiphanyId": "epi_shacklesofhunger_2",
+          "copies": 1,
+          "best": true
+        },
+        {
+          "epiphanyId": "epi_shacklesofhunger_3",
+          "copies": 1,
+          "best": true
+        }
+      ]
+    },
+    {
+      "cardId": "c5",
+      "options": [
+        {
+          "epiphanyId": "epi_bottomlesshunger_1",
+          "copies": 2,
+          "best": true
+        },
+        {
+          "epiphanyId": "epi_bottomlesshunger_2",
+          "copies": 2,
+          "best": true
+        },
+        {
+          "epiphanyId": "epi_bottomlesshunger_3",
+          "copies": 2,
+          "best": false
+        },
+        {
+          "epiphanyId": "epi_bottomlesshunger_4",
+          "copies": 2,
+          "best": false
+        }
+      ]
+    },
+    {
+      "cardId": "c6",
+      "options": [
+        {
+          "epiphanyId": "epi_voluntarycontrol_1",
+          "copies": 1,
+          "best": true
+        },
+        {
+          "epiphanyId": "epi_voluntarycontrol_2",
+          "copies": 1,
+          "best": true
+        }
+      ]
+    }
+  ],
+  "neutrals": [
+    {
+      "id": "forbidden_eternal_hunger",
+      "best": false
+    },
+    {
+      "id": "gear_bag",
+      "best": true
+    }
+  ],
+  "removal": [
+    {
+      "cardId": "c1",
+      "best": true
+    },
+    {
+      "cardId": "c2",
+      "best": true
+    },
+    {
+      "cardId": "c3",
+      "best": true
+    },
+    {
+      "cardId": "c7",
+      "best": false
+    }
+  ],
+  "partners": [
+    "gaya",
+    "alyssa"
+  ],
+  "fragments": [
+    {
+      "name": "khalipe_set_2",
+      "sets": [
+        "f14",
+        "f6",
+        "f10"
+      ],
+      "sub": [
+        "f12"
+      ]
+    }
+  ]
+}

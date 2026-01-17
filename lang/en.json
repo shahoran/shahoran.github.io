@@ -293,6 +293,31 @@
 
 
 
+    "narja_epi_bottomlesshunger_1": "Adds voracity making the passive very easy to activate",
+    "narja_epi_bottomlesshunger_2": "Has no conditions when reducing cost",
+    "narja_epi_bottomlesshunger_3": "Support for defense-scaling builds",
+    "narja_epi_bottomlesshunger_4": "Part of Narja DPS build",
+    "narja_epi_bottomlesshunger_5": "Upgrade",
+
+    "narja_epi_voluntarycontrol_1": "Provides draw for cycling",
+    "narja_epi_voluntarycontrol_2": "Greatly increases voracity generation",
+    "narja_epi_voluntarycontrol_3": "Increases basic attack damage and grants voracity on basics",
+    "narja_epi_voluntarycontrol_4": "For cards that move a lot to the hand",
+
+    "narja_epi_shacklesofhunger_1": "Generates positive voracity, helps with generation",
+    "narja_epi_shacklesofhunger_2": "Has draw so it helps with cycling",
+    "narja_epi_shacklesofhunger_3": "Greatly increases the damage of the next card at the cost of consuming more voracity, very good when used on multi-hit cards",
+
+    "narja_epi_domainofvoracity_1": "Provides draw helping with cycling",
+    "narja_epi_domainofvoracity_2": "When doing ravage you gain voracity",
+    "narja_epi_domainofvoracity_3": "Increases damage taken by defense-scaling characters",
+    "narja_epi_domainofvoracity_4": "Deals decent damage in the DPS build",
+
+
+
+
+
+
     "home.title": "Shahoran",
     "home.subtitle": "Character guides and tools for your favorite games",
 

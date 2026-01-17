@@ -190,6 +190,22 @@
         "Ego":"Draw 2",
         "rarity":3,
         "class":"hunter"
+    },
+    "alyssa":{
+        "name":"Alyssa",
+        "img":"alyssa.png",
+        "pasive":"The assigned combatant’s Defense is increased by 12%.<br>At the end of battle, Recover 3% Health.",
+        "Ego":"Heal 100%<br>1 Morale for 1 turn<br>Increase Heal Amount by 50% when below 30% HP",
+        "rarity":4,
+        "class":"controller"
+    },
+    "gaya":{
+        "name":"Gaya",
+        "img":"gaya.png",
+        "pasive":"Increase the assigned Combatant’s Defense by 8%.<br>+20% Defense-Based Damage Amount to the assigned Combatant’s Instinct cards.<br>When using a Unique Attack Card of the assigned Combatant with an original Cost of 6, +20% to Damage Amount of all allies (max 1 stack).",
+        "Ego":"60% Defense-Based Damage<br>Draw 1 Attack Card(s)",
+        "rarity":5,
+        "class":"controller"
     }
 
 }
